@@ -1,0 +1,74 @@
+
+
+p{
+    color: brown;
+   border-bottom: 2px solid black;font-weight: bolder;
+}
+.header {
+  
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
+
+.headeri{
+    flex-direction: row;
+}
+.fotografit{
+    padding-top: 10%;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly;
+}
+   .rubrika{max-width: 80%;
+
+   }
+   .permifooter{
+    display: flex;
+    justify-content:space-evenly;
+   }
+   .bgfoto{
+    display: flex;
+    justify-content:flex-end;
+   }
+   .menu{
+    width: 500px;
+    display: flex;
+    height: 70px;
+    
+    justify-content: space-between;
+   
+   }
+   ol{ 
+    padding-top: 10%;
+    padding-bottom: 9px;
+    margin: 10%;
+    border: 3px solid black;
+    
+    /* border-top: 3px solid black;
+    border-right:3px solid black;
+    border-bottom:3px solid black;
+    border-left: 3px solid black; */
+    
+    
+
+   }
+   ol >li{
+    list-style: none;
+    margin-left: 70px;
+    margin-top: 30px;
+    font-size: 15px;
+   }
+   ol > li > a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+
+   }
+   ol > li > a:hover{
+    color: blue;
+   
+}
