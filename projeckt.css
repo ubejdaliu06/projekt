@@ -153,12 +153,23 @@ h3>.f{
         
         border: 1px solid black;
         margin: 1%;
+        background-color: darkgray;
     }
   .f4{
   display: flex;
-  justify-content: center;
- 
   
-  
-
+  content: normal;
+  justify-content: flex-end;
   }
+  .fi{
+    display: flex;
+    justify-content:center;
+  }
+  .label{
+    display: flex;
+  }
+  .control{
+    justify-content: flex-end;
+  }
+
+  

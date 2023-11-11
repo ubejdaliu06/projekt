@@ -114,15 +114,23 @@
     </main>
     <footer>
         <div class="f3">
-            <div class="f5">
-            <h2>NEWSLETTER</h2>
-            <h3>Get special offers and find out what new in the store. Sign up for the EV newsletter.</h3>
-        </div>
+           
+            <div class="title"><strong>Newsletter</strong></div>
+            <div class="c3">
+          
+            <div class="fi">
+            <label class="label" for="newsletter"><span>Sign Up for Our Newsletter:</span></label>
+            <div class="control">
+            <input name="email" type="email" id="newsletter" placeholder="Enter your email address" autocomplete="off" data-validate="{required:true, 'validate-email':true}">
+            <div id="news-msg" role="alert"></div>
+            </div>
+            </div>
         
-        <div class="f4">
-            <input type="text" placeholder="Search.." style="background-color: ;">
-        </div>
-    </div>
+            <button class="action subscribe primary" title="Subscribe" type="submit">
+            <span>Subscribe</span>
+            </button>
+            </div>
+            </div>
         <div class="f">
             <!-- <h2>About Catalog-Z</h2>
             <h2>Our Links</h2> -->
@@ -156,6 +164,7 @@
  
     
     </footer> 
+    
 
 </body>
 
