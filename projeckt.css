@@ -1,10 +1,10 @@
 p.header{
     color: brown;
    border-bottom: 2px solid black;font-weight: bolder;}
-body{
 
-}
 .fotografit{
+  
+
    
     display: flex;
     flex-wrap: wrap;
@@ -22,16 +22,20 @@ body{
     justify-content: end;
    
    }
+
    .latestvideo{
     display: flex;
     justify-content: flex-end;
    content: 12px;;
 
    }
-  
-   .catalog{
+   .t1{
+    display: flex;
     justify-content: center;
+    align-items: center;
    }
+  
+ 
   .permifooter{ 
    
     display: flex;
@@ -39,51 +43,43 @@ body{
     background: #424242;
     border: 1px solid #424242;
     border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     margin: 1%;
   }
   
    .fotografit>.rubrika{
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   
+ 
+   
    }
-   .fotografit>.rubrika2{box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   .fotografit>.rubrika2{
+  
+ 
+  
    }
    
-   .fotografit>.rubrika3{box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   .fotografit>.rubrika3{
+
    }
    
    
-   .fotografit>.rubrika4{box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   .fotografit>.rubrika4{
+
    }
+   
    
     
-   ol >li{
-    display: flex;
-    list-style: none;
-    margin-left: 70px;
-    margin-top: 30px;
-    flex-direction: row-reverse;
+ 
 }
  .footerright{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
  }
- .fundi{
-    display: flex;
-    justify-content: flex-end;
- }
-
-   
-    
-
-  
 
 
-
-  
-   
-  
 .latestvideo{
     display: flex;
     justify-content: space-between;
@@ -100,22 +96,28 @@ body{
 
 }
 .f{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    flex-direction: row;
+
     display: flex;
     align-items: center;
-    background-color: dimgrey;
+  
+    flex-direction:row;
+    justify-content: space-between;
+
 }
 .f>.ff{
     margin-left: 5% ;
     margin-right: 5%;
     display: flex;
-    flex-direction: column;
-
+    flex-direction:column;
+    justify-content: space-evenly;
+   
 }
-h3>.f{
+p>.f{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+.f6{
+  flex-direction: row;
 }
 
 .rubrika{
@@ -138,15 +140,72 @@ h3>.f{
       padding: 0.04%;
       justify-content: space-around;
   }
+ .headerii{
+  width:100% ;
+  height: 60px;
+  padding: 0 40px;
+  box-sizing: border-box;
  
-  
-  .headeri{
+  border: 1px solid  ;
+  border-radius: 10px;
+ 
+ }
+ .menu1{
+  height: 100%;
       display: flex;
       flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      color: black;
+     
+     
+  gap: 50px;
+  list-style: none;
+ }
+ li>a{
+  color: black;
+  position: relative;
+  text-decoration: none;
+ }
+ li>a:after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition:transform 0.3s ease-out;
+
+ }
+ li>a:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+ }
+  
+  .headeri{
+    width: 100%;
+    height: 0%;
+    
+      display: flex;
+      flex-direction:column;
       justify-content: center;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
- margin: 30px 0;
- padding: 20px 0;
+      align-items: center;
+     
+      margin: 30px 30;
+      padding: 20px 30;
+  }
+  .catalog{
+    justify-content: center;
+   }
+   p>.catalog>.headeri{
+   te
+
+   }
+  .menu{
+     display: flex;
   }
  
     .f3{
@@ -158,18 +217,24 @@ h3>.f{
   .f4{
   display: flex;
   
-  content: normal;
-  justify-content: flex-end;
+
+  flex-direction: row;
   }
   .fi{
     display: flex;
     justify-content:center;
+    flex-direction: row;
   }
   .label{
     display: flex;
+
   }
   .control{
+
+  }
+  .ac1{
     justify-content: flex-end;
+  
   }
 
   
