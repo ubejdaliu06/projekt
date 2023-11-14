@@ -1,4 +1,4 @@
-p.header{
+p>.header{
     color: brown;
    border-bottom: 2px solid black;font-weight: bolder;}
 
@@ -12,11 +12,7 @@ p.header{
     margin: 3%;
 }
 
-   .rubrika{
   
-    justify-content: space-evenly;
-
-   }
   .bgfoto{
     display: flex;
     justify-content: end;
@@ -26,7 +22,7 @@ p.header{
    .latestvideo{
     display: flex;
     justify-content: flex-end;
-   content: 12px;;
+   content: 12px;
 
    }
    .t1{
@@ -80,15 +76,6 @@ p.header{
  }
 
 
-.latestvideo{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-   
-
- 
-}
-
 .fundi{
     display: flex;
     flex-direction: row;
@@ -120,10 +107,7 @@ p>.f{
   flex-direction: row;
 }
 
-.rubrika{
-    flex-grow: 1
-    flex: 200;
-}
+
 
 .p{
     margin: 1%;
@@ -217,7 +201,7 @@ p>.f{
   .f4{
   display: flex;
   
-
+  content: normal;
   flex-direction: row;
   }
   .fi{
