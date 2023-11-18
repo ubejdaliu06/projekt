@@ -10,12 +10,19 @@ p>.header{
 
 .fotografit{
   
+   padding: 3%;
+   padding-bottom: 2%;
 
-   
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 2%;
     margin: 3%;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    background-size:auto:
+ 
 }
 
   
@@ -48,31 +55,65 @@ p>.header{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     margin: 1%;
   }
+
+  .rubrika3{
+   background: transparent;
+  }
   
-   .fotografit>.rubrika{
-   
- 
+   .fotografit>.rubrika>a{
+
+    
+        color: white;
+    position: relative;
+    text-decoration: none;
    
    }
-   .fotografit>.rubrika2{
+   .fotografit>.rubrika2>a{
   
+    color: white;
+    position: relative;
+    text-decoration: none;
  
   
    }
    
-   .fotografit>.rubrika3{
+   .fotografit>.rubrika3>a{
+
+    color: white;
+    position: relative;
+    text-decoration: none;
+  
 
    }
    
    
-   .fotografit>.rubrika4{
+   .fotografit>.rubrika4>a{
+ 
+    color: white;
+    position: relative;
+    text-decoration: none;
+
+   }
+   
+   .fotografit>.rubrika5>a{
+  
+    color: white;
+    position: relative;
+    text-decoration: none;
+
+   }
+   .fotografit>.rubrika6>a{
+  
+    color: white;
+    position: relative;
+    text-decoration: none;
 
    }
    
    
     
  
-}
+
  .footerright{
     display: flex;
     align-items: center;
@@ -148,6 +189,8 @@ p>.f{
       color: black;
       gap: 50px;
       list-style: none;
+      
+      
  }
 .menu1>li>a{
   color: black;
