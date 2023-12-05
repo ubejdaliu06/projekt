@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    color: black;
+    background-color: red;
+    font-style: italic;
+}
+p{
+    background-color: antiquewhite;
+    font-style:inherit;
+    text-shadow: 5cap;
+}
+
+th{
+    color: white;
+    font-style: inherit;
+    background-color:dimgray;
+    text-align: center;
+}
+td{
+    text-align: center;
+
+    background-color: beige;
+    font-style: boldd;
+}
+div{
+    size: 300cm;
+    text-align: center;
+   font-style: oblique;
+    size: 200px;
+}

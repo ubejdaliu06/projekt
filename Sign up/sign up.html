@@ -14,38 +14,50 @@
 
   </style>
 
-
+<script src="signup.js"></script>
 </head>
 <body>
+  <form onsubmit="return validateForm()">
   <div class="h1">
    
     <div class="h2">
-      <p>Sign up</p>
+      <h1>sign up</h1>
       
       <div class="h3">
-      <input name="email" type="email">
-      <p>Email:</p>
+        <label for="email">Email:</label>
+      <input name="email" id="id" type="email">
+        
     </div>
     
     <div class="h4">
-       <input name="name" type="text">
-      <p>Name:</p>
+      <label for="name">Name:</label>
+       <input name="name" id="name" type="text" required>
+      
       </input>
     </div>  
      
     <div class="h5">
-      <input name="password" type="password">
-      <p>Password:</p>
+      <label for="password">Password:</label>
+      <input name="password" id="password" type="password" required>
+      
     </input>
 
 
   </div>
   <div class="h6">
+    <label for="confirmpassword">confirm Password:</label>
+    <input name="confirm-password" id="confirm-password" type="password" required>
+    
+  </input>
+
+
+</div>
+  <div class="h6">
   <a href=""> <button> Sign Up</button>
   </a>
- 
 </div>
-
+</div>
+</form>
     </div>
   </div>
   
