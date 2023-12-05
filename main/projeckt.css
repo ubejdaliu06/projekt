@@ -1,5 +1,6 @@
 
 body{
+  background-color: #868181;
   
 }
 
@@ -43,6 +44,18 @@ p>.header{
     justify-content: center;
     align-items: center;
    }
+   .f9{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+   }
+   .b22{
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font: 10pt;
+    color: red;
+   }
   
  
   .permifooter{ 
@@ -63,14 +76,14 @@ p>.header{
    .fotografit>.rubrika>a{
 
     
-        color: white;
+        color: black;
     position: relative;
     text-decoration: none;
    
    }
    .fotografit>.rubrika2>a{
   
-    color: white;
+    color: black;
     position: relative;
     text-decoration: none;
  
@@ -79,7 +92,7 @@ p>.header{
    
    .fotografit>.rubrika3>a{
 
-    color: white;
+    color: black;
     position: relative;
     text-decoration: none;
   
@@ -89,7 +102,7 @@ p>.header{
    
    .fotografit>.rubrika4>a{
  
-    color: white;
+    color: black;
     position: relative;
     text-decoration: none;
 
@@ -97,14 +110,14 @@ p>.header{
    
    .fotografit>.rubrika5>a{
   
-    color: white;
+    color: black;
     position: relative;
     text-decoration: none;
 
    }
    .fotografit>.rubrika6>a{
   
-    color: white;
+    color: black;
     position: relative;
     text-decoration: none;
 
@@ -239,6 +252,12 @@ p>.f{
 .fi{
   
  
+}
+button{
+  
+ 
+
+  color: black;
 }
   
   
