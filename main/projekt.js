@@ -18,22 +18,16 @@ function ndrroImg(){
 document.getElementById('fotografit').src =imgArray[i];
  if(i<imgArray.length-1){
   i++;
- }else{
-  i--;
  }
-//  setTimeout("ndrroImg()", 30000)
+
 }
- document.body.addEventListener('load',ndrroImg());
- function ktheImg(){
+function ndrroImg(){
   document.getElementById('fotografit').src =imgArray[i];
-   if(i<imgArray.length-1){
-    i--;
-   }else{
+   if(i<imgArray.length+1){
     i++;
    }
-  //  setTimeout("ndrroImg()", 30000)
   }
-   document.body.addEventListener('load',ktheImg());
+
   
 
 
