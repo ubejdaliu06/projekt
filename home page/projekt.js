@@ -14,19 +14,20 @@ var imgArray=[
   "u6-removebg-preview.png",
 
 ];
+
 function ndrroImg(){
 document.getElementById('fotografit').src =imgArray[i];
  if(i<imgArray.length-1){
   i++;
  }
-
 }
-function ndrroImg(){
+function ktheImg(){
   document.getElementById('fotografit').src =imgArray[i];
    if(i<imgArray.length+1){
-    i++;
+    i--;
    }
   }
+
 
   
 
