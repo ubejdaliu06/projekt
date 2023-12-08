@@ -1,6 +1,9 @@
 
 body{
- background-image: src(""); 
+ flex: wrap;
+ justify-content: center;
+ align-items: center;
+ padding-top: 25%;
 }
 
 .h1{
@@ -25,17 +28,28 @@ body{
 .h3{
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD:Sign up/signup.css
 }
 .h4{
   display: flex;
   flex-direction: column;
+=======
+  text-align: center;
+>>>>>>> 5cb301d21989f3bf1ddfdcff1d07da947c71a9b0:log in/Log in.css
 }
+
 .h5{
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD:Sign up/signup.css
+=======
+  text-align: center;
+>>>>>>> 5cb301d21989f3bf1ddfdcff1d07da947c71a9b0:log in/Log in.css
 }
 .h6{
   display: flex;
+  flex-direction: column;
+  text-align: center;
   
 
 }
