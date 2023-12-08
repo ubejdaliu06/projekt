@@ -65,7 +65,7 @@ const AGE = Vitilindjes - today;
 
 if(AGE < 18){
   alert('You must be 18 years old!');
-  return false;
+  return;
 }
 
 
