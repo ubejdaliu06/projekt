@@ -1,60 +1,44 @@
 <!DOCTYPE html>
 <head>
 
-  <meta charset="ubejd">
+  <meta charset="ilmi">
   <meta name="Views" content="width=device-width, inital-scale=1">
   <title>The Goat Vape</title>
-  <link rel="stylesheet" href="signup.css">
-  <style>
+  <link rel="stylesheet" href="LogIN.css">
+ 
 
+<script src="Login.js"></script>
 
-
-
-
-
-  </style>
-
-<script src="signup.js"></script>
 </head>
 <body>
   <form onsubmit="return validateForm()">
   <div class="h1">
-   
+    
     <div class="h2">
-      <h1>sign up</h1>
+      <h1 class="LOGIN"> Log In </h1>
       
-      <div class="h3">
-        <label for="name"><div id="text">UserName:</div></label>
-        <input name="name" id="name" type="text" required>
+      <div class="UserName">
+        <label for="name"><div class="UserName">UserName:</div></label>
+        <input name="name" itemid="UserName"  placeholder=" ex. FilanFisteku1" id="UserName" type="text" required>
        
        </input>
         
     </div>
     
-    <div class="h4">
-      <label for="email"><div id="text">Email: </div></label>
-      <input name="email" id="id" type="email">
-        
-    </div>  
+   
      
-    <div class="h5">
-      <label for="password">Password:</label>
-      <input name="password" id="password" type="password" required>
+    <div class="password">
+      <label for="password"><div class="password"> Password: </div></label>
+      <input name="password"  id="password" type="password" required>
       
     </input>
 
 
   </div>
-  <div class="h6">
-    <label for="confirmpassword">confirm Password:</label>
-    <input name="confirm-password" id="confirm-password" type="password" required>
-    
-  </input>
+  <div class="passwordError" id="passwordError"></div>
 
-
-</div>
-  <div class="h6">
-  <a href=""> <button> Sign Up</button>
+  <div class="signup">
+  <a href=""></label> <button type="button" onclick="validateForm()"> <div class="button"> <label for="signup">Log In </label></div></button>
   </a>
 </div>
 </div>

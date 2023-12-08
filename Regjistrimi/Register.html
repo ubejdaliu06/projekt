@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+
+  <meta charset="ilmi">
+  <meta name="Views" content="width=device-width, inital-scale=1">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="Register.css">
+ 
+
+<script src="Register.js"></script>
+
+</head>
+<body>
+  <div class="Titull">
+  <h1>Sign Up </h1>
+  </div>
+
+  <div class="pershkrim">
+  <h3>Create your account by filling out the information below.</h3>
+</div>
+
+  <form onsubmit="event.preventDefault();validateForm();">
+  <div class="Register">
+    <div class="Emri">
+    <label for="name">Name</label>
+    <input type="text" placeholder="ex. John" id="Emri" name="name" required>
+    </div>
+    <div class="Mbiemri">
+    <label for="Mbiemri">Surname</label>
+    <input type="text" placeholder="ex. Smith" id="Mbiemri" name="Mbiemri">
+    </div>
+<div class="Email">
+    <label for="Email">Email Address</label>
+    <input type="email" placeholder="abc123@....com" id="Email" name="Email" required>
+    </div>
+    <div class="User">
+      <label for="User">Username</label>
+      <input type="text" placeholder="ex.User12" id="User" name="User" required>
+      </div>
+    <div class="Password">
+      <label for="Password">Password</label>
+      <input type="password" placeholder="Min 8 Characters" id="password" name="Password">
+      </div>
+      <div class="Confirm Password">
+        <label for="Password">Confirm Password</label>
+        <input type="password" placeholder="" id="confirm-password" name="confirm-password">
+        </div>
+    <div class="Vitilindjes">
+    <label for="Vitilindjes">Birthdate</label>
+    <input type="date" id="Vitilindjes" name="Vitilindjes">
+    </div>
+    <div class="Gjinia">
+    
+    <label for="Gjinia">Sex</label>
+    
+      
+<div class="Perzgjidhje">
+    <p>M</p>
+    <input type="radio" id="Mashkull" name="Gjinia" value="Mashkull">
+    <p>W</p>
+    <input type="radio" id="Femer" name="Gjinia" value="Femer">
+  </div>
+  </div>
+    
+    <input type="submit" onclick="validateForm()" class="Regjistrohu" value="Sign Up">
+ 
+  </div>
+</div>
+  </form>
+
+    
+  
+
+
+
+</body>
