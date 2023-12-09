@@ -1,7 +1,11 @@
 
-@media screen (zoom :150%){
+@media screen and (max-width: 768px) {
+  body{
+     background-color: greenyellow;
+  }
+ 
   
-}
+ }
 
 .h2{
   padding-top:10% ;
@@ -61,11 +65,7 @@ flex-direction: column;
   flex-direction: row;
   gap: 50%;
 }
-.video{
-  position: fixed;
-  
-  
-}
+
 
 
 
