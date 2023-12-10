@@ -59,6 +59,9 @@ flex-direction: column;
 
 
 }
+label{
+  color: white;
+}
 .task{
   background-image: url(ITEM-Background.jpg);
   border: 5px solid violet; 
@@ -74,6 +77,7 @@ flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   position: relative;
+  
 }
 .password{
   display: flex;
@@ -89,6 +93,9 @@ flex-direction: column;
   cursor: pointer;
   position: relative;
   
+}
+.signup label{
+  color: black;
 }
 .Banner{
   background-image: url(PHOTObanner.jpeg);
@@ -119,7 +126,7 @@ flex-direction: column;
   font-size: 20px;
   
   padding: 10px 20px;
-
+  
   cursor: pointer;
 }
 .button-wr{
