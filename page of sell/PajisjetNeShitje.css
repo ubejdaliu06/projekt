@@ -15,7 +15,7 @@
    
   }
   .Banner{
-   margin-top: 15%;
+ margin-top: 8%;
    display: flex;
    background-image: url(Wallpaper.jpeg);
    margin-left: 20px;
@@ -23,7 +23,7 @@
    color: red;
    
   }
-  .Banner h3{
+  .Banner>h3{
    display: flex;
    text-align: center;
   }
@@ -36,6 +36,15 @@
    border-bottom: solid rgb(166, 165, 165);
    
   }
+  .first{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    gap: 10%;
+   
+  }
+
   .navbar a {
    float: left;
    display: block;
@@ -83,29 +92,34 @@
          justify-content: flex-end;
          
        }
-       .First{
+      
 
-         display: flex;
-         
-         
-       }
+
+
+       
        .Produkt{
         display: inline-block;
-        text-align: center;
+        
         margin: 5%;
-        color: white;
+        text-align: center;
         align-items: center;
         border: 5px white solid ;
         border-style:ridge;
         border-radius: 5%;
-        background-color: rgb(225, 225, 225);
-        color: black;
+       
+        
+        
+      }
+      p{
+        color: white;
       }
       .First-bracket{
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
-        background-image: url(ITEM-Background.jpg);
+        flex-wrap: nowrap;
+        flex-direction: column;
         justify-content: center;
+        align-content: center;
         
        
       }
@@ -118,44 +132,57 @@
         color: white;
       }
       .Main{ 
-        display: flex;
+        
+        flex-wrap: wrap;
         background-image: url(ITEM-Background.jpg);
-       text-align: center;
+       width: 100%;
         display: flex;
         align-content: center;
         justify-content: center;
         flex-direction: column;
+        margin-top: 5%;
       
-        margin: 10%;
         flex-wrap: wrap;
-        
-      
         
       }
-      .first-row{
-      
-        gap: 5%;
+      .First-row{
         display: flex;
         flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: 5%;
+        padding-left: 5%;
         flex-wrap: wrap;
-       background-image: url();
-       justify-content: center;
-       align-items: center;
-       
-       
+        justify-content: center;
+        align-items: center;
+      
+        
       }
       .titell {
         display: flex;
-        
+       
         justify-content: center;
         align-items: center;
       }
       .SEcond{
         display: flex;
         background-image: url(ITEM-Background.jpg);
-        text-align: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 2%;
+        width: 100%;
         
+
       }
+      .third{
+        background-image: url(ITEM-Background.jpg);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 2%;
+        width: 100%;
+      }
+
      
        
  
