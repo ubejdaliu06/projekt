@@ -2,124 +2,169 @@
    body{
       background-color: black;
    }
-  
+  #footer{
+   color: white;
+  }
+  .Banner{
+   color: white;
+  }
+  .navbar a{
+   color: white;
+  }
+
    
   }
   .Banner{
+   margin-top: 15%;
+   display: flex;
    background-image: url(Wallpaper.jpeg);
+   margin-left: 20px;
+   margin-right: 20px;
    color: red;
-   display: flex;
-  
-   justify-content: center;
-   padding: 0.4%;
-   margin: 2%;
    
- 
- }
-.container{
+  }
+  .Banner h3{
    display: flex;
-   flex-wrap: wrap;
-   justify-content: space-evenly;
-   margin: 30px 0;
-  background-color: violet;
-   border: 5px solid blueviolet;
-   size: 250px;
-   align-items: center;
-
-}
-.foto3{
-   padding-top: 15px;
-   padding-bottom: 25px;
-}
-
-
-.backgroundPIC{
+   text-align: center;
+  }
+  .navbar{
    
-   background-color: violet;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   padding: 3%;
-   margin-left: 15%;
-   margin-right: 15%;
-}
-.SPACE{
-     width: 10cm;
-     height: 10cm;
-   }
-
-.ITEMS{
-display: flex;
-flex-direction: column;
-border: 1px solid black;
-flex-wrap: wrap;
-background-image:src="ITEM-Background.jpg";
-border: 5px solid blueviolet;
-width: 100%;
-height: 100%;
-padding: 2%;
-
-
-}
-.FirstBracket{
-   margin: 10px;
+   overflow: hidden;
+   position: fixed;
+   top: 0;
    width: 100%;
- display: flex;
- 
- flex-direction: row;
-justify-content: space-evenly;
-
-
-
+   border-bottom: solid rgb(166, 165, 165);
+   
+  }
+  .navbar a {
+   float: left;
+   display: block;
+   color: black;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   margin-top: 15px;
+  
+  }
+  .navbar .right{
+   float: right;
+  }
+  .navbar a:hover {
+      background-color: #ddd;
+      color: black  ;
 }
-.SecondBracket{
-   margin: 10px;
+.navbar a.active{
+   background-color: #4caf50;
+   color: white;
+}
 
-   display: flex;
-   
-   flex-direction: row;
- justify-content: space-evenly;
+ .buttong:hover{
+   background-color: darkblue;
 
+ }
+ button:active{
+   background-color: green;
    
-   
-   }
-   .TripleBracket{
-      margin: 10px;
-      
-      
-      display: flex;
-      justify-content: space-evenly;
-      flex-direction: row;
-      
-      
-   
-      
-      }
-      .Produkt{
-         flex-direction: column;
-         color: white;
-         text-shadow: 5px solid black;
-         font-family: Georgia, 'Times New Roman', Times, serif;
-      }
-      .tek1{
+ }
+      .Copyright{
          display: flex;
-         flex-wrap: wrap;
          flex-direction: row;
-         justify-content: center;
-         align-content: center;
-         color: white;
-         font-family: Arial, Helvetica, sans-serif;
-         margin: 15px;
+
+       }.Fund{
+         display: flex;
+         justify-items: center;
+        
+       
+       }
+       .left{
+         justify-content: flex-start;
+       }
+       .right{
+         justify-content: flex-end;
          
+       }
+       .First{
+
+         display: flex;
+         
+         
+       }
+       .Produkt{
+        display: inline-block;
+        text-align: center;
+        margin: 5%;
+        color: white;
+        align-items: center;
+        border: 5px white solid ;
+        border-style:ridge;
+        border-radius: 5%;
+        background-color: rgb(225, 225, 225);
+        color: black;
       }
+      .First-bracket{
+        display: flex;
+        flex-wrap: wrap;
+        background-image: url(ITEM-Background.jpg);
+        justify-content: center;
+        
+       
+      }
+      .Header{
+        display: inline-block;
+        text-align: center;
+
+      }
+      h2{
+        color: white;
+      }
+      .Main{ 
+        display: flex;
+        background-image: url(ITEM-Background.jpg);
+       text-align: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+      
+        margin: 10%;
+        flex-wrap: wrap;
+        
+      
+        
+      }
+      .first-row{
+      
+        gap: 5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       background-image: url();
+       justify-content: center;
+       align-items: center;
+       
+       
+      }
+      .titell {
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+      }
+      .SEcond{
+        display: flex;
+        background-image: url(ITEM-Background.jpg);
+        text-align: center;
+        
+      }
+     
+       
  
          
       
       
          
          
-      }
+      
       
 
 
