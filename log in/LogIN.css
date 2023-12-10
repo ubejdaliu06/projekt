@@ -17,10 +17,11 @@ flex-direction: column;
 
 }
 .task{
-  border: 5px solid violet; 
+  border: 2px solid black; 
   border-radius: 7%;
   border-style:groove; 
   padding: 15%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 .UserName{
   display: flex;
