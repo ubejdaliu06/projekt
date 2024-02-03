@@ -2,35 +2,36 @@
     session_start();
 
     include("../home page/db.php");
+    include ("../home page/databaseConn.php");
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-        $Emri = $_POST['name'];
+        $Emri = $_POST['Emri'];
 
         $Mbiemri = $_POST['Mbiemri'];
-        $Email_Adress = $_POST['Email'];
-        $Username = $_POST['User'];
+        $Email_Adress = $_POST['Email_Adress'];
+        $Username = $_POST['Username'];
         $Password = $_POST['Password'];
-        $Birthdate = $_POST['Vitilindjes'];
-        $Sex = $_POST['Gjinia'];
+        $Birthdate = $_POST['Birthdate'];
+        $Sex = $_POST['Sex'];
         
 
         if(!empty($name) && !empty($surname) &&!empty($Email_Adress) &&!empty($Username)&&!empty($Password)&&!empty($Birthdate)&&!empty($Sex)){
             $query = "insert into user (Emri, Mbiemri, Email_Adress,Username, Password, Birthdate, Sex) values('$Emri', ' $Mbiemri', '$Email_Adress','$Username','$Password','$Birthdate','$Sex')";
 
-            if(mysqli_query($con, $query)) {
-
+            if(mysqli_query($conn, $query)) {
+         $Emri = $_POST['Emri'];
         $Surname = $_POST['Mbiemri'];
-        $Email_Address = $_POST['Email'];
-        $Username = $_POST['User'];
+        $Email_Address = $_POST['Email_Adress'];
+        $Username = $_POST['Username'];
         $pass = $_POST['Password'];
-        $Birthdate = $_POST['Vitilindjes'];
-        $Gjinia = $_POST['Gjinia'];
+        $Birthdate = $_POST['Birthdate'];
+        $Gjinia = $_POST['Sex'];
 
        
 
         if(!empty($email) && !empty($pass)){
-            $query = "insert into form (Name, Surname, Email_Address,Username,Password,Birthdate,Sex,) values('$Emri', '$Surname','$Email_Address','$Username', '$pass','$Birthdate','$Gjinia')";
+            $query = "insert into user (Name, Surname, Email_Address,Username,Password,Birthdate,Sex,) values('$Emri', '$Surname','$Email_Address','$Username', '$pass','$Birthdate','$Gjinia')";
 
             mysqli_query($con, $query);
 
@@ -88,12 +89,12 @@
 
 
 
-  <form onsubmit="validateForm()"  action="Register.php"  method="POST" >
+  <form onsubmit="validateForm()"   method="POST" >
 
   <div class="Register">
     <div class="Emri">
     <label for="name">Name</label>
-    <input type="text" placeholder="Name" id="Emri" name="name" required>
+    <input type="text" placeholder="Name" id="Emri" name="Emri" required>
     </div>
     <div class="Mbiemri">
     <label for="Mbiemri">Surname</label>
@@ -101,9 +102,12 @@
     </div>
 <div class="Email">
     <label for="Email">Email Address</label>
-    <input type="email" placeholder="Email" id="Email" name="Email" required>
+    <input type="email" placeholder="Email" id="Email" name="Email_Adress" required>
     </div>
-    
+    <div class="Email">
+    <label for="Username">Username</label>
+    <input type="text" placeholder="ex.Filan Fisteku" id="user" name="Username" required>
+    </div>
     <div class="Password">
       <label for="Password">Password</label>
       <input type="password" placeholder="Min. 8 Characters" id="password" name="Password">
@@ -115,7 +119,7 @@
    
         <div class = "Emri">
           <label for="Birthdate">Birthdate</label>
-          <input type="date" name="Vitilindjes">
+          <input type="date" name="Birthdate">
         </div>
     <div class="Gjinia">
     
@@ -124,16 +128,16 @@
       
 <div class="Perzgjidhje">
     <p>M</p>
-    <input type="radio" id="Mashkull" name="Gjinia" value="Mashkull">
+    <input type="radio" id="Mashkull" name="Sex" value="Mashkull">
     <p>W</p>
-    <input type="radio" id="Femer" name="Gjinia" value="Femer">
+    <input type="radio" id="Femer" name="Sex" value="Femer">
   </div>
   </div>
     
 
    
 
-    <input type="submit" onclick="validateForm()" class="Regjistrohu" value="Sign Up">
+    <input type="submit"  class="Regjistrohu" value="Sign Up">
 
  
   </div>
