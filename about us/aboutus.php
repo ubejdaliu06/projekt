@@ -37,10 +37,9 @@
                 <li><a href="../log in/Log in.php"><h3>Login</h3></a></li>
                 
                 <li><a href="../page of sell/PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
+                
                 <li><a href="../home page/projekt.php"><h3>Home Page</h3></a></li>
-                <li>
-           
-           </li>
+         
                 
                 </div>
         </div>

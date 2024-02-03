@@ -42,6 +42,10 @@ $vape = $p->getAllVape();
                 <li><a href="../log in/Log in.php"><h3>Login</h3></a></li>
                 
                 <li><a href="../page of sell/PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
+
+                <li><a href="../contact/contactus.php"><h3>Contact us</h3></a></li>
+
+                <li><a href="../about us/aboutus.php"><h3>About us</h3></a></li>
                 <li>
                   <?php 
                   
