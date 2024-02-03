@@ -17,7 +17,7 @@
   .Banner{
  margin-top: 8%;
    display: flex;
-   background-image: url();
+   background-image: url(Wallpaper.jpeg);
    margin-left: 20px;
    margin-right: 20px;
    color: red;
@@ -38,7 +38,7 @@
   }
   .first{
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     flex-wrap: wrap;
     padding-left: 5%;
     gap: 10%;
@@ -134,7 +134,7 @@
       .Main{ 
         
         flex-wrap: wrap;
-        background-image: url(ITEM-Background.jpg);
+        background-image: url();
        width: 100%;
         display: flex;
         align-content: center;
@@ -166,7 +166,7 @@
       }
       .SEcond{
         display: flex;
-        background-image: url(ITEM-Background.jpg);
+        background-image: url();
         flex-wrap: wrap;
         flex-direction: column;
         margin-top: 2%;
@@ -175,7 +175,7 @@
 
       }
       .third{
-        background-image: url(ITEM-Background.jpg);
+        background-image: url();
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
