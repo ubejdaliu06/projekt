@@ -17,7 +17,7 @@
   .Banner{
  margin-top: 8%;
    display: flex;
-   background-image: url();
+   background-image: url(Wallpaper.jpeg);
    margin-left: 20px;
    margin-right: 20px;
    color: red;
@@ -38,7 +38,7 @@
   }
   .first{
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     flex-wrap: wrap;
     padding-left: 5%;
     gap: 10%;
