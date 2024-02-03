@@ -113,6 +113,10 @@
         <input type="password" placeholder="Min. 8 Characters" id="confirm-password" name="confirm-password">
         </div>
    
+        <div class = "Emri">
+          <label for="Birthdate">Birthdate</label>
+          <input type="date" name="Vitilindjes">
+        </div>
     <div class="Gjinia">
     
     <label for="Gjinia">Sex</label>
