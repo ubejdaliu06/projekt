@@ -1,3 +1,12 @@
+@media screen and (max-width: 768px) {
+  body{
+     background-color: yellow;
+     
+     flex-wrap:wrap;
+  }
+ 
+  
+ }
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
