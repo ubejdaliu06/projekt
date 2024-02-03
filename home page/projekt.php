@@ -1,4 +1,5 @@
 <?php 
+
  include 'databaseConn.php';
  include_once 'VapeRepository.php'; 
  $p = new VapeRepository();
@@ -44,9 +45,11 @@ $vape = $p->getAllVape();
                 <li>
                   <?php 
                   
-                 
-                  if(isset($_SESSION['roli'])&&$_SESSION['roli']=="admin"){
+                  session_start();
+                  if(isset($_SESSION['roli'])){
+                    if($_SESSION['roli']=="admin"){
                       echo"<a href='Dashboard.php'><h3>Dashboard </h3></a> ";
+                    }
                   }
                  
                  require_once "databaseConn.php";

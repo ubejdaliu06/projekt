@@ -17,7 +17,16 @@ body {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.headeri{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.catalog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 h1 {
   text-align: center;
   color: #333;
@@ -45,6 +54,11 @@ h1 {
 
 .feedback-form {
   margin-top: 30px;
+}
+.ffff{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .dd{
   background-image:url(AdobeStock_277931111_Preview.jpeg);

@@ -10,7 +10,7 @@ session_start();
             $pass = $_POST['password'];
 
             if(!empty($Username) && !empty($pass)){
-                $query= "Select * From form where Username = '$Username' limit 1";
+                $query= "Select * From user where Username = '$Username' limit 1";
                 $result = mysqli_query($con, $query);
 
                 if($result){
@@ -20,11 +20,11 @@ session_start();
 
                         if($user_data['Password'] == $pass){
                             session_start();
-  $_SESSION['Username'] = $user_data['
-  Username'];
- $_SESSION['roli'] = $user_data['roli'];
- header("location: projekt.php");
-     die;
+                            $_SESSION['Username'] = $user_data['
+                            Username'];
+                          $_SESSION['roli'] = $user_data['roli'];
+                          header("location: projekt.php");
+                              die;
 
                         }
                     }
@@ -79,9 +79,9 @@ session_start();
     </h3>
   </div>
 
-  <form onsubmit=" validateForm()" method="POST" action="<?php  echo $_SERVER['PHP_SELF']; ?>">
+  <form onsubmit=" validateForm()" method="POST" >
 
-  <form onsubmit=" validateForm()" method="POST">
+
 
   
     
@@ -95,7 +95,7 @@ session_start();
 
       
 
-        <input name="name" itemid="UserName"  placeholder="Username" id="UserName" type="text" required>
+        <input name="Username" itemid="UserName"  placeholder="Username" id="UserName" type="text" required>
 
        
        </input>
@@ -128,7 +128,7 @@ session_start();
 </form>
   <div class="Register">
 
-    <a href="../Regjistrimi/Register.php"><button class="button-wr"> Register</button>
+    <a href="../Regjistrimi/Register.php"><button class="button-wr"> Sign up</button>
 
    
   </div>

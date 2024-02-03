@@ -51,9 +51,10 @@
 
 
 <!DOCTYPE html>
+<html lang="en">
 <head>
 
-  <meta charset="ilmi">
+  <meta charset="UTF-8">
   <meta name="Views" content="width=device-width, inital-scale=1">
   <title>Sign Up</title>
   <link rel="stylesheet" href="Register.css">
@@ -92,27 +93,24 @@
   <div class="Register">
     <div class="Emri">
     <label for="name">Name</label>
-    <input type="text" placeholder="ex. John" id="Emri" name="name" required>
+    <input type="text" placeholder="Name" id="Emri" name="name" required>
     </div>
     <div class="Mbiemri">
     <label for="Mbiemri">Surname</label>
-    <input type="text" placeholder="ex. Smith" id="Mbiemri" name="Mbiemri">
+    <input type="text" placeholder="Surname" id="Mbiemri" name="Mbiemri">
     </div>
 <div class="Email">
     <label for="Email">Email Address</label>
-    <input type="email" placeholder="abc123@....com" id="Email" name="Email" required>
+    <input type="email" placeholder="Email" id="Email" name="Email" required>
     </div>
-    <div class="User">
-      <label for="User">Username</label>
-      <input type="text" placeholder="ex.User12" id="User" name="User" required>
-      </div>
+    
     <div class="Password">
       <label for="Password">Password</label>
-      <input type="password" placeholder="Min 8 Characters" id="password" name="Password">
+      <input type="password" placeholder="Min. 8 Characters" id="password" name="Password">
       </div>
       <div class="Confirm Password">
         <label for="Password">Confirm Password</label>
-        <input type="password" placeholder="" id="confirm-password" name="confirm-password">
+        <input type="password" placeholder="Min. 8 Characters" id="confirm-password" name="confirm-password">
         </div>
    
     <div class="Gjinia">
@@ -184,7 +182,7 @@ let FemerRegex = /^[Femer]+$/;
 
 
 
-if( Emri = '' || !NameRegex.test(Name)){
+
 
 if( Emri.value.trim() = '' || !NameRegex.test(Name)){
 
@@ -250,14 +248,14 @@ if(AGE < 18){
 
 
 alert('Jeni Regjistruar Me Sukses!');
-}</script>
-
-
-</body>
-</html>
-
-alert('Jeni Loguar Me Sukses!');
 }
+
+
+
+
+
+  }
+
 </script>
 
 

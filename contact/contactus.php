@@ -48,23 +48,31 @@
 			<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Email: theGoatVape@gmail.com</p>
 			<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Phone: 044-481-136</p>
 			<div class="social-media">
+      <div class="ffff"></div>
       <div class="platform">
-					<img src="instagram.png" alt="Facebook">
+           <a href="https://www.instagram.com/"><img src="instagram.png" alt="Facebook">
 					<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Instagram</p>
-				</div>
+                    </a>
+                    </div>
 				<div class="platform">
-					<img src="facebook.png" alt="Facebook">
+					<a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook">
 					<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Facebook</p>
+                    </a>
 				</div>
 				<div class="platform">
-					<img src="twitter.png" alt="Twitter">
+					<a href="https://twitter.com/"><img src="twitter.png" alt="Twitter">
 					<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Twitter</p>
-						</div>
-			</div>
-	</div>
+                    </a>
+                    
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+	    
 	<form class="feedback-form">
 			<label for="name">Name:</label>
-			<input type="text"="name" namename">
+			<input type="text"id="name" name="name">
 			<label for="email">Email:</label>
 			<input type="email" id="email" name="email">
 			<label for="message">Message:</label>
