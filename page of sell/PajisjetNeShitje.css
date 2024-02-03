@@ -16,7 +16,7 @@
   }
 */
   .Banner{
- margin-top: 8%;
+ margin-top: 3%;
    display: flex;
    background-image: url(Wallpaper.jpeg);
    margin-left: 20px;
@@ -38,12 +38,13 @@
    
   }
   .first{
-    display: flex;
+    width: 100%;
+   display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    padding-left: 5%;
-    gap: 10%;
-   
+    justify-content: center;
+    margin-top: 5%;
+    gap: 15%;
   }
 
   .navbar a {
@@ -60,12 +61,12 @@
    float: right;
   }
   .navbar a:hover {
-      background-color: #ddd;
+      background-color: black;
       color: black  ;
 }
 .navbar a.active{
    background-color: #4caf50;
-   color: white;
+   color: black;
 }
 
  .buttong:hover{
@@ -80,11 +81,15 @@
          display: flex;
          flex-direction: row;
 
-       }.Fund{
+       }
+       .Fund{
          display: flex;
          justify-items: center;
         
-       
+       .hjr{display: flex;
+        flex-direction: column;
+
+       }
        }
        .left{
          justify-content: flex-start;
@@ -93,6 +98,50 @@
          justify-content: flex-end;
          
        }
+       .headerii{
+        width:100% ;
+        height: 60px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        color-scheme:initial;
+        border: 1px solid  ;
+        border-radius: 10px;
+       
+       }
+       .menu1{
+        height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            color: black;
+            gap: 50px;
+            list-style: none;
+            
+            
+       }
+      .menu1>li>a{
+        color: black;
+        position: relative;
+        text-decoration: none;
+       }
+       li>a:after{
+        content:"";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: black;
+        transform-origin: bottom right;
+        transition:transform 0.3s ease-out;
+      
+       }
+       li>a:hover:after{
+        transform: scaleX(1);
+        transform-origin: bottom left;
+       }
       
 
 
@@ -100,27 +149,28 @@
        
        .Produkt{
         display: inline-block;
-        
-        margin: 5%;
+        align-items: center;
+       
         text-align: center;
         align-items: center;
-        border: 5px white solid ;
-        border-style:ridge;
-        border-radius: 5%;
+       
+        border-radius: 56%;
        
         
         
       }
       p{
-        color: white;
+        color: black;
       }
       .First-bracket{
         width: 100%;
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        
         flex-direction: column;
         justify-content: center;
-        align-content: center;
+        align-items: center;
+       
         
        
       }
@@ -130,29 +180,44 @@
 
       }
       h2{
-        color: white;
+        color: black;
       }
       .Main{ 
-        
-        flex-wrap: wrap;
-        background-image: url();
-       width: 100%;
         display: flex;
+        flex-wrap: wrap;
+        gap: 15%;
+     
+        
         align-content: center;
-        justify-content: center;
-        flex-direction: column;
+        
+        flex-direction:column;
         margin-top: 5%;
       
-        flex-wrap: wrap;
+       
         
       }
-      .First-row{
+      .first-row{
+      
         display: flex;
         flex-direction: row;
         align-items: center;
         width: 100%;
-        padding: 5%;
-        padding-left: 5%;
+        margin-top: 5%;
+        gap: 5%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      
+        
+      }
+      .First-row{
+      
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-top: 5%;
+        gap: 5%;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -176,7 +241,7 @@
 
       }
       .third{
-        background-image: url();
+       
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;

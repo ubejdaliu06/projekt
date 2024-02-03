@@ -22,7 +22,7 @@
     gap: 2%;
 }
    .about-section {
- display: flex;
+  display: flex;
     margin: auto;
     justify-content: flex-start;
     text-align: center;
@@ -30,6 +30,7 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 4%;
 
 }
 .our{
@@ -75,6 +76,65 @@ justify-content: center;}
     justify-content: center;
     flex-direction: row;
 
+   }
+   .dd{
+    background-image:url(AdobeStock_277931111_Preview.jpeg);
+    color: red;
+    display: flex;
+    margin: 0.04%;
+    justify-content: center; 
+    padding: 0.04%;
+    margin: 2%;
+    border-radius: 9px;
+   
+  }
+  .headerii{
+  width:100% ;
+  height: 60px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  color-scheme:initial;
+  border: 1px solid  ;
+  border-radius: 10px;
+  
+  }
+  .menu1{
+  height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    gap: 50px;
+    list-style: none;
+    
+    
+  }
+  .menu1>li>a{
+  color: black;
+  position: relative;
+  text-decoration: none;
+  }
+  li>a:after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition:transform 0.3s ease-out;
+  
+  }
+  li>a:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  }
+   .end{
+    margin: 5%;
+    justify-content: center;
    }
 
    .dd{

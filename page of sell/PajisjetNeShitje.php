@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> e469f033cdcaf77e9eea4ca4370861d0022d2564
 <?php
   
 include "../home page/databaseConn.php";
@@ -14,7 +10,9 @@ $vape = $p->getAllVape();
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home Page</title>
+<meta charset="utf-8">
+<meta name="Views" content="width=device-width, inital-scale=1">
+<title>SHOP</title>
 <link rel="stylesheet" href="PajisjetNeShitje.css">
 </head>
 <body>
@@ -54,28 +52,7 @@ $vape = $p->getAllVape();
           <div class="Produkt"><img src="shisha 2.png" width="250px" height="250px" alt="shisha2">
             <p>Black shisha 79.99$</p>
           </div>
-         <?php foreach ($vape as $shisha){?>
-<<<<<<< HEAD
-
-=======
->>>>>>> e469f033cdcaf77e9eea4ca4370861d0022d2564
-          <div class="Produkt">
-            <img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
-            
-          <p> <?php echo $shisha['pershkrim']?></p>
-<<<<<<< HEAD
-
-          <div class="Produkt"><img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
-            
-          <p> <?php echo $shisha['Pershkrim']?></p>
-
-=======
-          <div class="Produkt"><img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
-            
-          <p> <?php echo $shisha['Pershkrim']?></p>
->>>>>>> e469f033cdcaf77e9eea4ca4370861d0022d2564
-          </div>
-          <?php } ?>
+        
          
            
           
@@ -119,6 +96,16 @@ $vape = $p->getAllVape();
         </div>
         <div class="Produkt"><img src="u3-removebg-preview.png" width="250px" height="250px" alt="vape 3">
           <p> Sigelei Smart Vape    15.99$</p>
+        </div>
+        <?php foreach ($vape as $vap) { ?>
+    <div class="Produkt">
+       <img src="<?php echo $vap['img']?> " alt="vapes" width="250px" height="250px">
+  <p><?php echo $vap['Emri']?></p> <p><?php echo $vap['Cmimi']?></p>
+           </div>
+            
+           </div>
+           <?php } ?>
+
         </div>
       </div>
     </div>

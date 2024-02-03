@@ -1,41 +1,9 @@
 <?php
 session_start();
 
-<<<<<<< HEAD
+
+
     include("../home page/db.php");
-  $Username = "";
-  $pass = "";
-        if($_SERVER['REQUEST_METHOD'] == "POST"){
-            $Username = $_POST['Username'];
-            $pass = $_POST['password'];
-
-            if(!empty($Username) && !empty($pass)){
-              $query = "Select * From user where Username = '$Username' limit 1";
-              $res = mysqli_query($con,$query);
-      
-              if($res){
-
-              if ($res && mysqli_num_rows($res) > 0) {
-                  $user_data =mysqli_fetch_assoc($res);
-      
-                  if ($user_data['password'] == $pass) {
-                      $_SESSION['Username'] = $user_data['Username'];
-                      $_SESSION['roli'] = $user_data['roli'];
-                      header("location: ../home page/projekt.php");
-                      die;
-
-                    }
-                }
-              }
-            echo "<script type='text/javascript'> alert('Wrong email or password')</script>";
-        
-              }else{
-            echo "<script type='text/javascript'> alert('Wrong email or password')</script>";
-        }
-
-      }
-=======
-    include("db.php");
 
         if($_SERVER['REQUEST_METHOD'] == "POST"){
             $Username = $_POST['name'];
@@ -68,7 +36,7 @@ session_start();
             }
 
         }
->>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
+
 
 
 ?>
@@ -77,10 +45,9 @@ session_start();
 
 
 <!DOCTYPE html>
-<<<<<<< HEAD
+
 <html lang="en">
-=======
->>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
+
 <head>
 
   <meta charset="ilmi">
@@ -94,15 +61,15 @@ session_start();
 </head>
 <body>
   <div class="navbar">
-<<<<<<< HEAD
+
     <a href="../about us/aboutus.php">About Us</a>
     <a href="../home page/projekt.php">Home Page</a>
-    <a href="../page of sell/PajisjetNeShitje.php">Selling Page</a>
-=======
-    <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\about us\aboutus.html">About Us</a>
-    <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\home page\projekt.html">Home Page</a>
-    <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\page of sell\PajisjetNeShitje.html">Selling Page</a>
->>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
+    <a href="../page of sell/PajisjetNeShitje1.php">Selling Page</a>
+
+   
+  
+  
+
    
 </div>
 
@@ -111,11 +78,11 @@ session_start();
       Nicotine is an Addictive chemical.!
     </h3>
   </div>
-<<<<<<< HEAD
+
   <form onsubmit=" validateForm()" method="POST" action="<?php  echo $_SERVER['PHP_SELF']; ?>">
-=======
+
   <form onsubmit=" validateForm()" method="POST">
->>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
+
   
     
     <div class="h2">
@@ -124,12 +91,12 @@ session_start();
       
       <div class="task">
       <div class="UserName">
-        <label for="name"><div class="UserName">UserName:</div></label>
-<<<<<<< HEAD
-        <input name="Username" itemid="Username"  placeholder=" ex. FilanFisteku1" id="UserName" type="text" required>
-=======
-        <input name="name" itemid="UserName"  placeholder=" ex. FilanFisteku1" id="UserName" type="text" required>
->>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
+        <label for="name" style="margin: 5px;"><div class="UserName">UserName:</div></label>
+
+      
+
+        <input name="name" itemid="UserName"  placeholder="Username" id="UserName" type="text" required>
+
        
        </input>
         
@@ -149,36 +116,34 @@ session_start();
   <div class="passwordError" id="passwordError"></div>
 
   <div class="signup">
-<<<<<<< HEAD
-  <a href="../home page/projekt.php"></label> <button type="button" name ="logIN" > <div class="button"> <label for="signup" name='login'>Log In </label></div></button>
-=======
-  <a href=""></label> <button type="button" name ="logIN" onclick="validateForm()"> <div class="button"> <label for="signup" name='login'>Log In </label></div></button>
->>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
+
+  <!-- <a href="../home page/projekt.php"></label> <button type="button" name ="logIN" > <div class="button">-->
+    <label for="signup" name='login'>Log In </label></div></button>
+  <a href="../home page/projekt.php"></label> <button type="button" name ="logIN" onclick="validateForm()"> <div class="button"> <label for="signup" name='login'>Log In </label></div></button>
+
   </a>
 </div>
 </div>
 </div>
 </form>
   <div class="Register">
-<<<<<<< HEAD
+
     <a href="../Regjistrimi/Register.php"><button class="button-wr"> Register</button>
-=======
-    <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\Regjistrimi\Register.html"><button class="button-wr"> Register</button>
->>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
-    </a>
+
+   
   </div>
 
   
-<div class="Copyright">
+ <!--<div class="Copyright">
   <h3 id=" left">Copyright 2023 The Goat Vape Company. All rights reserved.  </h3>
   <h3 id="rights">Designed by Ubejd and Ilmi</h3>
 </div>
 <hr>
 
 
-<div class="Fund">
+  <div class="Fund">
 <h3>Not for Sale for Minors - Products sold on this site may contain nicotine which is a highly addictive substance. California Proposition 65 - WARNING: This product can expose you to chemicals including nicotine, which is known to the State of California to cause birth defects or other reproductive harm. For more information, go to Proposition 65 Warnings Website. Products sold on this site is intended for adult smokers. You must be of legal smoking age in your territory to purchase products. Please consult your physician before use. E-Juice on our site may contain Propylene Glycol and/or Vegetable Glycerin, Nicotine and Flavorings. Our products may be poisonous if orally ingested. FDA DISCLAIMER: The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. For their protection, please keep out of reach of children and pets. Read our terms and conditions page before purchasing our products. Use All Products On This Site At Your Own Risk!</h3>
-</div>
+</div>-->
 
     
   <script>
@@ -190,11 +155,11 @@ function validateForm(){
   
   
 
-<<<<<<< HEAD
+
 let UserNameRegex = /^[a-z A-Z]$/;
-=======
+
 let UserNameRegex = /^[a-z A-Z]+[0-9]$/;
->>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
+
 let passwordRegex = /^[a-z A-Z]+[0-9]+$/;
 
 if(!UserNameRegex.test(UserName)){
@@ -218,7 +183,6 @@ alert('Your loged in with Success');
 
 
 </body>
-<<<<<<< HEAD
+
 </html>
-=======
->>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
+

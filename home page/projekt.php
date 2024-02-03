@@ -1,7 +1,12 @@
-
+<?php 
+ include 'databaseConn.php';
+ include_once 'VapeRepository.php'; 
+ $p = new VapeRepository();
+$vape = $p->getAllVape();
+?>
 <!DOCTYPE html>
 <head>
-<meta charset="ubejd">
+<meta charset="utf-8">
 <meta name="Views" content="width=device-width, inital-scale=1">
 <title>The Goat Vape</title>
 <link rel="stylesheet" href="projeckt.css">
@@ -27,22 +32,23 @@
             </div>
         </div>
 
-                <div class="headerii">
-                    <div class="menu1">
+        <div class="headerii">
+        <div class="menu1">
              
           
                 <li><a href="/"><h3>Search</h3></a></li>
                
                 <li><a href="../log in/Log in.php"><h3>Login</h3></a></li>
                 
-                <li><a href="../page of sell/PajisjetNeShitje.php"><h3>Shop</h3></a></li>
-
-                  <?php  session_start();
-                 if (isset($_SESSION['roli'])) {
-                  if($_SESSION['roli']=="admin"){
-                      echo"<li><a href='Dashboard.php'><h3>Dashboard </h3></a> </li>";
+                <li><a href="../page of sell/PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
+                <li>
+                  <?php 
+                  
+                 
+                  if(isset($_SESSION['roli'])&&$_SESSION['roli']=="admin"){
+                      echo"<a href='Dashboard.php'><h3>Dashboard </h3></a> ";
                   }
-                 }
+                 
                  require_once "databaseConn.php";
                  include_once "VapeRepository.php";
          
@@ -50,19 +56,20 @@
          $vape= $strep->getAllVape();
          
          ?>
-           
+           </li>
                 
+                </div>
+        </div>
+    </div>
+
+
+    
                  
               
              
             
         
-    </div>
-
-
-          
-            </div> 
-        </div> 
+   
        
         
  

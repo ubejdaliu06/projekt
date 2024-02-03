@@ -9,23 +9,42 @@
 </head>
 <body>
 
-     
-            <div class="dd">
-            <h3>WARNING: This product contains nicotine. Nicotine is an addictive chemical.</h3>
-            
-        </div> 
+<div class="main1">
+    <div class="main" >
+ 
+        <div class="dd">
+        <h3>WARNING: This product contains nicotine. Nicotine is an addictive chemical.</h3>
         
-            <div class="menu">
-              
-            
-                <div class="headeri">
-                    <img src="Download1-removebg-preview.png"  >
+    </div> 
+    
+        <div class="menu">
+          
+        
+            <div class="headeri">
+                <img src="Download1-removebg-preview.png" height="180px" >
+                <div class="catalog"> 
+                    <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">The Goat Vape</h2>
                 </div>
-                    <div class="catalog"> 
-                        <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">The Goat Vape</h1>
-                    </div>
-             
             </div>
+        </div>
+
+        <div class="headerii">
+        <div class="menu1">
+             
+          
+                <li><a href="/"><h3>Search</h3></a></li>
+               
+                <li><a href="../log in/Log in.php"><h3>Login</h3></a></li>
+                
+                <li><a href="../page of sell/PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
+                <li><a href="../home page/projekt.php"><h3>Home Page</h3></a></li>
+                <li>
+           
+           </li>
+                
+                </div>
+        </div>
+    </div>
             <div class="home">
                
                 <h4>About us</h4>
@@ -102,7 +121,7 @@
             </div>
             
             
-            <div class="end" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <div class="end" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" style="margin: 5;">
                 <h4>Not for Sale for Minors - Products sold on this site may contain nicotine which is a highly addictive substance. California Proposition 65 - WARNING: This product can expose you to chemicals including nicotine, which is known to the State of California to cause birth defects or other reproductive harm. For more information, go to Proposition 65 Warnings Website. Products sold on this site is intended for adult smokers. You must be of legal smoking age in your territory to purchase products. Please consult your physician before use. E-Juice on our site may contain Propylene Glycol and/or Vegetable Glycerin, Nicotine and Flavorings. Our products may be poisonous if orally ingested. FDA DISCLAIMER: The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. For their protection, please keep out of reach of children and pets. Read our terms and conditions page before purchasing our products. Use All Products On This Site At Your Own Risk!</h4>
             </div>
         </div>
