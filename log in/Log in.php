@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+<<<<<<< HEAD
     include("../home page/db.php");
   $Username = "";
   $pass = "";
@@ -33,6 +34,41 @@ session_start();
         }
 
       }
+=======
+    include("db.php");
+
+        if($_SERVER['REQUEST_METHOD'] == "POST"){
+            $Username = $_POST['name'];
+            $pass = $_POST['password'];
+
+            if(!empty($Username) && !empty($pass)){
+                $query= "Select * From form where Username = '$Username' limit 1";
+                $result = mysqli_query($con, $query);
+
+                if($result){
+
+                    if($result && mysqli_num_rows($result) > 0){
+                        $user_data = mysqli_fetch_assoc($result);
+
+                        if($user_data['Password'] == $pass){
+                            session_start();
+  $_SESSION['Username'] = $user_data['
+  Username'];
+ $_SESSION['roli'] = $user_data['roli'];
+ header("location: projekt.php");
+     die;
+
+                        }
+                    }
+                }
+                echo "<script type='text/javascript'> alert('Wrong username or password')</script>";
+            }
+            else{
+                echo "<script type='text/javascript'> alert('Wrong username or password')</script>";
+            }
+
+        }
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
 
 
 ?>
@@ -41,7 +77,10 @@ session_start();
 
 
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
+=======
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
 <head>
 
   <meta charset="ilmi">
@@ -55,9 +94,15 @@ session_start();
 </head>
 <body>
   <div class="navbar">
+<<<<<<< HEAD
     <a href="../about us/aboutus.php">About Us</a>
     <a href="../home page/projekt.php">Home Page</a>
     <a href="../page of sell/PajisjetNeShitje.php">Selling Page</a>
+=======
+    <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\about us\aboutus.html">About Us</a>
+    <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\home page\projekt.html">Home Page</a>
+    <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\page of sell\PajisjetNeShitje.html">Selling Page</a>
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
    
 </div>
 
@@ -66,7 +111,11 @@ session_start();
       Nicotine is an Addictive chemical.!
     </h3>
   </div>
+<<<<<<< HEAD
   <form onsubmit=" validateForm()" method="POST" action="<?php  echo $_SERVER['PHP_SELF']; ?>">
+=======
+  <form onsubmit=" validateForm()" method="POST">
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
   
     
     <div class="h2">
@@ -76,7 +125,11 @@ session_start();
       <div class="task">
       <div class="UserName">
         <label for="name"><div class="UserName">UserName:</div></label>
+<<<<<<< HEAD
         <input name="Username" itemid="Username"  placeholder=" ex. FilanFisteku1" id="UserName" type="text" required>
+=======
+        <input name="name" itemid="UserName"  placeholder=" ex. FilanFisteku1" id="UserName" type="text" required>
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
        
        </input>
         
@@ -96,14 +149,22 @@ session_start();
   <div class="passwordError" id="passwordError"></div>
 
   <div class="signup">
+<<<<<<< HEAD
   <a href="../home page/projekt.php"></label> <button type="button" name ="logIN" > <div class="button"> <label for="signup" name='login'>Log In </label></div></button>
+=======
+  <a href=""></label> <button type="button" name ="logIN" onclick="validateForm()"> <div class="button"> <label for="signup" name='login'>Log In </label></div></button>
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
   </a>
 </div>
 </div>
 </div>
 </form>
   <div class="Register">
+<<<<<<< HEAD
     <a href="../Regjistrimi/Register.php"><button class="button-wr"> Register</button>
+=======
+    <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\Regjistrimi\Register.html"><button class="button-wr"> Register</button>
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
     </a>
   </div>
 
@@ -129,7 +190,11 @@ function validateForm(){
   
   
 
+<<<<<<< HEAD
 let UserNameRegex = /^[a-z A-Z]$/;
+=======
+let UserNameRegex = /^[a-z A-Z]+[0-9]$/;
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
 let passwordRegex = /^[a-z A-Z]+[0-9]+$/;
 
 if(!UserNameRegex.test(UserName)){
@@ -153,4 +218,7 @@ alert('Your loged in with Success');
 
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3

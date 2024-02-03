@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
   
 include "../home page/databaseConn.php";
@@ -6,6 +7,9 @@ include_once "../home page/VapeRepository.php";
 $p = new VapeRepository();
 $vape = $p->getAllVape();
 ?>
+=======
+ 
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +17,7 @@ $vape = $p->getAllVape();
 <link rel="stylesheet" href="PajisjetNeShitje.css">
 </head>
 <body>
+<<<<<<< HEAD
  
     <div class="navbar">
         <a href="..\about us\aboutus.php">About Us</a>
@@ -20,6 +25,14 @@ $vape = $p->getAllVape();
         <a  
         id="right" href="..log in\Log in.html">Login</a>
         
+=======
+
+    <div class="navbar">
+        <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\about us\aboutus.html">About Us</a>
+        <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\home page\projekt.html">Home Page</a>
+        <a  
+        id="right" href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\log in\Log in.html">Login</a>
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
        
     </div>
     <div class="Banner">
@@ -42,10 +55,16 @@ $vape = $p->getAllVape();
             <p>Black shisha 79.99$</p>
           </div>
          <?php foreach ($vape as $shisha){?>
+<<<<<<< HEAD
           <div class="Produkt">
             <img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
             
           <p> <?php echo $shisha['pershkrim']?></p>
+=======
+          <div class="Produkt"><img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
+            
+          <p> <?php echo $shisha['Pershkrim']?></p>
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
           </div>
           <?php } ?>
          

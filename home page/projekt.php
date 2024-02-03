@@ -36,7 +36,7 @@
                 <li><a href="../log in/Log in.php"><h3>Login</h3></a></li>
                 
                 <li><a href="../page of sell/PajisjetNeShitje.php"><h3>Shop</h3></a></li>
-                <li><a href='Dashboard.php'><h3>Dashboard </h3></a> </li
+
                   <?php  session_start();
                  if (isset($_SESSION['roli'])) {
                   if($_SESSION['roli']=="admin"){

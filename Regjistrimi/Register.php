@@ -6,6 +6,7 @@
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
         $Emri = $_POST['name'];
+<<<<<<< HEAD
         $Mbiemri = $_POST['Mbiemri'];
         $Email_Adress = $_POST['Email'];
         $Username = $_POST['User'];
@@ -18,6 +19,21 @@
             $query = "insert into user (Emri, Mbiemri, Email_Adress,Username, Password, Birthdate, Sex) values('$Emri', ' $Mbiemri', '$Email_Adress','$Username','$Password','$Birthdate','$Sex')";
 
             if(mysqli_query($con, $query)) {
+=======
+        $Surname = $_POST['Mbiemri'];
+        $Email_Address = $_POST['Email'];
+        $Username = $_POST['User'];
+        $pass = $_POST['Password'];
+        $Birthdate = $_POST['Vitilindjes'];
+        $Gjinia = $_POST['Gjinia'];
+
+       
+
+        if(!empty($email) && !empty($pass)){
+            $query = "insert into form (Name, Surname, Email_Address,Username,Password,Birthdate,Sex,) values('$Emri', '$Surname','$Email_Address','$Username', '$pass','$Birthdate','$Gjinia')";
+
+            mysqli_query($con, $query);
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
             echo "<script type='text/javascript'> alert('Successfully Register')</script>";
         }
         else{
@@ -25,9 +41,15 @@
         }
 
     }
+<<<<<<< HEAD
   }
 ?>
 
+=======
+?>
+
+
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
 <!DOCTYPE html>
 <head>
 
@@ -37,12 +59,20 @@
   <link rel="stylesheet" href="Register.css">
  
 
+<<<<<<< HEAD
 <script src="Register.js"></script>
+=======
+
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
 
 </head>
 <body>
   <div class="navbar">
+<<<<<<< HEAD
     <a href="../log in/Log in.php">Log In</a>
+=======
+    <a href="C:\Users\ilmia\Desktop\ubejd\Detyre\projekt\log in\Log in.html">Log In</a>
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
    
 </div>
   <div class="Banner">
@@ -59,7 +89,11 @@
   <h3>Create your account by filling out the information below.</h3>
 </div>
 
+<<<<<<< HEAD
   <form onsubmit="validateForm()">
+=======
+  <form onsubmit="validateForm()" method="POST">
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
   <div class="Register">
     <div class="Emri">
     <label for="name">Name</label>
@@ -102,7 +136,11 @@
   </div>
   </div>
     
+<<<<<<< HEAD
     <input type="submit" onclick="" class="Regjistrohu" value="Sign Up">
+=======
+    <input type="submit" onclick="validateForm()" class="Regjistrohu" value="Sign Up">
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
  
   </div>
 
@@ -122,6 +160,7 @@
     
   
 <script>
+<<<<<<< HEAD
 function validateForm(){
   let UserName = document.getElementById('User').value.trim();
   let Name = document.getElementById('Emri').value.trim();
@@ -135,6 +174,22 @@ function validateForm(){
   
 
   let Vitilindjes = document.getElementById('Vitilindjes').value;
+=======
+  
+function validateForm(){
+  let UserName = document.getElementById('User');
+  let Name = document.getElementById('Emri');
+  let Surname = document.getElementById('Mbiemri');
+  let Email = document.getElementById('Email');
+  let Password = document.getElementById('password');
+  let confirmPassword = document.getElementById('confirm-password');
+  let Mashkull = document.getElementById('Mashkull');
+  let Femer = document.getElementById('Femer');
+
+  
+
+  let Vitilindjes = document.getElementById('Vitilindjes');
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
  
 
 let UserNameRegex = /^[a-z A-Z]+[0-9]+$/;
@@ -146,12 +201,20 @@ let MashkullRegex = /^[Mashkull]+$/;
 let FemerRegex = /^[Femer]+$/;
 
 
+<<<<<<< HEAD
 if( Emri = '' || !NameRegex.test(Name)){
+=======
+if( Emri.value.trim() = '' || !NameRegex.test(Name)){
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
   alert('This Name isnt valid!');
   return;
 }
 if(!UserNameRegex.test(UserName)){
+<<<<<<< HEAD
   alert('This UserName isnt valid (include Numbers)');
+=======
+  alert('This UserName isnt valid (inlcude Numbers)');
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
   return;
 }
 
@@ -179,19 +242,42 @@ if(MashkullRegex != Mashkull){
   }
   return;
 }
+<<<<<<< HEAD
 let dob = new Date(Vitilindjes);
 let age = Math.floor((Date.now() - dob.getTime()) / (1000 * 60 * 60 * 24 * 365));
 if (age < 18) {
     alert('You must be 18 years old!');
     return;
   }
+=======
+const today = new Date();
+if(Vitilindjes != null){
+  alert('Choose your Birthdate!');
+}else{
+const AGE = Vitilindjes - today;
+}
+
+if(AGE < 18){
+  alert('You must be 18 years old!');
+  return;
+}
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
 
 
 
 
+<<<<<<< HEAD
 alert('Jeni Regjistruar Me Sukses!');
 }</script>
 
 
 </body>
 </html>
+=======
+alert('Jeni Loguar Me Sukses!');
+}
+</script>
+
+
+</body>
+>>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
