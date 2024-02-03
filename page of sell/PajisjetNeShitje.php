@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> e469f033cdcaf77e9eea4ca4370861d0022d2564
 <?php
   
 include "../home page/databaseConn.php";
@@ -18,10 +21,10 @@ $vape = $p->getAllVape();
 
  
     <div class="navbar">
-        <a href="..\about us\aboutus.php">About Us</a>
-        <a href="..\home page\projekt.php">Home Page</a>
+        <a href="../about us/aboutus.php">About Us</a>
+        <a href="../home page/projekt.php">Home Page</a>
         <a  
-        id="right" href="..log in\Log in.html">Login</a>
+        id="right" href="../log in/Log in.php">Login</a>
         
 
 
@@ -52,16 +55,25 @@ $vape = $p->getAllVape();
             <p>Black shisha 79.99$</p>
           </div>
          <?php foreach ($vape as $shisha){?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> e469f033cdcaf77e9eea4ca4370861d0022d2564
           <div class="Produkt">
             <img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
             
           <p> <?php echo $shisha['pershkrim']?></p>
+<<<<<<< HEAD
 
           <div class="Produkt"><img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
             
           <p> <?php echo $shisha['Pershkrim']?></p>
 
+=======
+          <div class="Produkt"><img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
+            
+          <p> <?php echo $shisha['Pershkrim']?></p>
+>>>>>>> e469f033cdcaf77e9eea4ca4370861d0022d2564
           </div>
           <?php } ?>
          

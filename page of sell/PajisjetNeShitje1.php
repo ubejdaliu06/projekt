@@ -1,4 +1,11 @@
- 
+<?php
+  
+  include "../home page/databaseConn.php";
+  include_once "../home page/VapeRepository.php";
+  
+  $p = new VapeRepository();
+  $vape = $p->getAllVape();
+  ?>
 <!DOCTYPE html>
 <html>
 <head>
