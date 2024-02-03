@@ -32,6 +32,8 @@
        <li><a href="../log in/Log in.php"><h3>Login</h3></a></li>
                 
        <li><a href="../about us/aboutus.php"><h3>About us</h3></a></li>
+       
+       <li><a href="../best deals/deals.php"><h3>Best deals</h3></a></li>
         </div>
         </div>
         </div>

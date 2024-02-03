@@ -63,6 +63,7 @@ session_start();
     <a href="../about us/aboutus.php">About Us</a>
     <a href="../home page/projekt.php">Home Page</a>
     <a href="../page of sell/PajisjetNeShitje1.php">Selling Page</a>
+    <a href="../contact/contactus.php">Contact us</a>
 
    
   
