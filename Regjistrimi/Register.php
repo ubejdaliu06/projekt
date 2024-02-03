@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include("db.php");
+    include("../home page/db.php");
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
