@@ -86,9 +86,9 @@
 
 
 
-  <form onsubmit="validateForm()">
 
-  <form onsubmit="validateForm()" method="POST">
+
+  <form onsubmit="validateForm()"  action="Register.php"  method="POST" >
 
   <div class="Register">
     <div class="Emri">
@@ -113,6 +113,10 @@
         <input type="password" placeholder="Min. 8 Characters" id="confirm-password" name="confirm-password">
         </div>
    
+        <div class = "Emri">
+          <label for="Birthdate">Birthdate</label>
+          <input type="date" name="Vitilindjes">
+        </div>
     <div class="Gjinia">
     
     <label for="Gjinia">Sex</label>
