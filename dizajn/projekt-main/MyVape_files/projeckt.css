@@ -1,0 +1,121 @@
+
+
+body{
+    width: 100%;
+   
+ background-position: center;
+ background-size: cover;
+ height: 109vh;
+}
+.p{
+ 
+   border: 2px solid black;font-weight: bolder;
+  margin: 1%;
+  
+  padding-left: 20px;
+ 
+}
+.dd{
+    background-image:url(AdobeStock_277931111_Preview.jpeg);
+    color: red;
+    display: flex;
+    margin: 0.04%;
+    justify-content: center; 
+    padding: 0.04%;
+}
+.header {
+  
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    
+}
+.dd3{
+    border: 1px solid black;font-weight: bolder;
+}
+
+.headeri{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fotografit{
+   
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+   .rubrika{
+  
+    justify-content: space-evenly;
+
+   }
+  
+
+   .bgfoto{
+    display: flex;
+    justify-content: end;
+   
+   }
+   .latestvideo{
+    display: flex;
+    justify-content: flex-end;
+   
+   }
+  .permifooter{ 
+    display: flex;
+    justify-content: space-between;
+  }
+   
+
+
+  
+   
+   ol{ 
+    
+    
+    border: 3px solid black;
+    display: flex;
+    justify-content: space-evenly;
+
+   }
+   ol >li{
+    list-style: none;
+
+   }
+   ol > li > a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+
+   }
+   ol > li > a:hover{
+    color: blue;
+   
+}
+
+.latestvideo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-ends;
+}
+.fundi{
+    display: flex;
+    flex-direction: row;
+
+}
+.f{
+    border: 5px solid black;
+}
+.ff{
+    display: flex;
+
+}
+p>.ff{
+    flex-direction: column;
+}
