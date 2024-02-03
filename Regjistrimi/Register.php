@@ -86,9 +86,9 @@
 
 
 
-  <form onsubmit="validateForm()">
 
-  <form onsubmit="validateForm()" method="POST">
+
+  <form onsubmit="validateForm()"  action="Register.php"  method="POST" >
 
   <div class="Register">
     <div class="Emri">
