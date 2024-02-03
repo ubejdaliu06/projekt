@@ -33,9 +33,19 @@
           <div class="Produkt"><img src="shisha 2.png" width="250px" height="250px" alt="shisha2">
             <p>Black shisha 79.99$</p>
           </div>
-          <div class="Produkt"><img src="shisha 3.png" width="250px" height="250px" alt="shisha 3">
-            <p> Exclusive Shisha 87.99$</p>
+         <?php foreach ($vape as $shisha){?>
+          <div class="Produkt"><img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
+            
+          <p> <?php echo $shisha['Pershkrim']?></p>
           </div>
+          <?php } ?>
+         
+           
+          
+
+
+
+
 
         </div>
         

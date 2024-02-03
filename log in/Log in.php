@@ -1,3 +1,46 @@
+<?php
+session_start();
+
+    include("db.php");
+
+        if($_SERVER['REQUEST_METHOD'] == "POST"){
+            $Username = $_POST['name'];
+            $pass = $_POST['password'];
+
+            if(!empty($Username) && !empty($pass)){
+                $query= "Select * From form where Username = '$Username' limit 1";
+                $result = mysqli_query($con, $query);
+
+                if($result){
+
+                    if($result && mysqli_num_rows($result) > 0){
+                        $user_data = mysqli_fetch_assoc($result);
+
+                        if($user_data['Password'] == $pass){
+                            session_start();
+  $_SESSION['Username'] = $user_data['
+  Username'];
+ $_SESSION['roli'] = $user_data['roli'];
+ header("location: projekt.php");
+     die;
+
+                        }
+                    }
+                }
+                echo "<script type='text/javascript'> alert('Wrong username or password')</script>";
+            }
+            else{
+                echo "<script type='text/javascript'> alert('Wrong username or password')</script>";
+            }
+
+        }
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <head>
 
@@ -7,7 +50,7 @@
   <link rel="stylesheet" href="LogIN.css">
  
 
-<script src="Login.js"></script>
+
 
 </head>
 <body>
@@ -23,7 +66,7 @@
       Nicotine is an Addictive chemical.!
     </h3>
   </div>
-  <form onsubmit="return validateForm()">
+  <form onsubmit=" validateForm()" method="POST">
   
     
     <div class="h2">
@@ -53,7 +96,7 @@
   <div class="passwordError" id="passwordError"></div>
 
   <div class="signup">
-  <a href=""></label> <button type="button" onclick="validateForm()"> <div class="button"> <label for="signup">Log In </label></div></button>
+  <a href=""></label> <button type="button" name ="logIN" onclick="validateForm()"> <div class="button"> <label for="signup" name='login'>Log In </label></div></button>
   </a>
 </div>
 </div>
@@ -77,7 +120,34 @@
 </div>
 
     
+  <script>
+    
+function validateForm(){
+  let UserName = document.getElementById('UserName');
+  let password = document.getElementById('password');
   
+  
+  
+
+let UserNameRegex = /^[a-z A-Z]+[0-9]$/;
+let passwordRegex = /^[a-z A-Z]+[0-9]+$/;
+
+if(!UserNameRegex.test(UserName)){
+  alert('Type another Username include numbers!');
+  return;
+}
+
+if(!passwordRegex.test(password)){
+ alert =('Try another password including numbers');  
+  return ;
+}
+if(password < 8){
+  passError.innerText=('minimun length of a password is 8');
+  return;  
+}
+alert('Your loged in with Success');
+}
+  </script>
   
 
 

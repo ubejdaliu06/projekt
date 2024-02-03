@@ -1,3 +1,34 @@
+<?php
+    session_start();
+
+    include("db.php");
+
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+
+        $Emri = $_POST['name'];
+        $Surname = $_POST['Mbiemri'];
+        $Email_Address = $_POST['Email'];
+        $Username = $_POST['User'];
+        $pass = $_POST['Password'];
+        $Birthdate = $_POST['Vitilindjes'];
+        $Gjinia = $_POST['Gjinia'];
+
+       
+
+        if(!empty($email) && !empty($pass)){
+            $query = "insert into form (Name, Surname, Email_Address,Username,Password,Birthdate,Sex,) values('$Emri', '$Surname','$Email_Address','$Username', '$pass','$Birthdate','$Gjinia')";
+
+            mysqli_query($con, $query);
+            echo "<script type='text/javascript'> alert('Successfully Register')</script>";
+        }
+        else{
+            echo "<script type='text/javascript'> alert('Please Enter some Valid Information')</script>";
+        }
+
+    }
+?>
+
+
 <!DOCTYPE html>
 <head>
 
@@ -7,7 +38,7 @@
   <link rel="stylesheet" href="Register.css">
  
 
-<script src="Register.js"></script>
+
 
 </head>
 <body>
@@ -29,7 +60,7 @@
   <h3>Create your account by filling out the information below.</h3>
 </div>
 
-  <form onsubmit="event.preventDefault();validateForm();">
+  <form onsubmit="validateForm()" method="POST">
   <div class="Register">
     <div class="Emri">
     <label for="name">Name</label>
@@ -91,7 +122,83 @@
 
     
   
+<script>
+  
+function validateForm(){
+  let UserName = document.getElementById('User');
+  let Name = document.getElementById('Emri');
+  let Surname = document.getElementById('Mbiemri');
+  let Email = document.getElementById('Email');
+  let Password = document.getElementById('password');
+  let confirmPassword = document.getElementById('confirm-password');
+  let Mashkull = document.getElementById('Mashkull');
+  let Femer = document.getElementById('Femer');
 
+  
+
+  let Vitilindjes = document.getElementById('Vitilindjes');
+ 
+
+let UserNameRegex = /^[a-z A-Z]+[0-9]+$/;
+let NameRegex = /^[a-z A-z]+$/;
+let SurNameRegex = /^[a-z A-z]+$/;
+let passwordRegex = /^[a-z A-Z]+[0-9]+$/;
+let EmailRegex =  /^[a-zA-Z.-_]+@+[a-z]+\.+[a-z]+$/;
+let MashkullRegex = /^[Mashkull]+$/;
+let FemerRegex = /^[Femer]+$/;
+
+
+if( Emri.value.trim() = '' || !NameRegex.test(Name)){
+  alert('This Name isnt valid!');
+  return;
+}
+if(!UserNameRegex.test(UserName)){
+  alert('This UserName isnt valid (inlcude Numbers)');
+  return;
+}
+
+if( Mbiemri.value.trim() = ''||!SurNameRegex.test(Surname)){
+  alert('This SurName isnt valid!');
+  return;
+}
+if(!passwordRegex.test(Password)){
+  alert('This password isnt valid min. 8 characters!');
+  return;
+}
+if(!EmailRegex.test(Email)){
+  alert('This Email isnt valid!');
+  return;
+}
+
+
+if(Password != confirmPassword){
+  alert('The Passwords arent matching!');
+  return;
+}
+if(MashkullRegex != Mashkull){
+  if(FemerRegex != Femer){
+    alert("You must choose a gender!");
+  }
+  return;
+}
+const today = new Date();
+if(Vitilindjes != null){
+  alert('Choose your Birthdate!');
+}else{
+const AGE = Vitilindjes - today;
+}
+
+if(AGE < 18){
+  alert('You must be 18 years old!');
+  return;
+}
+
+
+
+
+alert('Jeni Loguar Me Sukses!');
+}
+</script>
 
 
 </body>
