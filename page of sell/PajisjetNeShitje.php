@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
   
 include "../home page/databaseConn.php";
@@ -52,16 +52,16 @@ $vape = $p->getAllVape();
             <p>Black shisha 79.99$</p>
           </div>
          <?php foreach ($vape as $shisha){?>
-<<<<<<< HEAD
+
           <div class="Produkt">
             <img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
             
           <p> <?php echo $shisha['pershkrim']?></p>
-=======
+
           <div class="Produkt"><img src="<?php echo $shisha['img']?> " width="250px" height="250px" alt="shisha 3">
             
           <p> <?php echo $shisha['Pershkrim']?></p>
->>>>>>> b8cd6c023bad98ad006d9358eadcbdcc6dd2c8b3
+
           </div>
           <?php } ?>
          

@@ -27,14 +27,13 @@
              
             </div>
             <div class="home">
-                <h4>Home</h4>
-                <h4>></h4>
+               
                 <h4>About us</h4>
             </div>
             <h2 style="display: flex; justify-content: center;">History</h2>
             <div class="u1">
 
-            <div class="about-section">
+            <div class="about-section" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
                 <h4>Established in 2013, Element Vape is a progressive retail establishment in the electronic cigarette industry based out of California. Our personal philosophy is to give consumers more than what they pay for. With an uncompromising drive to exceed expectations, we are committed to help customers experience the best possible shopping experience. Furthermore, we invested in a strict, industry-leading age verification system to verify every single order for youth prevention in accordance with federal law.
 
                     Trash The Ash...Get In The Element.
@@ -44,7 +43,7 @@
 
                
 
-<div class="ffoto"><img src="Download1-removebg-preview.png" alt="" height="300px"> </div>
+<div class="ffoto"><img src="Download1-removebg-preview.png" alt="" height="300px"><h4>The Goat Vape</h4></div>
 
             
         </div>
@@ -85,13 +84,13 @@
                     <h4 style="font-family: Arial, Helvetica, sans-serif;" >Follow us</h4>
                     <div class="f6">
                    
-                        <a href="https://www.facebook.com/"><img src="facebook.png" alt="https://facebook>" height="40px"></a>
+                        <a href="https://www.facebook.com/"><img src="facebook.png" alt="https://facebook>" height="20px"></a>
                     
-                        <a href="https://twitter.com/i/flow/login"><img src="twitter.png" alt="twitter" height="40px"></a>
+                        <a href="https://twitter.com/i/flow/login"><img src="twitter.png" alt="twitter" height="20px"></a>
                    
-                        <a href="https://www.instagram.com/"><img src="instagram.png" alt="" height="40px"></a>
+                        <a href="https://www.instagram.com/"><img src="instagram.png" alt="" height="20px"></a>
                   
-                        <a href="https://www.pinterest.com/login/"><img src="pinterest.png" alt="" height="40px"></a>
+                        <a href="https://www.pinterest.com/login/"><img src="pinterest.png" alt="" height="20px"></a>
                 </div>
                 </div>
             </div>
@@ -103,8 +102,8 @@
             </div>
             
             
-            <div class="end">
-                <h3>Not for Sale for Minors - Products sold on this site may contain nicotine which is a highly addictive substance. California Proposition 65 - WARNING: This product can expose you to chemicals including nicotine, which is known to the State of California to cause birth defects or other reproductive harm. For more information, go to Proposition 65 Warnings Website. Products sold on this site is intended for adult smokers. You must be of legal smoking age in your territory to purchase products. Please consult your physician before use. E-Juice on our site may contain Propylene Glycol and/or Vegetable Glycerin, Nicotine and Flavorings. Our products may be poisonous if orally ingested. FDA DISCLAIMER: The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. For their protection, please keep out of reach of children and pets. Read our terms and conditions page before purchasing our products. Use All Products On This Site At Your Own Risk!</h3>
+            <div class="end" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                <h4>Not for Sale for Minors - Products sold on this site may contain nicotine which is a highly addictive substance. California Proposition 65 - WARNING: This product can expose you to chemicals including nicotine, which is known to the State of California to cause birth defects or other reproductive harm. For more information, go to Proposition 65 Warnings Website. Products sold on this site is intended for adult smokers. You must be of legal smoking age in your territory to purchase products. Please consult your physician before use. E-Juice on our site may contain Propylene Glycol and/or Vegetable Glycerin, Nicotine and Flavorings. Our products may be poisonous if orally ingested. FDA DISCLAIMER: The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. For their protection, please keep out of reach of children and pets. Read our terms and conditions page before purchasing our products. Use All Products On This Site At Your Own Risk!</h4>
             </div>
         </div>
 </body>

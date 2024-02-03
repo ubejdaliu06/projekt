@@ -106,19 +106,16 @@ padding: 10px;
         
         display: flex;
         flex-direction:column;
+        width: 100%;
       
         
        
     }
-    h4>.f>.ff{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+ 
     .f6{
         width: 100%;
         flex-direction: row;
-        gap: 30%;
+        gap: 60%;
       }
       .fundi{
         display: flex;
