@@ -68,7 +68,7 @@
                 </div>
                 </div>
                 </div>
-                </div>
+                
 	    
 	<form class="feedback-form">
 			<label for="name">Name:</label>
