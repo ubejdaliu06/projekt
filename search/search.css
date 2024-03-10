@@ -1,9 +1,10 @@
 @media screen and (max-width: 768px) {
   body{
      background-color: yellow;
-     
+     color: black;
      flex-wrap:wrap;
   }
+  
  
   
  }

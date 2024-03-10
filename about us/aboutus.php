@@ -32,7 +32,7 @@
         <div class="menu1">
              
           
-                <li><a href="/"><h3>Search</h3></a></li>
+                <li><a href="../best deals/deals.php"><h3>Best Deals</h3></a></li>
                
                 <li><a href="../log in/Log in.php"><h3>Login</h3></a></li>
                 

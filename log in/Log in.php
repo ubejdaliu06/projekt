@@ -1,8 +1,34 @@
 <?php
 session_start();
 
-    include("../home page/db.php");
+class databaseConn{
+    
+  private $host = "localhost";
+  private $username = "root";
+  private $db = "vape";
 
+function startConnection(){
+  try{
+      // Cakton atributet e PDO për raportimin e gabimeve
+      $conn = new PDO("mysql:host=$this->host;dbname=$this->db", $this->username);
+       // Cakton atributet e PDO për raportimin e gabimeve
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      // Kontrollon nëse lidhja është suksesshme
+      if(!$conn){
+          //echo "Connection failed "; per testim
+          return null;
+      }else{
+          //echo "Connection successful!"; per testim
+          return $conn;
+      }
+
+  }catch(PDOException $e){
+      echo "Connection failed ". $e->getMessage();
+      return null;
+  }
+}
+}
+//Kontrollon nëse kërkesa është bërë përmes metodes POST.
         if($_SERVER['REQUEST_METHOD'] == "POST"){
             $Username = $_POST['name'];
             $pass = $_POST['password'];
@@ -10,12 +36,13 @@ session_start();
             if(!empty($Username) && !empty($pass)){
                 $query= "Select * From user where Username = '$Username' limit 1";
                 $result = mysqli_query($con, $query);
+// nese ekziston result 
 
                 if($result){
-
+//nese ka result dhe numri i reshtave te tij eshte me i madh 0;
                     if($result && mysqli_num_rows($result) > 0){
                         $user_data = mysqli_fetch_assoc($result);
-
+                     // Nëse përdoruesi dhe fjalëkalimi janë të saktë, krijohet sesioni dhe përdoruesi ridrejtohet në faqen e projektit
                         if($user_data['Password'] == $pass){
                             session_start();
                             $_SESSION['Username'] = $user_data['
@@ -32,7 +59,6 @@ session_start();
             else{
                 echo "<script type='text/javascript'> alert('Wrong username or password')</script>";
             }
-
         }
 
 
@@ -64,6 +90,7 @@ session_start();
     <a href="../home page/projekt.php">Home Page</a>
     <a href="../page of sell/PajisjetNeShitje1.php">Selling Page</a>
     <a href="../contact/contactus.php">Contact us</a>
+    <a href="../best deals/deals.php"><h3>Best Deals</h3></a>
 
    
   
@@ -78,7 +105,7 @@ session_start();
     </h3>
   </div>
 
-  <form onsubmit=" validateForm()" method="POST" >
+  <form onsubmit="return validateForm()" method="POST" >
 
 
 
@@ -118,7 +145,7 @@ session_start();
 
   <!-- <a href="../home page/projekt.php"></label> <button type="button" name ="logIN" > <div class="button">-->
     <label for="signup" name='login'>Log In </label></div></button>
-  <a href="../home page/projekt.php"></label> <button type="button" name ="logIN" onclick="validateForm()"> <div class="button"> <label for="signup" name='login'>Log In </label></div></button>
+  <a href=""></label> <button type="button" name ="logIN" onclick="validateForm()"> <div class="button"> <label for="signup" name='login'>Log In </label></div></button>
 
   </a>
 </div>
@@ -157,7 +184,7 @@ function validateForm(){
 
 let UserNameRegex = /^[a-z A-Z]$/;
 
-let UserNameRegex = /^[a-z A-Z]+[0-9]$/;
+
 
 let passwordRegex = /^[a-z A-Z]+[0-9]+$/;
 

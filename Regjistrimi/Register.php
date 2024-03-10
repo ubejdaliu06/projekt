@@ -89,7 +89,7 @@
 
 
 
-  <form onsubmit="validateForm()"   method="POST" >
+  <form action = "Register.php"    method="POST" onsubmit="return validateForm()">
 
   <div class="Register">
     <div class="Emri">
@@ -119,7 +119,7 @@
    
         <div class = "Emri">
           <label for="Birthdate">Birthdate</label>
-          <input type="date" name="Birthdate">
+          <input type="date" id = "Vitilindjes"name="Birthdate">
         </div>
     <div class="Gjinia">
     
@@ -136,8 +136,9 @@
     
 
    
+  <!--</label> <button type="submit" name ="Sign Up" onclick="validateForm()"> <div class="button"> <label for="sign in" name='sign up'>sign up </label></div></button>-->
 
-    <input type="submit"  class="Regjistrohu" value="Sign Up">
+     <input type="submit"  class="Regjistrohu" value="Sign Up" onclick="validateForm()">
 
  
   </div>
@@ -150,19 +151,7 @@
   
 <script>
 
-function validateForm(){
-  let UserName = document.getElementById('User').value.trim();
-  let Name = document.getElementById('Emri').value.trim();
-  let Surname = document.getElementById('Mbiemri').value.trim();
-  let Email = document.getElementById('Email').value.trim();
-  let Password = document.getElementById('password').value.trim();
-  let confirmPassword = document.getElementById('confirm-password').value.trim();
-  let Mashkull = document.getElementById('Mashkull').checked;
-  let Femer = document.getElementById('Femer').checked;
-
-  
-
-  let Vitilindjes = document.getElementById('Vitilindjes').value;
+ 
 
 function validateForm(){
   let UserName = document.getElementById('User');
@@ -192,7 +181,7 @@ let FemerRegex = /^[Femer]+$/;
 
 
 
-if( Emri.value.trim() = '' || !NameRegex.test(Name)){
+if( Name.value.trim() = '' || !NameRegex.test(Name)){
 
   alert('This Name isnt valid!');
   return;
@@ -239,7 +228,7 @@ if (age < 18) {
   }
 
 const today = new Date();
-if(Vitilindjes != null){
+if(Vitilindjes == null){
   alert('Choose your Birthdate!');
 }else{
 const AGE = Vitilindjes - today;
@@ -256,13 +245,14 @@ if(AGE < 18){
 
 
 alert('Jeni Regjistruar Me Sukses!');
+
 }
 
 
 
 
 
-  }
+  
 
 </script>
 

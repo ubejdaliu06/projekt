@@ -1,21 +1,19 @@
 <?php
-class databaseConn{
-    
-    private $host = "localhost";
-    private $username = "root";
-    private $db = "vape";
-
+  
 function startConnection(){
+    $dsn = "mysql:host=localhost;dbname=vape";
+  
+        $username = "root";
     try{
-        $conn = new PDO("mysql:host=$this->host;dbname=$this->db", $this->username);
+        
+        // Cakton atributet e PDO për raportimin e gabimeve
+        $conn = new PDO($dsn, $username);
+         // Cakton atributet e PDO për raportimin e gabimeve
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+        // Kontrollon nëse lidhja është suksesshme
         if(!$conn){
             //echo "Connection failed "; per testim
             return null;
-        }else{
-            //echo "Connection successful!"; per testim
-            return $conn;
         }
 
     }catch(PDOException $e){
@@ -23,6 +21,8 @@ function startConnection(){
         return null;
     }
 }
-}
+
 ?>
-  
+
+
+   
