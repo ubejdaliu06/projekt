@@ -6,6 +6,7 @@
  
   
  }
+
  .navbar{
    
   overflow: hidden;
@@ -17,12 +18,14 @@
  }
  .navbar a {
   float: left;
-  display: block;
+  display: flex;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  justify-content: center;
+
+
   text-decoration: none;
-  margin-top: 15px;
+
  
  }
  .navbar .right{
@@ -47,8 +50,10 @@ button:active{
 }
 
 .h2{
-  padding-top:10% ;
-padding-bottom: 20%;
+
+
+
+
   flex: wrap;
   flex-wrap: line;
  background-clip: ;
@@ -88,27 +93,16 @@ label{
 }
 .signup{
   display: flex;
-  
- justify-content: center;
-  cursor: pointer;
-  position: relative;
+  justify-content: center;
+  margin-top: -15%;
+  margin-bottom: 20%;
+  color: black;
   
 }
 .signup label{
   color: black;
 }
-.Banner{
-  background-image: url(PHOTObanner.jpeg);
-  color: red;
-  display: flex;
-  
-  justify-content: center;
-  padding: 0.4%;
-  margin: 2%;
-  margin-top: 8%;
-  border-radius: 9px;
 
-}
 .Copyright{
   display: flex;
   flex-direction: row;
@@ -123,23 +117,14 @@ label{
 }
 .button{
   display: inline-block;
-  font-size: 20px;
+ 
+  color: black;
   
-  padding: 10px 20px;
+
   
   cursor: pointer;
 }
-.button-wr{
-  
-  border: none;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: underline;
-  outline: 5%;
-  display: inline-block;
-  font-size: 17px ;
-  cursor: pointer;
-}
+
 
 
 

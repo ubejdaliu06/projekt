@@ -1,4 +1,5 @@
-<?php
+
+ <?php
 session_start();
 
 class databaseConn{
@@ -31,13 +32,6 @@ function startConnection(){
 //Kontrollon nëse kërkesa është bërë përmes metodes POST.
         if($_SERVER['REQUEST_METHOD'] == "POST"){
             $Username = $_POST['name'];
-            $pass = $_POST['password'];
-
-            if(!empty($Username) && !empty($pass)){
-                $query= "Select * From user where Username = '$Username' limit 1";
-                $result = mysqli_query($con, $query);
-// nese ekziston result 
-
                 if($result){
 //nese ka result dhe numri i reshtave te tij eshte me i madh 0;
                     if($result && mysqli_num_rows($result) > 0){
@@ -59,11 +53,10 @@ function startConnection(){
             else{
                 echo "<script type='text/javascript'> alert('Wrong username or password')</script>";
             }
-        }
-
-
-
+        
 ?>
+
+
 
 
 
@@ -90,7 +83,7 @@ function startConnection(){
     <a href="../home page/projekt.php">Home Page</a>
     <a href="../page of sell/PajisjetNeShitje1.php">Selling Page</a>
     <a href="../contact/contactus.php">Contact us</a>
-    <a href="../best deals/deals.php"><h3>Best Deals</h3></a>
+    <a href="../best deals/deals.php">Best Deals</a>
 
    
   
@@ -98,15 +91,6 @@ function startConnection(){
 
    
 </div>
-
-  <div class="Banner">
-    <h3>WARNING: The Items in our Shop contain nicotine
-      Nicotine is an Addictive chemical.!
-    </h3>
-  </div>
-
-  <form onsubmit="return validateForm()" method="POST" >
-
 
 
   
@@ -143,7 +127,7 @@ function startConnection(){
 
   <div class="signup">
 
-  <!-- <a href="../home page/projekt.php"></label> <button type="button" name ="logIN" > <div class="button">-->
+
     <label for="signup" name='login'>Log In </label></div></button>
   <a href=""></label> <button type="button" name ="logIN" onclick="validateForm()"> <div class="button"> <label for="signup" name='login'>Log In </label></div></button>
 
@@ -160,19 +144,10 @@ function startConnection(){
   </div>
 
   
- <!--<div class="Copyright">
-  <h3 id=" left">Copyright 2023 The Goat Vape Company. All rights reserved.  </h3>
-  <h3 id="rights">Designed by Ubejd and Ilmi</h3>
-</div>
-<hr>
 
-
-  <div class="Fund">
-<h3>Not for Sale for Minors - Products sold on this site may contain nicotine which is a highly addictive substance. California Proposition 65 - WARNING: This product can expose you to chemicals including nicotine, which is known to the State of California to cause birth defects or other reproductive harm. For more information, go to Proposition 65 Warnings Website. Products sold on this site is intended for adult smokers. You must be of legal smoking age in your territory to purchase products. Please consult your physician before use. E-Juice on our site may contain Propylene Glycol and/or Vegetable Glycerin, Nicotine and Flavorings. Our products may be poisonous if orally ingested. FDA DISCLAIMER: The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. For their protection, please keep out of reach of children and pets. Read our terms and conditions page before purchasing our products. Use All Products On This Site At Your Own Risk!</h3>
-</div>-->
 
     
-  <script>
+  <script src="">
     
 function validateForm(){
   let UserName = document.getElementById('UserName');
