@@ -1,8 +1,7 @@
 <?php
     session_start();
-
-    include("../home page/db.php");
-    include ("../home page/databaseConn.php");
+    include("db.php");
+    include ("databaseConn.php");
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
@@ -69,17 +68,13 @@
 <body>
   <div class="navbar">
 
-    <a href="../log in/Log in.php">Log In</a>
+    <a href="Log in.php">Log In</a>
 
 
 
    
 </div>
-  <div class="Banner">
-    <h3>WARNING: The Items in our Shop contain nicotine
-      Nicotine is an Addictive chemical.!
-    </h3>
-  </div>
+
 
   <div class="Titull">
   <h1>Sign Up </h1>

@@ -31,19 +31,19 @@
         <div class="menu1">
              
           
-                <li><a href="/"><h3>Search</h3></a></li>
+              
                
-                <li><a href="../log in/Log in.php"><h3>Login</h3></a></li>
+                <li><a href="Log in.php"><h3>Login</h3></a></li>
                 
-                <li><a href="../page of sell/PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
+                <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
 
-                <li><a href="../about us/aboutus.php"><h3>About us</h3></a></li>
+                <li><a href="aboutus.php"><h3>About us</h3></a></li>
 
-                <li><a href="../home page/projekt.php"><h3>Home Page</h3></a></li>
+                <li><a href="projekt.php"><h3>Home Page</h3></a></li>
 
-                <li><a href="../contact/contactus.php"><h3>Contact us</h3></a></li>
+                <li><a href="contactus.php"><h3>Contact us</h3></a></li>
 
-                <li><a href="../best deals/deals.php"><h3>Best deals</h3></a></li>
+              
                 
                 </div>
         </div>

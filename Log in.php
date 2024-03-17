@@ -138,7 +138,7 @@ function startConnection(){
 </form>
   <div class="Register">
 
-    <a href="../Regjistrimi/Register.php"><button class="button-wr"> Sign up</button>
+    <a href="Register.php"><button class="button-wr"> Sign up</button>
 
    
   </div>
