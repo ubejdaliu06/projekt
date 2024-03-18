@@ -127,11 +127,11 @@ function startConnection(){
 
   <div class="signup">
 
-
-    <label for="signup" name='login'>Log In </label></div></button>
-  <a href=""></label> <button type="button" name ="logIN" onclick="validateForm()"> <div class="button"> <label for="signup" name='login'>Log In </label></div></button>
-
-  </a>
+<br>
+    <!-- <label for="signup" name='login'>Log In </label></div></button> -->
+   <button type="button" name ="logIN" onclick="validateForm()"> log in</button>
+   
+  
 </div>
 </div>
 </div>
