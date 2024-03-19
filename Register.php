@@ -1,39 +1,19 @@
 <?php
     session_start();
+
     include("db.php");
-    include ("databaseConn.php");
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-        $Emri = $_POST['Emri'];
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $pass = $_POST['pass'];
+        $confirmpassword = $_POST['confirmpassword'];
 
-        $Mbiemri = $_POST['Mbiemri'];
-        $Email_Adress = $_POST['Email_Adress'];
-        $Username = $_POST['Username'];
-        $Password = $_POST['Password'];
-        $Birthdate = $_POST['Birthdate'];
-        $Sex = $_POST['Sex'];
-        
-
-        if(!empty($name) && !empty($surname) &&!empty($Email_Adress) &&!empty($Username)&&!empty($Password)&&!empty($Birthdate)&&!empty($Sex)){
-            $query = "insert into user (Emri, Mbiemri, Email_Adress,Username, Password, Birthdate, Sex) values('$Emri', ' $Mbiemri', '$Email_Adress','$Username','$Password','$Birthdate','$Sex')";
-
-            if(mysqli_query($conn, $query)) {
-         $Emri = $_POST['Emri'];
-        $Surname = $_POST['Mbiemri'];
-        $Email_Address = $_POST['Email_Adress'];
-        $Username = $_POST['Username'];
-        $pass = $_POST['Password'];
-        $Birthdate = $_POST['Birthdate'];
-        $Gjinia = $_POST['Sex'];
-
-       
-
-        if(!empty($email) && !empty($pass)){
-            $query = "insert into user (Name, Surname, Email_Address,Username,Password,Birthdate,Sex,) values('$Emri', '$Surname','$Email_Address','$Username', '$pass','$Birthdate','$Gjinia')";
+        if(!empty($email) && !empty($pass) && !is_numeric($email) && !empty($confirmpassword)){
+            $query = "insert into form (name, email, pass,confirmpassword) values('$name', '$email', '$pass','$confirmpassword')";
 
             mysqli_query($con, $query);
-
             echo "<script type='text/javascript'> alert('Successfully Register')</script>";
         }
         else{
@@ -41,216 +21,202 @@
         }
 
     }
-  }
-
-  }
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
-  <meta name="Views" content="width=device-width, inital-scale=1">
-  <title>Sign Up</title>
-  <link rel="stylesheet" href="Register.css">
- 
-
-
-<script src="Register.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">Thalia Online Shop | buy Books, eBooks, Toys etc. | Thalia </title> 
 
 
 </head>
+
+
 <body>
-  <div class="navbar">
-
-    <a href="Log in.php">Log In</a>
-
-
-
-   
-</div>
-
-
-  <div class="Titull">
-  <h1>Sign Up </h1>
-  </div>
-
-
-
-
-
-  <form action = "Register.php"    method="POST" onsubmit="return validateForm()">
-
-  <div class="Register">
-    <div class="Emri">
-    <label for="name">Name</label>
-    <input type="text" placeholder="Name" id="Emri" name="Emri" required>
+    <div class="logo">
+      <a href="Main.php"> <img src="Screenshot 2023-11-16 221803 1.png"> </a>
     </div>
-    <div class="Mbiemri">
-    <label for="Mbiemri">Surname</label>
-    <input type="text" placeholder="Surname" id="Mbiemri" name="Mbiemri">
-    </div>
-<div class="Email">
-    <label for="Email">Email Address</label>
-    <input type="email" placeholder="Email" id="Email" name="Email_Adress" required>
-    </div>
-    <div class="Email">
-    <label for="Username">Username</label>
-    <input type="text" placeholder="ex.Filan Fisteku" id="user" name="Username" required>
-    </div>
-    <div class="Password">
-      <label for="Password">Password</label>
-      <input type="password" placeholder="Min. 8 Characters" id="password" name="Password">
+
+  <div class="formular">
+    <form onsubmit="validimi()" method="POST">
+
+
+        <h2>Mirë se vini në Thalia</h2>
+        <h4>Regjistrohuni lehtësisht këtu për një llogari klienti në Thalia.de</h4><br>
+  
+        <input style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" type="text" placeholder="Username" id="emri" name="name" class="input-box" required>
+        <input style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" type="text" placeholder="E-mail" id="email" name="email" class="input-box" required>
+        <input style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" type="password" placeholder="Password" id="fjalekalimi" name="pass" class="input-box" required>
+        <input style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" type="password" placeholder="Confirm Password" id="confirmpassword" name="confirmpassword" class="input-box" required>
+
+      <br><br>
+      <div class="remember-forgot">
+        <label><input type="checkbox" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Remember Me</label>
+        <a href="#" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Forgot Password</a>
       </div>
-      <div class="Confirm Password">
-        <label for="Password">Confirm Password</label>
-        <input type="password" placeholder="Min. 8 Characters" id="confirm-password" name="confirm-password">
-        </div>
-   
-        <div class = "Emri">
-          <label for="Birthdate">Birthdate</label>
-          <input type="date" id = "Vitilindjes"name="Birthdate">
-        </div>
-    <div class="Gjinia">
-    
-    <label for="Gjinia">Sex</label>
-    
-      
-<div class="Perzgjidhje">
-    <p>M</p>
-    <input type="radio" id="Mashkull" name="Sex" value="Mashkull">
-    <p>W</p>
-    <input type="radio" id="Femer" name="Sex" value="Femer">
+
+
+      <button type="submit" class="btn">Register</button><br>
+      <a  href="Log in.php"><p id="register">Back to LOG IN</p></a>
+
+    </form>
   </div>
-  </div>
-    
-
-   
-  <!--</label> <button type="submit" name ="Sign Up" onclick="validateForm()"> <div class="button"> <label for="sign in" name='sign up'>sign up </label></div></button>-->
-
-     <input type="submit"  class="Regjistrohu" value="Sign Up" onclick="validateForm()">
-
- 
-  </div>
-
-</div>
-  </form>
-  
-
-    
-  
-<script>
-
- 
-
-function validateForm(){
-  let UserName = document.getElementById('User');
-  let Name = document.getElementById('Emri');
-  let Surname = document.getElementById('Mbiemri');
-  let Email = document.getElementById('Email');
-  let Password = document.getElementById('password');
-  let confirmPassword = document.getElementById('confirm-password');
-  let Mashkull = document.getElementById('Mashkull');
-  let Femer = document.getElementById('Femer');
 
   
 
-  let Vitilindjes = document.getElementById('Vitilindjes');
-
- 
-
-let UserNameRegex = /^[a-z A-Z]+[0-9]+$/;
-let NameRegex = /^[a-z A-z]+$/;
-let SurNameRegex = /^[a-z A-z]+$/;
-let passwordRegex = /^[a-z A-Z]+[0-9]+$/;
-let EmailRegex =  /^[a-zA-Z.-_]+@+[a-z]+\.+[a-z]+$/;
-let MashkullRegex = /^[Mashkull]+$/;
-let FemerRegex = /^[Femer]+$/;
 
 
-
-
-
-if( Name.value.trim() = '' || !NameRegex.test(Name)){
-
-  alert('This Name isnt valid!');
-  return;
-}
-if(!UserNameRegex.test(UserName)){
-
-  alert('This UserName isnt valid (include Numbers)');
-
-  alert('This UserName isnt valid (inlcude Numbers)');
-
-  return;
-}
-
-if( Mbiemri.value.trim() = ''||!SurNameRegex.test(Surname)){
-  alert('This SurName isnt valid!');
-  return;
-}
-if(!passwordRegex.test(Password)){
-  alert('This password isnt valid min. 8 characters!');
-  return;
-}
-if(!EmailRegex.test(Email)){
-  alert('This Email isnt valid!');
-  return;
-}
-
-
-if(Password != confirmPassword){
-  alert('The Passwords arent matching!');
-  return;
-}
-if(MashkullRegex != Mashkull){
-  if(FemerRegex != Femer){
-    alert("You must choose a gender!");
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
   }
-  return;
-}
-
-let dob = new Date(Vitilindjes);
-let age = Math.floor((Date.now() - dob.getTime()) / (1000 * 60 * 60 * 24 * 365));
-if (age < 18) {
-    alert('You must be 18 years old!');
-    return;
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: gainsboro;
   }
 
-const today = new Date();
-if(Vitilindjes == null){
-  alert('Choose your Birthdate!');
-}else{
-const AGE = Vitilindjes - today;
-}
 
-if(AGE < 18){
-  alert('You must be 18 years old!');
-  return;
-}
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    top:0px;
+    margin-left: 20px;
+    position:absolute;
+    padding: 5px;
+    background-color: white;
+    width:100%
+  }
+  h2{
+    color: #292929;
+    font-family: Circular,Segoe UI,Candara,Bitstream Vera Sans,DejaVu Sans,Trebuchet MS,Verdana,Verdana Ref,"sans-serif";
+    font-size: 20px;
+    font-weight: 900;
+  }
+  h4{
+    color: #292929;
+    font-family: Circular,Segoe UI,Candara,Bitstream Vera Sans,DejaVu Sans,Trebuchet MS,Verdana,Verdana Ref,"sans-serif";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .formular{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin-top: 150px;
+    padding: 30px 40px;
+    background-color: white;
+  }
 
+  .formular .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+  }
+  .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+  }
+  .formular label{
+    color: black;
 
-
-
-
-
-alert('Jeni Regjistruar Me Sukses!');
-
-}
-
-
-
-
-
+  }
+  .input-box input::placeholder{
+    color: #fff;
+  }
+  .formular .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    
+  }
+  .remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 3px;
   
+  }
+  .remember-forgot a{
+    color: black;
+    text-decoration: none;
+  
+  }
+  .remember-forgot a:hover{
+    text-decoration: underline;
+  }
+  .formular .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+  }
+#register{
+  text-align: center;
+  text-decoration:none;
+  margin-top: 29px;
+  color: black;
 
-</script>
+}</style>
 
+  <script>
+      function validimi() {
+      let emri = document.getElementById("emri").value;
+      let email = document.getElementById("email").value;
+      let fjalekalimi = document.getElementById("fjalekalimi").value;
+      let confirmpassword = document.getElementById("confirmpassword").value;
 
+      let emriRegex = /^[a-zA-Z\s]+$/;
+      if (!emriRegex.test(emri)) {
+        alert("Please enter a valid username!");
+        return false;
+      }
+
+      let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email!");
+        return false;
+      }
+
+      if(fjalekalimi.length<8){
+        alert("Password should be more than 8 characters long");
+        return false;
+      }
+
+      if (fjalekalimi !== confirmpassword) {
+        alert("Passwords aren't matching!");
+        return false;
+      }
+      alert("The account was created sucesfully!");
+      return true;
+    }
+  </script>
 </body>
 </html>
