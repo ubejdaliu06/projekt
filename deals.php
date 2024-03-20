@@ -33,17 +33,18 @@
           
               
                
-                <li><a href="Log in.php"><h3>Login</h3></a></li>
+        <li><a href="projekt.php"><h3>Home Page</h3></a></li>
+
                 
                 <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
 
                 <li><a href="aboutus.php"><h3>About us</h3></a></li>
 
-                <li><a href="projekt.php"><h3>Home Page</h3></a></li>
+               
 
                 <li><a href="contactus.php"><h3>Contact us</h3></a></li>
 
-              
+                <li><a href="Log in.php"><h3>Login</h3></a></li>
                 
                 </div>
         </div>
@@ -81,6 +82,59 @@
                  1+1
         </h2>
     </div>
+    <div class="t1">
+            <h2>TRENDING</h2>
+        </div>
+                <div class="fotografit">
+                  <div class="rubrika"> 
+                <a href="">  
+                <img src="u1-removebg-preview.png" alt="" class="img" height="200px" >
+                 <h6>VIHO TURBO VAPES DISPOSABLE</h6>
+            </a>
+        </div>
+     
+          <div class="rubrika2">
+                <a href="" >
+                <img src="u2-removebg-preview.png" alt="" class="img" height="200px">
+               
+                    <h6>DUMMY VAPES XFINITY 6900 DISPOSABLE</h6>
+                </a> 
+    
+            </div>
+            <div class="rubrika3">
+            <a href="">
+                <img src="u3-removebg-preview.png" alt="" class="img" height="200px">
+                <h6>SIGELEI SMART AC10000 DISPOSABLE</h6>
+            </a> 
+            </div>
+            
+            <div class="rubrika4">
+                <a href="">
+                <img src="u4-removebg-preview.png" alt="" class="img" height="200px">
+                <h6> GEEK BAR PULSE – DISPOSABLE VAPE</h6>
+            </a> 
+        </div>
+                  
+          
+                <div class="rubrika5">
+                    <a href=""> 
+                   
+                    <img src="u5-removebg-preview.png" alt="" class="img" height="200px">
+                    <h6>LOST VAPE ORION BAR 7500 DISPOSABLE</h6>
+                </a> 
+                </div>
+            </a> 
+            
+                <div class="rubrika6">
+                    <a href=""> 
+                   
+                        <img src="u6-removebg-preview.png" alt="" class="img" height="200px">
+                    <h6>POD POCKET 7500 DISPOSABLE</h6>
+                </a>
+                </div> 
+               
+            
+           </div>
     <hr>
     <br>
     <script src="deals.js"></script>

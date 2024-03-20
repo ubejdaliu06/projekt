@@ -2,6 +2,8 @@
 
 include "databaseConn.php";
 include_once "VapeRepository.php";
+include_once "deals.php";
+include_once ".php";
 
 
 $strep = new VapeRepository();
@@ -27,7 +29,7 @@ $vape = $strep->getAllVape();
                 
                 </tr>
             </thead>
-            <tbody>
+            <body>
                 <?php foreach($vape as $vepat) { ?> <!--e hapim foreach-->
                     <tr>
                         <td><?php echo $vepat['Emri'];?></td>
@@ -39,6 +41,6 @@ $vape = $strep->getAllVape();
                         <td><a href='delete.php?Id=<?php echo $vepat['Id']?>'>Delete</a></td>
                     </tr>
                 <?php }?> <!--e mbyllim foreach-->
-            </tbody>
+            </body>
         </table>
         <br><br><br>

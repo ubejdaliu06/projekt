@@ -14,11 +14,24 @@
 
    
   }
-
+  .headeri{
+  
+    
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+     
+      margin: 00 0px;
+      padding: 20px 30;
+  }
+  .catalog{
+    justify-content: center;
+   }
   .Banner{
  margin-top: 3%;
    display: flex;
-   background-image: url(Wallpaper.jpeg);
+   background-image: url(ITEM-Background.jpg);
    margin-left: 20px;
    margin-right: 20px;
    color: red;

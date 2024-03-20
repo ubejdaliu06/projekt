@@ -1,7 +1,7 @@
 <?php
     session_start();
-
     include("db.php");
+
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
@@ -28,7 +28,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="title">Thalia Online Shop | buy Books, eBooks, Toys etc. | Thalia </title> 
+  <title id="title"></title> 
 
 
 </head>
@@ -36,15 +36,15 @@
 
 <body>
     <div class="logo">
-      <a href="Main.php"> <img src="Screenshot 2023-11-16 221803 1.png"> </a>
+      <a href="projekt.php"> <img src="Download1-removebg-preview.png"> </a>
     </div>
 
   <div class="formular">
     <form onsubmit="validimi()" method="POST">
 
 
-        <h2>Mirë se vini në Thalia</h2>
-        <h4>Regjistrohuni lehtësisht këtu për një llogari klienti në Thalia.de</h4><br>
+        <h2>Mirë se vini në The GoatVape</h2>
+       
   
         <input style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" type="text" placeholder="Username" id="emri" name="name" class="input-box" required>
         <input style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" type="text" placeholder="E-mail" id="email" name="email" class="input-box" required>
@@ -63,7 +63,7 @@
 
     </form>
   </div>
-
+   >
   
 
 

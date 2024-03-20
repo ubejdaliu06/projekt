@@ -39,14 +39,18 @@ $vape = $p->getAllVape();
           
                 <li><a href="deals.php"><h3>Best Deals</h3></a></li>
                
-                <li><a href="Log in.php" target="_blank"><h3>Login</h3></a></li>
+            
                 
                 <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
 
                 <li><a href="contactus.php"><h3>Contact us</h3></a></li>
 
                 <li><a href="aboutus.php"><h3>About us</h3></a></li>
-                <li>
+               
+                    
+                <li><a href="Log in.php" target="_blank"><h3>Login</h3></a></li>
+
+                <a href="LogOut.php" style='color:blue;'><h3>LogOut</h3></a>
                   <?php 
                   
                   session_start();

@@ -34,11 +34,12 @@
           
                 <li><a href="deals.php"><h3>Best Deals</h3></a></li>
                
-                <li><a href="Log in.php"><h3>Login</h3></a></li>
+                <li><a href="contactus.php"><h3>ContactUs</h3></a></li>
                 
                 <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
                 
                 <li><a href="projekt.php"><h3>Home Page</h3></a></li>
+                <li><a href="Log in.php"><h3>Login</h3></a></li>
          
                 
                 </div>
@@ -61,7 +62,7 @@
 
                
 
-<div class="ffoto"><img src="Download1-removebg-preview.png" alt="" height="300px"><h4>The Goat Vape</h4></div>
+
 
             
         </div>

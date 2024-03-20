@@ -1,96 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Contact Us</title>
-<link rel="stylesheet" type="text/css" href="cantactus.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ContactUs.css">
 </head>
 <body>
-  
-<div class="main1">
-    <div class="main" >
- 
-        <div class="dd">
-        <h3>WARNING: This product contains nicotine. Nicotine is an addictive chemical.</h3>
-        
-    </div> 
-    
-        <div class="menu">
-          
-        
-            <div class="headeri">
-                <img src="Download1-removebg-preview.png" height="180px" >
-                <div class="catalog"> 
-                    <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">The Goat Vape</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="headerii">
-        <div class="menu1">
-             
-          
-               
-               
-                <li><a href="Log in.php"><h3>Login</h3></a></li>
-                
-                <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
-                <li><a href="projekt.php"><h3>Home Page</h3></a></li>
-                <li>
-           
-           </li>
-                
-                </div>
-        </div>
+<div class="logo">
+      <a href="projekt.php"> <img src="Download1-removebg-preview.png"> </a>
     </div>
-	<div class="container">
-		<h1>Contact Us</h1>
-		<div class="contact-info">
-			<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Email: theGoatVape@gmail.com</p>
-			<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Phone: 044-481-136</p>
-			<div class="social-media">
-      <div class="ffff"></div>
-      <div class="platform">
-           <a href="https://www.instagram.com/"><img src="instagram.png" alt="Facebook">
-					<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Instagram</p>
-                    </a>
-                    </div>
-				<div class="platform">
-					<a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook">
-					<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Facebook</p>
-                    </a>
-				</div>
-				<div class="platform">
-					<a href="https://twitter.com/"><img src="twitter.png" alt="Twitter">
-					<p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Twitter</p>
-                    </a>
-                    
+
+<div class="forma">
+        <form onsubmit="return validateform()" method="POST">
+            <div class="contact">
+                <h1>Contact Us
+                </h1>
                 </div>
-                </div>
-                </div>
-                </div>
-                
-	    
-	<form class="feedback-form">
-			<label for="name">Name:</label>
-			<input type="text"id="name" name="name">
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email">
-			<label for="message">Message:</label>
-			<textarea id="message" name="message"></textarea>
-			<button type="submit">Send</button>
-		</form>
-	</div>
-  <div class="fundi">
-                    <h3>Copyright 2023 The Goat Vape Company. All rights reserved.  </h3>
-                    <h3>Designed by Ubejd and Ilmi</h3>
-                </div>
-                <hr>
-            </div>
-            
-            
-            <div class="end" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" style="margin: 5;">
-                <h4>Not for Sale for Minors - Products sold on this site may contain nicotine which is a highly addictive substance. California Proposition 65 - WARNING: This product can expose you to chemicals including nicotine, which is known to the State of California to cause birth defects or other reproductive harm. For more information, go to Proposition 65 Warnings Website. Products sold on this site is intended for adult smokers. You must be of legal smoking age in your territory to purchase products. Please consult your physician before use. E-Juice on our site may contain Propylene Glycol and/or Vegetable Glycerin, Nicotine and Flavorings. Our products may be poisonous if orally ingested. FDA DISCLAIMER: The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. For their protection, please keep out of reach of children and pets. Read our terms and conditions page before purchasing our products. Use All Products On This Site At Your Own Risk!</h4>
-            </div>
-        </div>
+            <p>Emri:<br>
+            <input type="text" id="emri" name="emri"></p>
+            <p>Mbiemri:<br>
+            <input type="text" id="mbiemri" name="mbiemri"></p>
+            <p>E-mail:<br>
+            <input type="text" id="email" name="email"></p>
+            <p>Numri Telefonit::<br>
+            <input type="text" id="nrtelefonit" name="nrtelefonit"></p>
+            <p>A keni ndonje pyetje?<br>
+            <textarea id="comment" cols="40" rows="10" name="comment" style="border-color: #eeeeee; border:2px solid #eeeeee"></textarea></p>
+            <p><input type="submit" id="submit-btn" value="Send" name='input'></p>
+        </form>
+    </div>
+    
+        <style>
+            body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(1616588204_35-p-fon-magiya-39.jpg) no-repeat;
+    background-size: cover;
+    
+}
+p{
+    color:white;
+}
+h1{
+    color:white;
+}
+input{
+    width: 90%;
+    height: 30px;
+}
+.forma {
+    font-family: Arial, sans-serif;
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(50px);
+    color:black;
+    border-radius: 12px;
+    padding: 30px 40px;
+
+}
+
+
+.contact {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+textarea {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+
+#submit-btn {
+
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 95%;
+    
+    
+}
+
+
+#submit-btn:hover {
+    background-color: #45a049;
+}
+
+        </style>
+    <?php
+                if(isset($_POST['input'])){
+                      include_once 'function.php';
+
+                      $obj= new Contact();
+                      $res = $obj->contact_us($_POST);
+
+                      if($res == true){
+                        echo "<script>alert('Query successfully Submitted .Thank You')</script>";
+                      }
+                      else{
+                        echo "<script>alert('Something Went wrong!!')</script>";
+                      }
+                }
+
+            ?>
+
+    <script>
+        function validateform() {
+            var email = document.getElementById('email').value;
+            var nrtelefonit = document.getElementById('nrtelefonit').value;
+            var phoneregex = /^(+383|0)?[1-9]\d{7,8}$/;
+
+            var emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+
+            if (!phoneregex.test(nrtelefonit)) {
+                alert('Please enter a valid phone number');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
 </body>
 </html>

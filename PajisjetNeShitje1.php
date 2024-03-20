@@ -1,7 +1,7 @@
 <?php
   
-  include "../home page/databaseConn.php";
-  include_once "../home page/VapeRepository.php";
+  include "databaseConn.php";
+  include_once "VapeRepository.php";
   
   $p = new VapeRepository();
   $vape = $p->getAllVape();
@@ -20,20 +20,25 @@
           Nicotine is an Addictive chemical.!
         </h3>
        
-        </div>
+
+      </div>
      
         <div class="Main" id="sample">
         <div class="headerii">
         <div class="menu1">
              
           
-        <li><a href="/"><h3>Search</h3></a></li>
+        <li><a href="projekt.php"><h3>Home Page</h3></a>
+         <li><a href="deals.php"><h3>Best Deals</h3></a></li>
                
-       <li><a href="../log in/Log in.php"><h3>Login</h3></a></li>
-                
-       <li><a href="../about us/aboutus.php"><h3>About us</h3></a></li>
        
-       <li><a href="../best deals/deals.php"><h3>Best deals</h3></a></li>
+               
+     
+       <li><a href="contactus.php"><h3>Contact us</h3></a></li>
+
+        <li><a href="aboutus.php"><h3>About us</h3></a></li>
+        <li><a href="Log in.php" target="_blank"><h3>Login</h3></a></li>
+        <a href="LogOut.php" style='color:blue;'><h3>LogOut</h3></a>
         </div>
         </div>
         </div>
@@ -119,10 +124,7 @@
           <img src="shisha-accesoires-removebg-preview.png" width="250px"  height="250px" alt="gaca">
           <p> Shisha Cole LIMITED EDITION    14.99$ </p>
         </div>
-        <div class="Produkt">
-          <img src="mouth_gard-removebg-preview.png" width="250px"  height="250px" alt="Mouthgard">
-          <p> Mouth Gardd    6.99$ </p>
-        </div>
+      
 
         </div>
       </div>

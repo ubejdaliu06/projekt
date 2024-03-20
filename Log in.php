@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-    if(isset($_SESSION['email'])){
-        header("location:deals.php");
-        die;
-    }
-    include("db.php");
+if(isset($_SESSION['email'])){
+  header("location:projekt.php");
+  die;
+}
+include("db.php");
 
         if($_SERVER['REQUEST_METHOD'] == "POST"){
             $email = $_POST['email'];
@@ -22,10 +22,10 @@ session_start();
 
                         if($user_data['pass'] == $pass){
                             session_start();
-  $_SESSION['email'] = $user_data['email'];
- $_SESSION['roli'] = $user_data['roli'];
- header("location:projekt.php");
-     die;
+                            $_SESSION['email'] = $user_data['email'];
+                            $_SESSION['roli'] = $user_data['roli'];
+                            header("location:projekt.php");
+                            die;
 
                         }
                     }
@@ -50,8 +50,14 @@ session_start();
   <link rel="stylesheet" href="LogIn.css">
 
 </head>
-<body>
-  <h2>The GoatVape</h2>
+<body> 
+  <div class="logo">
+      <h2>The GoatVape</h2>
+ <br>
+ <br>
+      <a href="projekt.php"> <img src="Download1-removebg-preview.png"> </a>
+    </div>
+
   <div class="formular">
     <form onsubmit="validimi()" method="POST">
       <h1>LogIn</h1>
@@ -73,9 +79,16 @@ session_start();
 
   <script>
       function validimi() {
+      let emri = document.getElementById("emri").value;
       let email = document.getElementById("email").value;
       let fjalekalimi = document.getElementById("fjalekalimi").value;
-      
+      let confirmpassword = document.getElementById("confirmpassword").value;
+
+      let emriRegex = /^[a-zA-Z\s]+$/;
+      if (!emriRegex.test(emri)) {
+        alert("Please enter a valid username!");
+        return false;
+      }
 
       let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
@@ -88,8 +101,11 @@ session_start();
         return false;
       }
 
-     
-      alert("You have logged in sucesfully!");
+      if (fjalekalimi !== confirmpassword) {
+        alert("Passwords aren't matching!");
+        return false;
+      }
+      alert("The account was created sucesfully!");
       return true;
     }
   </script>
