@@ -2,15 +2,16 @@
 include_once 'Vape.php';
 include_once 'VapeRepository.php';
 
+
 if (isset($_POST['submitbtn'])) {
-    $emri = $_POST['emri']; 
-    $Pershkrimi = $_POST['pershkrimi'];
-    $cmimi = $_POST['cmimi'];
+    $Emri = $_POST['Emri']; 
+    $Pershkrim = $_POST['Pershkrim'];
+    $Cmimi = $_POST['Cmimi'];
     
     $img = $_POST['img'];
    
 
-    $vape = new Vape($emri, $Pershkrimi, $cmimi,$img);
+    $vape = new Vape($Emri, $Pershkrim, $Cmimi,$img);
 
     $VapeRepository = new VapeRepository();
     $VapeRepository->insertVape($vape);
@@ -27,11 +28,11 @@ if (isset($_POST['submitbtn'])) {
         <h2>Register</h2>
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">  
         <label>Emri:</label>    
-        <input type="text" name="emri" ><br>
+        <input type="text" name="Emri" ><br>
         <label>Pershkrimi:</label>  
-        <input type="text" name="pershkrimi" ><br>
+        <input type="text" name="Pershkrim" ><br>
         <label>Cmimi:</label>  
-        <input type="text" name="cmimi" ><br>
+        <input type="text" name="Cmimi" ><br>
         
         <label>Image:</label>  
         <input type="file" name="img" ><br>

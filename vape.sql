@@ -27,15 +27,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
-  `Id` int(11) NOT NULL,
-  `Emri` varchar(255) NOT NULL,
-  `Mbiemri` varchar(255) NOT NULL,
-  `Email_Adress` varchar(255) NOT NULL,
-  `Username` varchar(255) NOT NULL,
-  `Password` varchar(24) NOT NULL,
-  `Birthdate` date NOT NULL,
-  `Sex` enum('Male',' Female') NOT NULL,
+CREATE TABLE `form` (
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL,
+  `confirmpassword` varchar(255) NOT NULL,
   `roli` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -57,9 +53,21 @@ CREATE TABLE `vepat` (
 -- Indexes for dumped tables
 --
 
+
+CREATE TABLE `contact_us` (
+  `emri` varchar(255) NOT NULL,
+  `mbiemri` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `nrtelefonit` int(11) NOT NULL,
+  `comment` varchar(5000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 --
--- Indexes for table `user`
---
+
+INSERT INTO `contact_us` (`emri`, `mbiemri`, `email`, `nrtelefonit`, `comment`) VALUES
+('meriton', 'sokoli', 'meritonsokoli2004@gmail.com', 2147483647, 'A bon met pyt diqka?');
+
+
+
 ALTER TABLE `user`
   ADD PRIMARY KEY (`Id`),
   ADD UNIQUE KEY `Username` (`Username`);

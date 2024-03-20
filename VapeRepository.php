@@ -22,17 +22,17 @@
         public function insertVape($vape){
             $conn = $this->connection;
            
-            $emri = $vape->getEmri();
-            $pershkrim = $vape->getPershkrimi();
-            $cmimi = $vape->getCmimi();
+            $Emri = $vape->getEmri();
+            $Pershkrim = $vape->getPershkrimi();
+            $Cmimi = $vape->getCmimi();
             $img = $vape->getImg();
             
             
 
-            $sql = "INSERT INTO vepat(Emri, Pershkrim, Cmimi, img) VALUES (?,?,?,?)";
+            $sql = "INSERT INTO vape(Emri, Pershkrim, Cmimi, img) VALUES (?,?,?,?)";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$emri, $pershkrim, $cmimi,$img]);
+            $statement->execute([$Emri, $Pershkrim, $Cmimi,$img]);
 
             echo "<script>alert('U shtua me sukses!')</script>";
         }
@@ -40,7 +40,7 @@
         public function getAllVape(){
             $conn = $this->connection;
                 
-            $sql = "SELECT * FROM vepat";
+            $sql = "SELECT * FROM vape";
             $statement = $conn->prepare($sql);
 
             
@@ -52,13 +52,13 @@
 
         //Pjesa tjeter e funksioneve CRUD: update 
         //dergohet parametri ne baze te cilit e identifikojme paisjen (ne kete rast id, por mund te jete edhe ndonje atribut tjeter) dhe parametrat e tjere qe mund t'i ndryshojme (emri, mbiemri, etj...)
-        public function editVape($id, $emri, $pershkrim, $cmimi,$img){
+        public function editVape($id, $Emri, $Pershkrim, $Cmimi,$img){
             $conn = $this->connection;
             
-            $sql = "UPDATE vepat SET Emri=?,Pershkrimi=?, Cmimi=? ,img=? WHERE Id=?";
+            $sql = "UPDATE vape SET Emri=?,Pershkrimi=?, Cmimi=? ,img=? WHERE Id=?";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$emri, $pershkrim, $cmimi,$img ,$id]);
+            $statement->execute([$Emri, $Pershkrim, $Cmimi,$img ,$id]);
 
             echo "<script>alert('U ndryshua me sukses!')</script>";
 
@@ -69,7 +69,7 @@
         function deleteVape($id){
             $conn = $this->connection;
             
-            $sql = "DELETE FROM vepat WHERE Id=?";
+            $sql = "DELETE FROM vape WHERE Id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);
@@ -80,7 +80,7 @@
         function getVapeById($id){
             $conn = $this->connection;
             
-            $sql = "SELECT * FROM vepat WHERE Id=?";
+            $sql = "SELECT * FROM vape WHERE Id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);

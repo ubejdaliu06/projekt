@@ -2,15 +2,16 @@
 class Vape{
     private $Id; //e kemi shtu Id direkt ne db me AutoIncrement
     private $Emri;
-    private $Pershkrimi;
+    private $Pershkrim;
     private $Cmimi;
     private $img;
+
   
 
 
     public function __construct($e, $n, $c,$img){
         $this->Emri=$e;
-        $this->Pershkrimi=$n;
+        $this->Pershkrim=$n;
         $this->Cmimi=$c;
         $this ->img=$img;
       
@@ -34,10 +35,10 @@ class Vape{
     }
 
     public function getPershkrimi(){
-        return $this->Pershkrimi;
+        return $this->Pershkrim;
     }
     public function setPershkrimi($m){
-        $this->Pershkrimi = $m;
+        $this->Pershkrim = $m;
     }
     public function getImg(){
         return $this->img;
@@ -48,7 +49,7 @@ class Vape{
    
 
     public function toString(){
-        return "Emri: ".$this->Emri." dhe ngjyra ".$this->Pershkrimi;
+        return "Emri: ".$this->Emri." dhe ngjyra ".$this->Pershkrim;
     }
 }
 ?>

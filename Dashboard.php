@@ -3,7 +3,6 @@
 include "databaseConn.php";
 include_once "VapeRepository.php";
 include_once "deals.php";
-include_once ".php";
 
 
 $strep = new VapeRepository();
@@ -14,33 +13,77 @@ $vape = $strep->getAllVape();
 
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet"  href="">
-    <link rel="stylesheet"  href="">
-    
-    <body>
-        <a href="Register1.php" style="margin-top:40px; margin-left:40px;color:black;">Register</a>
-        <table>
-            <thead>
+
+<body>
+    <a href="Register1.php" style="margin-top:40px; margin-left:40px;color:black;">Register</a>
+    <table>
+        <thead>
             <tr>
                 <th>Emri</th>
                 <th>Pershkrimi</th>
                 <th>Cmimi</th>
                 <th>image</th>
-                
-                </tr>
-            </thead>
-            <body>
-                <?php foreach($vape as $vepat) { ?> <!--e hapim foreach-->
-                    <tr>
-                        <td><?php echo $vepat['Emri'];?></td>
-                        <td><?php echo $vepat['Pershkrimi'];?></td>
-                        <td><?php echo $vepat['Cmimi'];?></td>
-                        <td><?php echo $vepat['image'];?></td>
-                        
-                        <td><a href='edit.php?Id=<?php echo $vepat['Id']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga studenti i cili eshte i paraqitur ne kete rresht-->
-                        <td><a href='delete.php?Id=<?php echo $vepat['Id']?>'>Delete</a></td>
-                    </tr>
-                <?php }?> <!--e mbyllim foreach-->
-            </body>
-        </table>
-        <br><br><br>
+
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($vape as $vapet) {  ?>
+
+            <tr>
+                <td><?php echo $vapet['Emri'];?></td>
+                <td><?php echo $vapet['Pershkrim'];?></td>
+                <td><?php echo $vapet['Cmimi'];?></td>
+                <td><?php echo $vapet['img'];?></td>
+
+                <td><a href='edit.php?Id=<?php echo $vapet['Id']?>'>Edit</a></td>
+
+                <td><a href='delete.php?Id=<?php echo $vapet['Id']?>'>Delete</a></td>
+            </tr>
+            <?php } ?>
+        </tbody>
+        <style>
+            /* Apply basic styles to the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style table header */
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style table rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Style table cells */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Apply some spacing to the table */
+thead {
+    margin-bottom: 10px;
+}
+
+tbody {
+    margin-top: 10px;
+}
+
+        </style>
+
+    </table>
+</body>
+
+</html>
