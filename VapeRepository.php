@@ -41,7 +41,7 @@
             $conn = $this->connection;
                 
             $sql = "SELECT * FROM vape";
-            $statement = $conn->prepare($sql);
+            $statement = $conn->query($sql);
 
             
 
