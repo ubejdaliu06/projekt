@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once 'Vape.php';
 include_once 'VapeRepository.php';
 

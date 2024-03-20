@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
  include 'databaseConn.php';
  include_once 'VapeRepository.php'; 
  $p = new VapeRepository();
@@ -53,7 +53,7 @@ $vape = $p->getAllVape();
                 <a href="LogOut.php" style='color:blue;'><h3>LogOut</h3></a>
                   <?php 
                   
-                  session_start();
+                
                   if(isset($_SESSION['roli'])){
                     if($_SESSION['roli']=="admin"){
                       echo"<a href='Dashboard.php'><h3>Dashboard </h3></a> ";
@@ -81,107 +81,8 @@ $vape = $p->getAllVape();
             
         
    
-       
-        
  
-   
- <!-- -->
-  
- 
-        
-        <!-- <div class="t1">
-            <h2>TRENDING</h2>
-        </div>
-                <div class="fotografit">
-                  <div class="rubrika"> 
-                <a href="">  
-                <img src="u1-removebg-preview.png" alt="" class="img" height="200px" id="fotografit">
-                 <h6>VIHO TURBO VAPES DISPOSABLE</h6>
-            </a>
-        </div>
-     
-          <div class="rubrika2">
-                <a href="" >
-                <img src="u2-removebg-preview.png" alt="" class="img" height="200px">
-               
-                    <h6>DUMMY VAPES XFINITY 6900 DISPOSABLE</h6>
-                </a> 
-    
-            </div>
-            <div class="rubrika3">
-            <a href="">
-                <img src="u3-removebg-preview.png" alt="" class="img" height="200px">
-                <h6>SIGELEI SMART AC10000 DISPOSABLE</h6>
-            </a> 
-            </div>
-            
-            <div class="rubrika4">
-                <a href="">
-                <img src="u4-removebg-preview.png" alt="" class="img" height="200px">
-                <h6> GEEK BAR PULSE – DISPOSABLE VAPE</h6>
-            </a> 
-        </div>
-                  
           
-                <div class="rubrika5">
-                    <a href=""> 
-                   
-                    <img src="u5-removebg-preview.png" alt="" class="img" height="200px">
-                    <h6>LOST VAPE ORION BAR 7500 DISPOSABLE</h6>
-                </a> 
-                </div>
-            </a> 
-            
-                <div class="rubrika6">
-                    <a href=""> 
-                   
-                        <img src="u6-removebg-preview.png" alt="" class="img" height="200px">
-                    <h6>POD POCKET 7500 DISPOSABLE</h6>
-                </a>
-                </div> 
-               
-            
-           </div>  -->
-     
-       
-         <!-- <div class="para">
-            <a href="">
-                <img src="geek_vape_-_t200_aegis_touch_-_kits_-_all_colors-removebg-preview.png" alt="" height="200px">
-                <h6>Geek Vape Disposable</h6>
-            </a>
-         </div>
-         <div class="para1">
-            <a href="">
-                <img src="snowwolf_easy_smart_ea9000_disposable_-_default-removebg-preview.png" alt="" height="200px">
-                <h6>Snowwolf Easy Smart Disposable</h6>
-            </a>
-         </div>
-         <div class="para2">
-            <a href="">
-                <img src="oxbar_magic_maze_pro_10000_disposable_-_pod_juice_default-removebg-preview.png" alt="" height="200px">
-                <h6>Oxbar Magic Pro Disposable</h6>
-            </a>
-         </div>
-         <div class="para3">
-            <a href="">
-                <img src="spaceman_10k_pro_disposable_-_default-removebg-preview.png" alt="" height="200px">
-                <h6>Spaceman Pro Disposable</h6>
-            </a>
-         </div>
-         <div class="para4">
-            <a href="">
-                <img src="hamilton_devices_butterfly_510_vaporizer_battery_-_default_1-removebg-preview.png" alt="" height="200px">
-                <h6>Hamilton Butterfly Disposable</h6>
-            </a>
-         </div>
-         <div class="para5">
-            <a href="">
-                <img src="ijoy_bar_sd10000_disposable_-_default-removebg-preview.png" alt="" height="200px">
-                <h6>Ijoy Bar Disposable</h6>
-            </a>
-         </div>
-        </div>
-          -->
           <div class="new">
             <div class="new1">
                <h2>NEW ARRIVALS</h2>
@@ -248,7 +149,16 @@ $vape = $p->getAllVape();
                     <h6>POD POCKET 7500 DISPOSABLE</h6>
                 </a>
                 </div> 
-               
+                <div>
+    <?php foreach ($vape as $vapet) { ?>
+    <div class="s5">
+        <img src="<?php echo $vapet['img']?>">
+            <p><?php echo $vapet['Emri']?></p>
+           
+        </div>
+           <?php } ?>
+
+    </div>   
             
             </div>
            </div> 

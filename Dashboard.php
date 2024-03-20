@@ -2,7 +2,7 @@
 
 include "databaseConn.php";
 include_once "VapeRepository.php";
-include_once "deals.php";
+// include_once "deals.php";
 
 
 $strep = new VapeRepository();
