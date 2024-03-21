@@ -38,6 +38,8 @@
     <div class="logo">
       <a href="projekt.php"> <img src="Download1-removebg-preview.png"> </a>
     </div>
+    <br>
+    <br>
 
   <div class="formular">
     <form onsubmit="validimi()" method="POST">
@@ -63,7 +65,7 @@
 
     </form>
   </div>
-   >
+  
   
 
 
@@ -93,10 +95,11 @@
     z-index: 9999;
     top:0px;
     margin-left: 20px;
+    padding:10px;
     position:absolute;
-    padding: 5px;
-    background-color: white;
-    width:100%
+   height:100px;
+    
+    width:100%;
   }
   h2{
     color: #292929;
