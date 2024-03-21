@@ -149,13 +149,14 @@ $vape = $p->getAllVape();
                     <h6>POD POCKET 7500 DISPOSABLE</h6>
                 </a>
                 </div> 
-                <div>
-    <?php foreach ($vape as $vapet) { ?>
-    <div class="s5">
-        <img src="<?php echo $vapet['img']?>">
-            <p><?php echo $vapet['Emri']?></p>
+              
+                <div class="rubrika">
+            <?php foreach ($vape as $vapet) { ?>
+        
+           <a href=""> <img src="<?php echo $vapet['img']?>" height="200px">
+               <p><?php echo $vapet['Emri']?></p></a> 
            
-        </div>
+       
            <?php } ?>
 
     </div>   

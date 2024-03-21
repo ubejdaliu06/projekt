@@ -36,7 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(1616588204_35-p-fon-magiya-39.jpg) no-repeat;
+    /* background: url(1616588204_35-p-fon-magiya-39.jpg) no-repeat; */
     background-size: cover;
     
 }
