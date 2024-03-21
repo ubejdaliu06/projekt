@@ -1,11 +1,13 @@
 <?php
 session_start();
 include 'VapeRepository.php'; 
-$id = $_GET['Id'];//e merr id e Paisjes
+$id = $_GET['id'];
 $editedBy = isset($_SESSION['email']) ? "Edited By: " . $_SESSION['email'] : "Edited By: Unknown";
 
+
 $strep = new VapeRepository();
-$vape = $strep->getVapeById($id);
+$vape = $strep->getVapeById($id); 
+
 ?>
 
 
@@ -13,12 +15,12 @@ $vape = $strep->getVapeById($id);
 <html>
 <body>
     <h3>Edit Vape</h3>
-    <form action="<?php echo $_SERVER['PHP_SELF'] . '?Id=' . $id; ?>" method="POST">
+    <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="POST">
      <!-- nese nuk duam t'i ndryshojme te gjitha te dhenat, e perdorim kete pjesen tek value qe te na shfaqen vlerat aktuale, ashtu qe atributet qe nuk duam t'i ndryshojme mbesin te njejta pa pasur nevoje t'i shkruajme prape-->  
      <label>Emri:</label>    
      <input type="text" name="Emri"  value="<?php echo $vape['Emri']?>"> <br> <br> <!-- Pjesa brenda [] eshte emri i sakte i atributit si ne Databaze-->
      <label>Pershkrimi:</label> 
-     <input type="text" name="Pershkrimi"  value="<?php echo $vape['Pershkrimi']?>"> <br> <br>
+     <input type="text" name="Pershkrimi"  value="<?php echo $vape['Pershkrim']?>"> <br> <br>
      <label>Cmimi:</label> 
      <input type="text" name="Cmimi"  value="<?php echo $vape['Cmimi']?>"> <br> <br>
      <label>Image:</label> 
@@ -58,7 +60,7 @@ input {
 input[type="submit"] {
     background-color: #4caf50;
     color: #fff;
-    cursor: pointer;
+   
 }
 
 input[type="submit"]:hover {
@@ -71,14 +73,14 @@ input[type="submit"]:hover {
 <?php 
 
 if(isset($_POST['editBtn'])){
-    $Id = $Id; //merret nga paisja me siper
+    $id = $id; //merret nga paisja me siper
     $Emri = $_POST['Emri']; //merret nga formulari
     $Pershkrimi = $_POST['Pershkrimi'];
     $Cmimi = $_POST['Cmimi'];
     $img = $_POST['img'];
    
 
-    $strep->editVape($Id,$Emri,$Pershkrimi,$Cmimi,$img);
+    $strep->editVape($id,$Emri,$Pershkrimi,$Cmimi,$img);
     header("location:Dashboard.php");
     exit();
 }

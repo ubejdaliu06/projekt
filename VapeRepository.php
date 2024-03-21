@@ -55,10 +55,10 @@
         public function editVape($id, $Emri, $Pershkrim, $Cmimi,$img){
             $conn = $this->connection;
             
-            $sql = "UPDATE vape SET Emri=?,Pershkrimi=?, Cmimi=? ,img=? WHERE id=?";
+            $sql = "UPDATE vape SET Emri=?,Pershkrim=?, Cmimi=? ,img=? WHERE id=?";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$Emri, $Pershkrim, $Cmimi,$img ,$id]);
+            $statement->execute([$Emri, $Pershkrim, $Cmimi, $img , $id]);
 
             echo "<script>alert('U ndryshua me sukses!')</script>";
 
@@ -84,9 +84,9 @@
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);
-            $vape=$statement->fetch();
+            $vapet=$statement->fetch();
 
-            return $vape;
+            return $vapet;
         }
 
     }

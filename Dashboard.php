@@ -32,8 +32,10 @@ $vape = $strep->getAllVape();
           </div>
       </div>
 
-<body>
-
+<body>   
+   
+      <tbody>
+<tr> </tr>
 
    
     <table>
@@ -56,9 +58,9 @@ $vape = $strep->getAllVape();
                 <td><?php echo $vapet['Cmimi'];?></td>
                 <td><?php echo $vapet['img'];?></td>
 
-                <td><a href='edit.php?Id=<?php echo $vape['Id']?>'>Edit</a></td>
+                <td><a href='edit.php?Id=1<?php echo $vapet['id']?>'>Edit</a></td>
 
-                <td><a href='delete.php?Id=<?php echo $vape['Id']?>'>Delete</a></td>
+                <td><a href='delete.php?Id=1<?php echo $vapet['id']?>'>Delete</a></td>
             </tr>
            <p> <?php } ?>
             <a href="Register1.php" style="margin-top:40px; margin-left:40px;color:black;">Register</a></p>
@@ -89,8 +91,8 @@ $vape = $strep->getAllVape();
                         <td><?php echo $vape['img'];?></td>
                         <td><?php echo $vape['Pershkrim'];?></td>
                        
-                        <td><a href='edit.php?Id=<?php echo $vape['Id']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga studenti i cili eshte i paraqitur ne kete rresht-->
-                        <td><a href='delete.php?Id=<?php echo $vape['Id']?>'>Delete</a></td>
+                        <td><a href='edit.php?Id=<?php echo $vape['id']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga studenti i cili eshte i paraqitur ne kete rresht-->
+                        <td><a href='delete.php?Id=<?php echo $vape['id']?>'>Delete</a></td>
                     </tr>
                 <?php }?> 
 
