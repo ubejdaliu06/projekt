@@ -1,9 +1,9 @@
 <?php
 include_once 'VapeRepository.php';
-$id = $_GET['Emri'];
+$id = $_GET['id'];
 
 $strep = new VapeRepository();
-$strep->deleteVape($Emri);
+$strep->deleteVape($id);
 
 header("location:Dashboard.php");
 ?>

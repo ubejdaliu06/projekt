@@ -55,7 +55,7 @@
         public function editVape($id, $Emri, $Pershkrim, $Cmimi,$img){
             $conn = $this->connection;
             
-            $sql = "UPDATE vape SET Emri=?,Pershkrimi=?, Cmimi=? ,img=? WHERE Id=?";
+            $sql = "UPDATE vape SET Emri=?,Pershkrimi=?, Cmimi=? ,img=? WHERE id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$Emri, $Pershkrim, $Cmimi,$img ,$id]);
@@ -69,7 +69,7 @@
         function deleteVape($id){
             $conn = $this->connection;
             
-            $sql = "DELETE FROM vape WHERE Id=?";
+            $sql = "DELETE FROM vape WHERE id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);
@@ -80,7 +80,7 @@
         function getVapeById($id){
             $conn = $this->connection;
             
-            $sql = "SELECT * FROM vape WHERE Id=?";
+            $sql = "SELECT * FROM vape WHERE id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);

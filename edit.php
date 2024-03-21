@@ -1,6 +1,8 @@
 <?php
-include_once('VapeRepository.php'); 
-$id = isset($_GET['Id']) ? $_GET['Id'] : null;
+session_start();
+include 'VapeRepository.php'; 
+$id = $_GET['Id'];//e merr id e Paisjes
+$editedBy = isset($_SESSION['email']) ? "Edited By: " . $_SESSION['email'] : "Edited By: Unknown";
 
 $strep = new VapeRepository();
 $vape = $strep->getVapeById($id);

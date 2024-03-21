@@ -58,11 +58,11 @@ input {
     box-sizing: border-box;
 }
 
-input[type="submit"] {
+/* input[type="submit"] {
     background-color: #4caf50;
     color: #fff;
     cursor: pointer;
-}
+} */
 
 input[type="submit"]:hover {
     background-color: #45a049;
