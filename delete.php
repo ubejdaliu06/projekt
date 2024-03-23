@@ -1,6 +1,6 @@
 <?php
 include_once 'VapeRepository.php';
-$id = $_GET['id'];
+$id = $_GET['Id'];
 
 $strep = new VapeRepository();
 $strep->deleteVape($id);

@@ -51,7 +51,7 @@ INSERT INTO `form` (`name`, `email`, `pass`, `confirmpassword`, `roli`) VALUES
 --
 
 CREATE TABLE `shisha` (
-  `shisha_ID` int(11) NOT NULL,
+  `shisha_Id` int(11) NOT NULL,
   `Emri` varchar(255) NOT NULL,
   `Pershkrim` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE `shisha` (
 --
 
 CREATE TABLE `vape` (
-  `id` int(11) NOT NULL,
+  `Id` int(11) NOT NULL,
   `Emri` varchar(255) NOT NULL,
   `Pershkrim` varchar(255) NOT NULL,
   `Cmimi` varchar(255) NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE `vape` (
 -- Dumping data for table `vape`
 --
 
-INSERT INTO `vape` (`id`, `Emri`, `Pershkrim`, `Cmimi`, `img`) VALUES
+INSERT INTO `vape` (`Id`, `Emri`, `Pershkrim`, `Cmimi`, `img`) VALUES
 (12, 'vape', 'asdasdsa', 'adsadsadada', 0x452d7368697368612d484153482d72656d6f766562672d707265766965772e706e67),
 (13, 'ubejd', 'vapett', '23232', '');
 
@@ -94,7 +94,7 @@ ALTER TABLE `shisha`
 -- Indexes for table `vape`
 --
 ALTER TABLE `vape`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -110,7 +110,7 @@ ALTER TABLE `shisha`
 -- AUTO_INCREMENT for table `vape`
 --
 ALTER TABLE `vape`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

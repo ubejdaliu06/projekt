@@ -1,8 +1,8 @@
 <?php
-include_once 'deals.php';
-$id = $_GET['Id'];//e merr id prej url
+include_once 'ShishaRespsitory.php';
+$id = $_GET['shisha_Id'];//e merr id prej url
 
-$strep = new PaisjetRepository();
+$strep = new ShishaRespsitory();
 $strep->deletePaisja($id);
 
 header("location:Dashboard.php");

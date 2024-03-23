@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'VapeRepository.php'; 
-$id = $_GET['id'];
+$id = $_GET['Id'];
 $editedBy = isset($_SESSION['email']) ? "Edited By: " . $_SESSION['email'] : "Edited By: Unknown";
 
 
@@ -15,7 +15,7 @@ $vape = $strep->getVapeById($id);
 <html>
 <body>
     <h3>Edit Vape</h3>
-    <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="POST">
+    <form action="<?php echo $_SERVER['PHP_SELF'] . '?Id=' . $id; ?>" method="POST">
      <!-- nese nuk duam t'i ndryshojme te gjitha te dhenat, e perdorim kete pjesen tek value qe te na shfaqen vlerat aktuale, ashtu qe atributet qe nuk duam t'i ndryshojme mbesin te njejta pa pasur nevoje t'i shkruajme prape-->  
      <label>Emri:</label>    
      <input type="text" name="Emri"  value="<?php echo $vape['Emri']?>"> <br> <br> <!-- Pjesa brenda [] eshte emri i sakte i atributit si ne Databaze-->

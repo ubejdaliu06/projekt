@@ -1,5 +1,6 @@
 <?php
     include_once('databaseConn.php');
+    
 
     class ShishaRepository{
       private $connection;
@@ -46,7 +47,7 @@
 
         //delete
 
-        function deleteshish($id){
+        function deleteshisha($id){
           $conn = $this->connection;
           
           $sql = "DELETE FROM shisha WHERE shisha_Id=?";

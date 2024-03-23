@@ -1,7 +1,7 @@
 <?php
 session_start();
-include 'VapeRepository.php'; 
-$id = $_GET['id'];//e merr id e Paisjes
+include 'ShishaRepository.php'; 
+$id = $_GET['shisha_Id'];//e merr id e Paisjes
 $editedBy = isset($_SESSION['email']) ? "Edited By: " . $_SESSION['email'] : "Edited By: Unknown";
 $strep = new PaisjetRepository();
 $paisja = $strep->getPaisjaById($id);
@@ -11,8 +11,8 @@ $paisja = $strep->getPaisjaById($id);
 <!DOCTYPE html>
 <html>
 <body>
-    <h3>Edit Paisja</h3>
-    <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="POST">
+    <h3>Edit Shisha</h3>
+    <form action="<?php echo $_SERVER['PHP_SELF'] . '?shisha_Id=' . $id; ?>" method="POST">
      <!-- nese nuk duam t'i ndryshojme te gjitha te dhenat, e perdorim kete pjesen tek value qe te na shfaqen vlerat aktuale, ashtu qe atributet qe nuk duam t'i ndryshojme mbesin te njejta pa pasur nevoje t'i shkruajme prape-->  
      <label>Emri:</label>    
      <input type="text" name="emri"  value="<?php echo $paisja['Emri']?>"> <br> <br> <!-- Pjesa brenda [] eshte emri i sakte i atributit si ne Databaze-->

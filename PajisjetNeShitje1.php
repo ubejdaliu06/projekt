@@ -70,46 +70,6 @@
       </div>
       
 
-      <div class="SEcond" >
-      <div class="titell">
-      <h2>VAPE'S</h2>
-      </div>
-      <div class="first-row">
-        
-        <div class="Produkt">
-          <img src="u1-removebg-preview.png" width="150px" height="150px" alt="Vape1">
-          <p>Viho Vape 2% Nic   
-             9.99$</p>
-        </div>
-        <div class="Produkt"><img src="E-shisha-STRAWBERRY-removebg-preview.png" width="150px" height="150px" alt="vape2">
-          <p>XInfinity Vape 0% Nic   
-             12.99$</p>
-        </div>
-        <div class="Produkt"><img src="E-shisha-KIWI-removebg-preview.png" width="150px" height="150px" alt="vape 3">
-          <p> Sigelei Smart Vape   
-             15.99$</p>
-        </div>
-        <div class="Produkt"><img src="E-shisha-HASH-removebg-preview.png" width="150px" height="150px" alt="vape 3">
-          <p> Sigelei Smart Vape    15.99$</p>
-        </div>
-        <div class="Produkt"><img src="E-shisha-BANANA-removebg-preview.png" width="150px" height="150px" alt="vape 3">
-          <p> Sigelei Smart Vape   
-             15.99$</p>
-        </div>
-        <div class="Produkt"><img src="E-shisha-APPLE-PEACH-removebg-preview.png" width="150px" height="150px" alt="vape 3">
-          <p> Sigelei Smart Vape  
-              15.99$</p>
-        </div>
-        <div class="Produkt"><img src="u2-removebg-preview.png" width="150px" height="150px" alt="vape 3">
-          <p> Sigelei Smart Vape  
-              15.99$</p>
-        </div>
-        <div class="Produkt"><img src="u3-removebg-preview.png" width="150px" height="150px" alt="vape 3">
-          <p> Sigelei Smart Vape  
-              15.99$</p>
-        </div>
-      </div>
-    </div>
 
       <div class="third">
         <div class="titell">
