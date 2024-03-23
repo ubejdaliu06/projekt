@@ -5,105 +5,200 @@ session_start();
  $p = new VapeRepository();
 $vape = $p->getAllVape();
 ?>
+
+
+
+
 <!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="Views" content="width=device-width, inital-scale=1">
-<title>The Goat Vape</title>
-<link rel="stylesheet" href="projeckt.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Goat Vape</title>
+    <link rel="stylesheet" href="projeckt.css">
+    <style>
+        /* Reset styles */
+        body, h1, h2, h3, h4, h5, h6, p, ul, li {
+            margin: 0;
+            padding: 0;
+           
+        }
 
-  <body>
-    <div class="main1">
-    <div class="main" >
- 
-        <div class="dd">
-        <h3>WARNING: This product contains nicotine. Nicotine is an addictive chemical.</h3>
-        
-    </div> 
-    
-        <div class="menu">
-          
-        
-            <div class="headeri">
-                <img src="Download1-removebg-preview.png" height="180px" >
-                <div class="catalog"> 
-                    <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">The Goat Vape</h2>
-                </div>
-            </div>
-        </div>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
-        <div class="headerii">
-        <div class="menu1">
-             
-          
-                <li><a href="deals.php"><h3>Best Deals</h3></a></li>
-               
-            
-                
-                <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
-
-                <li><a href="contactus.php"><h3>Contact us</h3></a></li>
-
-                <li><a href="aboutus.php"><h3>About us</h3></a></li>
-               
-                    
-                <li><a href="Log in.php" target="_blank"><h3>Login</h3></a></li>
-
-                <a href="LogOut.php" style='color:blue;'><h3>LogOut</h3></a>
-                  <?php 
-                  
-                
-                  if(isset($_SESSION['roli'])){
-                    if($_SESSION['roli']=="admin"){
-                      echo"<a href='Dashboard.php'><h3>Dashboard </h3></a> ";
-                    }
-                  }
-                 
-                 require_once "databaseConn.php";
-                 include_once "VapeRepository.php";
-         
-         $strep = new VapeRepository();
-         $vape= $strep->getAllVape();
-         
-         ?>
-           </li>
-                
-                </div>
-        </div>
-    </div>
-
-
-    
-                 
-              
-             
-            
-        
    
- 
-          
-          <div class="new">
-            <div class="new1">
-               <h2>NEW ARRIVALS</h2>
+
+        /* Main container */
+        .main1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .dd {
+            background-color: #ff9999;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .headeri img {
+            height: 180px;
+        }
+
+        .catalog h2 {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .headerii {
+            background-color: #333;
+            padding: 10px;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .menu1 {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu1 li {
+            margin-right: 20px;
+        }
+
+    
+     
+
+        /* Product container */
+        .new {
+            margin-top: 40px;
+        }
+
+        .new1 h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Trending section */
+        .f1 {
+            margin-top: 40px;
+        }
+
+        .t1 h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .fotografit {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .rubrika {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .rubrika img {
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .f {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .ff {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .f6 a {
+            margin: 0 10px;
+        }
+
+        .end {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="main1">
+    <div class="dd">
+        <h3>WARNING: This product contains nicotine. Nicotine is an addictive chemical.</h3>
+    </div>
+    <div class="menu">
+        <div class="headeri">
+            <img src="Download1-removebg-preview.png" alt="The Goat Vape Logo">
+            <div class="catalog"> 
+                <h2>The Goat Vape</h2>
             </div>
-<div class="yy">
-          <div class="photo-container" id="photoContainer">
-            <div class="photo-list" id="photoList">
-            </div>
+        </div>
+    </div>
+    <div class="headerii">
+        <ul class="menu1">
+            <li><a href="deals.php"><h3>Best Deals</h3></a></li>
+            <li><a href="contactus.php"><h3>Contact Us</h3></a></li>
+            <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
+            <li><a href="aboutus.php"><h3>About us</h3></a></li>
+            <li><a href="projekt.php"><h3>Home Page</h3></a></li>
+           
+            </li>  <?php 
+           if(isset($_SESSION['roli'])){
+                if($_SESSION['roli']=="admin"){
+                    echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";
+                    echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+                }
+            }
+            ?></li>
+            <li><a href="Log in.php"><h3>Login</h3></a></li>
+        </ul>
+    </div>
+
+    <div class="new">
+        <div class="new1">
+           <h2>NEW ARRIVALS</h2>
+        </div>
+        <div class="yy">
+            <div class="photo-container" id="photoContainer">
+                <div class="photo-list" id="photoList">
+                </div>
             </div>
         </div>
     </div>
 
-        <div class="f1">
-
+    <div class="f1">
         <div class="t1">
             <h2>TRENDING</h2>
         </div>
-    
-                <div class="fotografit">
-                  
-                  <div class="rubrika"> 
+        <div class="fotografit">
+        <div class="rubrika"> 
                 <a href="">  
                 <img src="u1-removebg-preview.png" alt="" class="img" height="200px" id="fotografit">
                  <h6>VIHO TURBO VAPES DISPOSABLE</h6>
@@ -196,94 +291,22 @@ $vape = $p->getAllVape();
             </div>
             </div>
             
-        
-          
 
-           
-            </div>
-            
-           
-        <div class="f">
-          
-            <div class="ff">
-               
-                
-                 
-                <h4 style="font-family: Arial, Helvetica, sans-serif;" >Follow us</h4>
-                <div class="f6">
-               
-                    <a href="https://www.facebook.com/"><img src="facebook.png" alt="https://facebook>" height="40px"></a>
-                
-                    <a href="https://twitter.com/i/flow/login"><img src="twitter.png" alt="twitter" height="40px"></a>
-               
-                    <a href="https://www.instagram.com/"><img src="instagram.png" alt="" height="40px"></a>
-              
-                    <a href="https://www.pinterest.com/login/"><img src="pinterest.png" alt="" height="40px"></a>
-            </div>
-            </div>
-    
-        
-       
-           <!-- <div class="info" style="font-family: Arial, Helvetica, sans-serif;"> -->
-            
-            <!-- <div class="footercenter">
-                <h4>Info</h4>
-                <h4>Contact</h4>
-                <h4>Reviews</h4>
-                <h4>Our Company</h4>
-             
-            </div> -->
-            </div>
-            <!-- <div class="footerright">
-                <h4>Terms of use Privacy Policy</h4>
-            </div> -->
         </div>
+    </div>
 
-
-        <div class="about-section">
-            <a href="projekt\about us.html">
-            <h2>About us</h2>
-        </a>
-        <div class="footercenter">
-            <a href="">
-            <h2>Info</h2>
-            </a>
-            <a href="">
-            <h2>Contact</h2>
-            </a>
-            <a href="">
-            <h2>Reviews</h2>
-            </a>
-            <a href="">
-            <h2>Our Company</h2>
-            </a>
-            
-         
-        </div>
-           
-                <!-- <h4>Welcome to The Goat Vapes</h4>
-                <h5>
-                    At The Goat Vapes, we are enthusiasts dedicated to delivering the best vaping experience to our community.
-                    Our mission is to provide high-quality vape products that cater to both beginners and seasoned vapers alike.
-              
-                    Founded in 2023, we have been on a journey to explore the world of vaping and share our passion with you.
-                    Our team is comprised of vaping experts who are committed to offering expert advice, the latest products, and a friendly community.
-             
-                    Explore our range of premium e-liquids, cutting-edge devices, and accessories. Whether you're new to vaping or a cloud-chasing pro,
-                    The Goat Vapes is here to elevate your vaping experience.
-               
-                    Thank you for choosing The Goat Vapes. Join us on this flavorful journey!
-                </h5> -->
+    <div class="f">
+        <div class="ff">
+            <h4>Follow us</h4>
+            <div class="f6">
+                <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook" height="40px"></a>
+                <a href="https://twitter.com/i/flow/login"><img src="twitter.png" alt="Twitter" height="40px"></a>
+                <a href="https://www.instagram.com/"><img src="instagram.png" alt="" height="40px"></a>
+                <a href="https://www.pinterest.com/login/"><img src="pinterest.png" alt="" height="40px"></a>
             </div>
-   
-       
-        <div class="fundi">
-            <h3>Copyright 2023 The Goat Vape Company. All rights reserved.  </h3>
-            <h3>Designed by Ubejd and Ilmi</h3>
         </div>
-        <hr>
-    
-    
+    </div>
+
     <div class="end">
         <h3>Not for Sale for Minors - Products sold on this site may contain nicotine which is a highly addictive substance. California Proposition 65 - WARNING: This product can expose you to chemicals including nicotine, which is known to the State of California to cause birth defects or other reproductive harm. For more information, go to Proposition 65 Warnings Website. Products sold on this site is intended for adult smokers. You must be of legal smoking age in your territory to purchase products. Please consult your physician before use. E-Juice on our site may contain Propylene Glycol and/or Vegetable Glycerin, Nicotine and Flavorings. Our products may be poisonous if orally ingested. FDA DISCLAIMER: The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. For their protection, please keep out of reach of children and pets. Read our terms and conditions page before purchasing our products. Use All Products On This Site At Your Own Risk!</h3>
     </div>
@@ -296,5 +319,4 @@ $vape = $p->getAllVape();
 
 
 </html>
-
 
