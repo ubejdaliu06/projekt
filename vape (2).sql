@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2024 at 08:08 PM
+-- Generation Time: Mar 23, 2024 at 04:15 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `vape`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `countact_us`
+--
+
+CREATE TABLE `countact_us` (
+  `emri` varchar(255) NOT NULL,
+  `mbiemri` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `nrtelefonit` int(11) NOT NULL,
+  `comment` varchar(5000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -42,7 +56,10 @@ CREATE TABLE `form` (
 INSERT INTO `form` (`name`, `email`, `pass`, `confirmpassword`, `roli`) VALUES
 ('ubejd', 'ubejdaliu@gmail.com', '12345678', '12345678', 'admin'),
 ('ilmi', 'ilmialiu@gmail.com', '12345678', '12345678', 'admin'),
-('ubejd', 'ubejdaliu55@gmail.com', 'omeraliu12.', 'omeraliu12.', '');
+('ubejd', 'ubejdaliu55@gmail.com', 'omeraliu12.', 'omeraliu12.', ''),
+('ubejd', 'ubejdaliu123@gmail.com', '12345678', '12345678', ''),
+('ubejd11', 'ilmialiu1389@gmail.com', '12345678', '12345678', ''),
+('ubejdaa', 'ilmialiu1389@gmail.com', '12345678', '12345678', '');
 
 -- --------------------------------------------------------
 
@@ -51,12 +68,19 @@ INSERT INTO `form` (`name`, `email`, `pass`, `confirmpassword`, `roli`) VALUES
 --
 
 CREATE TABLE `shisha` (
-  `shisha_Id` int(11) NOT NULL,
+  `shisha_ID` int(11) NOT NULL,
   `Emri` varchar(255) NOT NULL,
   `Pershkrim` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL,
   `cmimi` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `shisha`
+--
+
+INSERT INTO `shisha` (`shisha_ID`, `Emri`, `Pershkrim`, `img`, `cmimi`) VALUES
+(2, 'asdasd', 'adsasdasds', 'asdasdasdas', '');
 
 -- --------------------------------------------------------
 
@@ -77,8 +101,7 @@ CREATE TABLE `vape` (
 --
 
 INSERT INTO `vape` (`Id`, `Emri`, `Pershkrim`, `Cmimi`, `img`) VALUES
-(12, 'vape', 'asdasdsa', 'adsadsadada', 0x452d7368697368612d484153482d72656d6f766562672d707265766965772e706e67),
-(13, 'ubejd', 'vapett', '23232', '');
+(3, 'asdasda', 'adsadad', 'adasdadad', 0x696a6f795f6261725f736431303030305f646973706f7361626c655f2d5f64656661756c742d72656d6f766562672d707265766965772e706e67);
 
 --
 -- Indexes for dumped tables
@@ -104,13 +127,13 @@ ALTER TABLE `vape`
 -- AUTO_INCREMENT for table `shisha`
 --
 ALTER TABLE `shisha`
-  MODIFY `shisha_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `shisha_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `vape`
 --
 ALTER TABLE `vape`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

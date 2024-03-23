@@ -1,10 +1,10 @@
 <?php
 session_start();
 include 'ShishaRepository.php'; 
-$id = $_GET['shisha_Id'];//e merr id e Paisjes
+$id = $_GET['shisha_ID'];
 $editedBy = isset($_SESSION['email']) ? "Edited By: " . $_SESSION['email'] : "Edited By: Unknown";
-$strep = new PaisjetRepository();
-$paisja = $strep->getPaisjaById($id);
+$strep = new ShishaRepository();
+$shisha = $strep->getShishaById($id);
 ?>
 
 
@@ -12,19 +12,18 @@ $paisja = $strep->getPaisjaById($id);
 <html>
 <body>
     <h3>Edit Shisha</h3>
-    <form action="<?php echo $_SERVER['PHP_SELF'] . '?shisha_Id=' . $id; ?>" method="POST">
-     <!-- nese nuk duam t'i ndryshojme te gjitha te dhenat, e perdorim kete pjesen tek value qe te na shfaqen vlerat aktuale, ashtu qe atributet qe nuk duam t'i ndryshojme mbesin te njejta pa pasur nevoje t'i shkruajme prape-->  
+    <form action="<?php echo $_SERVER['PHP_SELF'] . '?shisha_ID=' . $id; ?>" method="POST">
+     
      <label>Emri:</label>    
-     <input type="text" name="emri"  value="<?php echo $paisja['Emri']?>"> <br> <br> <!-- Pjesa brenda [] eshte emri i sakte i atributit si ne Databaze-->
-  
+     <input type="text" name="Emri" value="<?php echo $shisha['Emri']?>"> <br> <br> 
     
      <label>Cmimi:</label> 
-     <input type="text" name="cmimi"  value="<?php echo $paisja['Cmimi']?>"> <br> <br>
+     <input type="text" name="cmimi" value="<?php echo $shisha['cmimi']?>"> <br> <br>
   
      <label>Foto e produktit:</label>
-     <input type="file" name="img"  value="<?php echo $paisja['img']?>"> <br> <br>
+     <input type="file" name="img" value="<?php echo $shisha['img']?>"> <br> <br>
      <label>Pershkrimi:</label>
-     <input type="text" name="Pershkrim"  value="<?php echo $paisja['Pershkrim']?>"> <br> <br>
+     <input type="text" name="Pershkrim" value="<?php echo $shisha['Pershkrim']?>"> <br> <br>
      <input type="hidden" name="edit" value="<?php echo htmlspecialchars($editedBy); ?>"> <br> <br>
      <input type="submit" name="editBtn" value="save"> <br> <br>
     </form>
@@ -74,17 +73,14 @@ input[type="submit"]:hover {
 <?php 
 
 if(isset($_POST['editBtn'])){
-    $id = $id; //merret nga paisja me siper
-    $emri = $_POST['emri']; //merret nga formulari
-
+    $id = $id; 
+    $Emri = $_POST['Emri']; 
     $cmimi = $_POST['cmimi'];
-
     $img = $_POST['img'];
-    $pershkrimi = $_POST['Pershkrim'];
-    $edit = $_POST['edit'];
+    $Pershkrim = $_POST['Pershkrim'];
 
-    $strep->editPaisja($id, $Emri, $Pershkrim, $Cmimi,$img);
-    header("location:Dashboard.php");
+    $strep->editShisha($id, $Emri, $Pershkrim, $cmimi, $img);
+    header("location: Dashboard.php");
     exit();
 }
 

@@ -89,6 +89,14 @@
         </div>
       </div>
       </div>
+      <div class="rubrika">
+            <?php foreach ($shisha as $vape) { ?>
+        
+           <a href=""> <img src="<?php echo $vape['img']?>" height="200px">
+               <p><?php echo $vape['Emri']?></p></a> 
+           
+       
+           <?php } ?>s
       <hr>
       <br>
       

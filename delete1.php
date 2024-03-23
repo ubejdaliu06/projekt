@@ -1,9 +1,10 @@
 <?php
-include_once 'ShishaRespsitory.php';
-$id = $_GET['shisha_Id'];//e merr id prej url
+include_once 'ShishaRepository.php'; 
 
-$strep = new ShishaRespsitory();
-$strep->deletePaisja($id);
+$id = $_GET['shisha_ID'];
 
-header("location:Dashboard.php");
+$strep = new ShishaRepository();
+$strep->deleteShisha($id);
+
+header("location: Dashboard.php");
 ?>

@@ -10,8 +10,13 @@
       public function __construct()
       {
           $this->mysqli = new mysqli($this->host, $this->user, $this->pass, $this->db);
+      
+          // Check for connection errors
+          if ($this->mysqli->connect_error) {
+              die('Connect Error (' . $this->mysqli->connect_errno . ') ' . $this->mysqli->connect_error);
+          }
       }
-
+      
       public function contact_us($data)
       {
           $emri = $data['emri'];

@@ -10,11 +10,13 @@ if ( $_SESSION['roli'] !== 'admin') {
 }
 include "databaseConn.php";
 include_once "VapeRepository.php";
+include_once "ShishaRepository.php";
 include "function.php"; 
 
 $strep = new VapeRepository();
 $vape = $strep->getAllVape();
-
+$strepShisha = new ShishaRepository();
+$shisha = $strepShisha->getAllShisha();
 
 ?>
 
@@ -75,31 +77,30 @@ $vape = $strep->getAllVape();
         
           <th>Foto</th>
           <th>Pershkrimi</th>
-       
+        ^`
        </tr>
       </thead>
         <tbody>
         <h2 style="text-align: center;">Regjistri i Shishave</h2>
-                <?php foreach($shisha as $vape) { ?> 
+                <?php foreach($shisha as $shishat) { ?> 
                     <tr>
-                        <td><?php echo $vape['Emri'];?></td>
+                        <td><?php echo $shishat['Emri'];?></td>
                       
-                        <td><?php echo $vape['Cmimi'];?></td>
+                        <td><?php echo $shishat['cmimi'];?></td>
                    
-                        <td><?php echo $vape['img'];?></td>
-                        <td><?php echo $vape['Pershkrim'];?></td>
+                        <td><?php echo $shishat['img'];?></td>
+                        <td><?php echo $shishat['Pershkrim'];?></td>
                        
-                        <td><a href='edit1.php?shisha_Id=<?php echo $vape['shisha_Id']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga studenti i cili eshte i paraqitur ne kete rresht-->
-                        <td><a href='delete.php?Id=<?php echo $vape['id']?>'>Delete</a></td>
+                        <td><a href='edit1.php?shisha_ID=<?php echo $shishat['shisha_ID']?>'>Edit</a></td> 
+                        <td><a href='delete1.php?shisha_ID=<?php echo $shishat['shisha_ID']?>'>Delete</a></td>
                     </tr>
                 <?php }?> 
-                <a href="Register2.php" style="margin-top:40px; margin-left:40px;color:black;">Register</a>
+                <a href="Register12.php" style="margin-top:40px; margin-left:40px;color:black;">Register</a>
 <h2 style="text-align: center;">Regjistri i Vapes</h2>
 
 <table>
             <thead>
             <tr>
-            <h2 style="text-align: center;">Regjistri i Paqartesive</h2>
             <th>Emri</th>
                 <th>Mbiemri</th>
                 <th>Email</th>
@@ -120,7 +121,8 @@ $vape = $strep->getAllVape();
 
                     </tr>
                 <?php }?> 
-        </tbody>
+            </tbody>
+        </table>
         <style>
  body {
     font-family: Arial, sans-serif;
