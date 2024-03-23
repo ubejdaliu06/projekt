@@ -4,7 +4,7 @@
       private $host = "localhost";
       private $user = "root";
       private $pass = "";
-      private $db = "store";
+      private $db = "vape";
       public $mysqli;
 
       public function __construct()
@@ -25,7 +25,6 @@
           $nrtelefonit = $data['nrtelefonit'];
           $comment = $data['comment'];
 
-          // Using prepared statement to prevent SQL injection
           $stmt = $this->mysqli->prepare("INSERT INTO contact_us (emri, mbiemri, email, nrtelefonit, comment) VALUES (?, ?, ?, ?, ?)");
           $stmt->bind_param("sssss", $emri, $mbiemri, $email, $nrtelefonit, $comment);
           $result = $stmt->execute();
@@ -33,7 +32,8 @@
 
           return $result;
       }
-
+          
+      
       public function getAllComments()
       {
           $conn = $this->mysqli;
@@ -47,4 +47,4 @@
           return $comments;
       }
   }
-  ?>
+?>
