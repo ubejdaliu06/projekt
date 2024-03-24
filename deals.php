@@ -1,9 +1,9 @@
 <?php 
 session_start();
  include 'databaseConn.php';
- include_once 'ShishaRepository.php'; 
- $p = new ShishaRepository();
-$shisha = $p->getAllShisha();
+ include_once 'dealsRepository.php'; 
+ $p = new dealsRepository();
+$deals = $p->getAlldeals();
 ?>
 
 
@@ -14,6 +14,7 @@ $shisha = $p->getAllShisha();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Goat Vape - Best Deals</title>
+    <!-- <link rel="stylesheet" href="deals.css"> -->
   
     
     <style>
@@ -45,6 +46,8 @@ $shisha = $p->getAllShisha();
       border-radius: 9px;
      
   }
+
+
  .headerii{
   width:100% ;
   height: 60px;
@@ -120,6 +123,17 @@ $shisha = $p->getAllShisha();
         .headeri img {
             height: 180px;
         }
+        .first{
+            display:flex;
+            gap:80px;
+            justify-content:center;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-wrap: wrap;
+          
+        }
 
         .catalog h2 {
             font-size: 24px;
@@ -156,22 +170,40 @@ $shisha = $p->getAllShisha();
             font-size: 36px;
             margin-bottom: 20px;
         }
+        .main1 {
+            background-color: #ffffff;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
         /* Deal images */
-        .photo-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
 
-        .photo-container a {
-            margin: 10px;
-        }
+        .yy{
+  display: flex;
+  justify-content: center;
+}
 
-        .photo-container img {
-            height: 200px;
-        }
+.photo-container {
+ 
+  width: 300px; 
+  height: 300px; 
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-list {
+  display: flex;
+  transition: transform 0.5s ease-in-out; 
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
         /* Discount label */
         .yy1 {
@@ -191,6 +223,29 @@ $shisha = $p->getAllShisha();
             border: none;
             border-top: 1px solid #ccc;
         }
+        .f {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .ff {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .f6 a {
+            margin: 0 10px;
+        }
+
+        .end {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -198,13 +253,14 @@ $shisha = $p->getAllShisha();
     <div class="dd">
         <h3>WARNING: This product contains nicotine. Nicotine is an addictive chemical.</h3>
     </div>
+  
     <div class="menu">
-        <div class="headeri">
+       <a href="projekt.php" style="text-decoration:none; color:black;"> <div class="headeri">
             <img src="Download1-removebg-preview.png" alt="The Goat Vape Logo">
             <div class="catalog"> 
                 <h2>The Goat Vape</h2>
             </div>
-        </div>
+        </div></a> 
     </div>
     <div class="headerii">
         <ul class="menu1">
@@ -212,22 +268,22 @@ $shisha = $p->getAllShisha();
             <li><a href="contactus.php"><h3>Contact Us</h3></a></li>
             <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
             <li><a href="aboutus.php"><h3>About us</h3></a></li>
-            <li><a href="projekt.php"><h3>Home Page</h3></a></li>
+            <!-- <li><a href="projekt.php"><h3>Home Page</h3></a></li> -->
            
-            </li>  <?php 
-           if(isset($_SESSION['roli'])){
-                if($_SESSION['roli']=="admin"){
-                    echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";
-                    echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
-                }else{
-                    echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
-                   
-                }
-         
-            }
+            </li>    <?php  if(isset($_SESSION['roli'])){
+    if($_SESSION['roli']=="admin"){
+        echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";
+        echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+    } else {
+        echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+    }
+} else {
+    // User is not logged in, so display the "Log in" link
+    echo "<li><a href='Log in.php'><h3>Log In</h3></a></li>";
+    echo "<li><a href='Register.php'><h3>Sign In</h3></a></li>";
+}
+?></li>
             
-            ?></li>
-            <li><a href="Log in.php"><h3>Login</h3></a></li>
         </ul>
     </div>
 
@@ -235,31 +291,55 @@ $shisha = $p->getAllShisha();
         <div class="new1">
            <h2>Best Deals</h2>
         </div>
-        <div class="photo-container">
-            <a href=""><img src="elf-bar-600-bubble-tea-e-zigarette-vape-stick-20-mg-alle-neuen-sorten-guenstig-online-kaufen-hookain-e-shisha-onlineshop.webp" alt="Deal 1"></a>
-            <a href=""><img src="u6-removebg-preview.png" alt="Deal 2"></a>
-            <a href=""><img src="u4-removebg-preview.png" alt="Deal 3"></a>
-            <a href=""><img src="u3-removebg-preview.png" alt="Deal 4"></a>
+        <div class="yy">
+          <div class="photo-container" id="photoContainer">
+            <div class="photo-list" id="photoList">
+               
+            </div>
+            
+                
+            </div>
+        
+            </div>
+            <div class="yy1">
+                <h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">20% off </h2>
+          
         </div>
-        <div class="yy1">
-            <h2>20% off</h2>
-        </div>
-
+                
+            
+      
     <div class="g2">
         <h2>Gratis Offer 1+1</h2>
     </div>
 
-    <div class="photo-container">
-    <?php foreach ($shisha as $shishat) { ?>
+    <div class="first"style="text-decoration:none;
+            color:black;">
+            <?php foreach ($deals as $ad) { ?>
         
-        <a href=""> <img src="<?php echo $shishat['img']?>" height="200px">
-            <p><?php echo $shishat['Emri']?></p></a> 
-        
-    
-        <?php } ?>
+           <a href=""> <img src="<?php echo $ad['img']?>" height="200px">
+               <p><?php echo $ad['Emri']?></p>
+               <p><?php echo $ad['cmimi']?></p>
+            </a> 
+           
+       
+           <?php } ?>
+
+    </div>   
+ 
 
     </div>
 </div>
+<div class="f">
+        <div class="ff">
+            <h4>Follow us</h4>
+            <div class="f6">
+                <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook" height="40px"></a>
+                <a href="https://twitter.com/i/flow/login"><img src="twitter.png" alt="Twitter" height="40px"></a>
+                <a href="https://www.instagram.com/"><img src="instagram.png" alt="" height="40px"></a>
+                <a href="https://www.pinterest.com/login/"><img src="pinterest.png" alt="" height="40px"></a>
+            </div>
+        </div>
+    </div>
 
 <hr>
 <script src="deals.js"></script>

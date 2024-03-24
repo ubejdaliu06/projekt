@@ -1,3 +1,9 @@
+<?php 
+session_start();
+include 'databaseConn.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,24 +18,31 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+        body, h1, h2, h3, h4, h5, h6, p, ul, li {
+            margin: 0;
+            padding: 0;
+           
+        }
+
 
         .main1 {
             background-color: #ffffff;
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        .main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+   
 
         .dd {
             text-align: center;
             padding: 10px 0;
-            background-color: #ff9999;
-            color: #ffffff;
+        
+    
             font-size: 14px;
+            background-image:url(AdobeStock_277931111_Preview.jpeg);
+          color: red;
         }
 
         .menu {
@@ -37,6 +50,7 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
+            
         }
 
         .headeri img {
@@ -71,17 +85,27 @@
         .home {
             text-align: center;
             margin-top: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .u1 {
             margin: 20px;
             padding: 20px;
             background-color: #ffffff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .about-section {
             text-align: justify;
             line-height: 1.5;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        
         }
 
         .our {
@@ -91,6 +115,9 @@
             margin-top: 20px;
             padding: 20px;
             background-color: #ffffff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .s55 {
@@ -102,6 +129,9 @@
             color: #ffffff;
             text-align: center;
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .ff {
@@ -111,6 +141,9 @@
         .f6 a {
             margin: 0 5px;
             color: #ffffff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .fundi {
@@ -118,6 +151,9 @@
             padding: 20px;
             background-color: #333;
             color: #ffffff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .end {
@@ -125,6 +161,9 @@
             padding: 20px;
             background-color: #333;
             color: #ffffff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
     </style>
 </head>
@@ -136,13 +175,13 @@
             <h3>WARNING: This product contains nicotine. Nicotine is an addictive chemical.</h3>
         </div>
         <div class="menu">
-            <div class="headeri">
-                <img src="Download1-removebg-preview.png" alt="The Goat Vape Logo">
-                <div class="catalog"> 
-                    <h2>The Goat Vape</h2>
-                </div>
+       <a href="projekt.php" style="text-decoration:none; color:black;"> <div class="headeri">
+            <img src="Download1-removebg-preview.png" alt="The Goat Vape Logo">
+            <div class="catalog"> 
+                <h2>The Goat Vape</h2>
             </div>
-        </div>
+        </div></a> 
+    </div>
         <div class="headerii">
         <ul class="menu1">
         
@@ -150,16 +189,21 @@
             <li><a href="contactus.php"><h3>Contact Us</h3></a></li>
             <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
             <li><a href="aboutus.php"><h3>About us</h3></a></li>
-            <li><a href="projekt.php"><h3>Home Page</h3></a></li>
-            </li>  <?php 
-            if(isset($_SESSION['roli'])){
-             
-                    echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
-                }
-            
-         
-            ?></li>
-            <li><a href="Log in.php"><h3>Login</h3></a></li>
+            <!-- <li><a href="projekt.php"><h3>Home Page</h3></a></li> -->
+            </li>    <?php  if(isset($_SESSION['roli'])){
+    if($_SESSION['roli']=="admin"){
+        echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";
+        echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+    } else {
+        echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+    }
+} else {
+    // User is not logged in, so display the "Log in" link
+    echo "<li><a href='Log in.php'><h3>Log In</h3></a></li>";
+    echo "<li><a href='Register.php'><h3>Sign In</h3></a></li>";
+}
+?></li>
+           
         </ul>
             </div>
         </div>
@@ -168,6 +212,7 @@
         <h4>About us</h4>
     </div>
     <h2 style="text-align: center;">History</h2>
+    <br><br><br><br>
     <div class="u1">
         <div class="about-section">
             <h4>Established in 2013, Element Vape is a progressive retail establishment in the electronic cigarette industry based out of California. Our personal philosophy is to give consumers more than what they pay for. With an uncompromising drive to exceed expectations, we are committed to help customers experience the best possible shopping experience. Furthermore, we invested in a strict, industry-leading age verification system to verify every single order for youth prevention in accordance with federal law.
@@ -178,9 +223,11 @@
             Element Vape is committed to the vibrant vaping community. We are an active member of Vapor Tech Association (VTA) and donated to vape advocacy groups such as American Vaping Association (AVA).</h4>
         </div>
     </div>
-    <div>
+    <br><br><br><br><br>
+    <div class="our">
         <h2>Our Company</h2>
     </div>
+    <br> <br> <br>
     <div class="our">
         <div class="s55">
             <h4>5-STAR USER REVIEWS</h4>
@@ -199,6 +246,7 @@
             <h1>10K</h1>
         </div>
     </div>
+    <br><br><br><br>
     <div class="f">
         <div class="ff">
             <h4 style="font-family: Arial, Helvetica, sans-serif;">Follow us</h4>

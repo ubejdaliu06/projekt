@@ -5,24 +5,24 @@ class user{
     private $Name;
     private $Surname;
     private $Email_Adress;
-    private $Username;
+  
     private $password;
-    private $Birthdate;
-    private $SEX;
+  
+
    
     
     
   
 
 
-    public function __construct($Name,$Surname, $Email_Adress,$Username,$password,$Birthdate,$SEX){
+    public function __construct($Name,$Surname, $Email_Adress,$password){
         $this->Name=$Name;
         $this->Surname=$Surname;
         $this->Email_Adress=$Email_Adress;
-        $this ->Username=$Username;
+       
         $this ->password=$password;
-        $this ->Birthdate=$Birthdate;
-        $this ->SEX=$SEX;
+     
+     
       
     }
 
@@ -53,19 +53,7 @@ class user{
     public function setpassword($m){
         $this->password = $m;
     }
-    public function getBirthdate(){
-        return $this->Birthdate;
-    }
-    public function setBirthdate($m){
-        $this->Birthdate = $m;
-    }
-    public function getSEX(){
-        return $this->SEX;
-    }
-    public function setSEX($m){
-        $this->SEX = $m;
-    }
-   
+
 
     public function toString(){
         return "Emri: ".$this->Name." dhe username ".$this->Username;

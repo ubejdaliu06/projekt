@@ -52,7 +52,7 @@ include("db.php");
 </head>
 <body> 
   <div class="logo">
-      <h2>The GoatVape</h2>
+  
  <br>
  <br>
       <a href="projekt.php"> <img src="Download1-removebg-preview.png"> </a>
@@ -60,20 +60,20 @@ include("db.php");
 
   <div class="formular">
     <form onsubmit="validimi()" method="POST">
-      <h1>LogIn</h1>
+      <h1  style="color:white;">LogIn</h1>
 
-        <label>E-mail:</label>
+        <label style="color:white;">E-mail:</label>
         <input type="text" placeholder="E-mail" id="email" name="email" class="input-box" required>
-        <label>Password:</label>
+        <label style="color:white;">Password:</label>
         <input type="password" placeholder="Password" id="fjalekalimi" name="pass" class="input-box" required>
         
 
       <div class="remember-forgot">
-        <label><input type="checkbox">Remember Me</label>
-        <a href="#">Forgot Password</a>
+        <label style="color:white;"><input type="checkbox" >Remember Me</label>
+        <a href="#" style="color:white;">Forgot Password</a>
       </div>
       <button type="submit" class="btn">LogIn</button>
-      <a href="Register.php" target="_blank"><p id="register"style="display:flex; margin-left:120px; text-align:center; justify=content:center; align-items:center;">Create Account</p></a>
+      <a href="Register.php" target="_blank"><p id="register"style="display:flex; margin-left:120px; text-align:center; justify=content:center; align-items:center; color:white;">Create Account</p></a>
     </form>
   </div>
 

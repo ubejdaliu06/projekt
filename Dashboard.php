@@ -12,7 +12,9 @@ include "databaseConn.php";
 include_once "VapeRepository.php";
 include_once "ShishaRepository.php";
 include_once "accesoriesRepository.php";
+include_once "dealsRepository.php";
 include "Contact.php";
+include "news.php";
 
 $strep = new VapeRepository();
 $vape = $strep->getAllVape();
@@ -22,6 +24,10 @@ $contact = new Contact();
 $data = $contact->getAllComments();
 $strepaccesories = new accesoriesRepository();
 $accesories = $strepaccesories->getAllaccesories();
+$news = new News();
+$newss = $news->getAllNews();
+$strepdeals = new dealsRepository();
+$deals = $strepdeals->getAlldeals();
 
 ?>
 
@@ -121,9 +127,10 @@ $accesories = $strepaccesories->getAllaccesories();
         </div>
     </div>
 </div>
-
+<br>
+<br><br>
 <h2 style="text-align: center;">Regjistri i Vapes</h2>
-
+<br><br>
 <table>
     <thead>
     <tr>
@@ -150,8 +157,8 @@ $accesories = $strepaccesories->getAllaccesories();
 </table>
 
 <a href="Register1.php">Register Vape</a>
-
-<h2 style="text-align: center;">Regjistri i Shishave</h2>
+<br><br><br> <br> <br> <hr>
+<h2 style="text-align: center;">Regjistri i Shishave</h2><br><br>
 
 <table>
     <thead>
@@ -178,9 +185,10 @@ $accesories = $strepaccesories->getAllaccesories();
     </tbody>
 </table>
 
-<a href="Register12.php">Register Shisha</a>
+<a href="Register12.php">Register Shisha</a> <br> <br> <br> <br>
 
-
+<hr>
+<h2 style="text-align: center;">Regjistri i Accesories</h2><br><br>
 <table>
     <thead>
     <tr>
@@ -200,7 +208,7 @@ $accesories = $strepaccesories->getAllaccesories();
             <td><?php echo $ac['Cmimi'];?></td>
             <td><?php echo $ac['img'];?></td>
             <td><a href='edit33.php?id=<?php echo $ac['id']?>'>Edit</a></td>
-            <td><a href='.php?id=<?php echo $ac['id']?>'>Delete</a></td>
+            <td><a href='delete3.php?id=<?php echo $ac['id']?>'>Delete</a></td>
         </tr>
     <?php } ?>
     </tbody>
@@ -208,9 +216,44 @@ $accesories = $strepaccesories->getAllaccesories();
 <a href="Register123.php">Register Accesories</a>
 
 
+<br><br><br> <br>
+<hr>
+
+<br> <br> <br> <br>
+
+<hr>
+<h2 style="text-align: center;">Regjistri i Deals</h2><br><br>
+<table>
+    <thead>
+    <tr>
+        <th>Emri</th>
+        <th>Pershkrimi</th>
+        <th>Cmimi</th>
+        <th>Foto</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach($deals as $ad) { ?>
+        <tr>
+            <td><?php echo $ad['Emri'];?></td>
+            <td><?php echo $ad['Pershkrim'];?></td>
+            <td><?php echo $ad['cmimi'];?></td>
+            <td><?php echo $ad['img'];?></td>
+            <td><a href='edit5.php?id=<?php echo $ac['id']?>'>Edit</a></td>
+            <td><a href='delete4.php?id=<?php echo $ac['id']?>'>Delete</a></td>
+        </tr>
+    <?php } ?>
+    </tbody>
+</table>
+<a href="register4.php">Register Deals</a>
 
 
+<br><br><br> <br>
+<hr>
 <h2 style="text-align: center;">Regjistri i Paqartesive</h2>
+<br><br>
 <table>
 
 <table>
@@ -233,6 +276,28 @@ $accesories = $strepaccesories->getAllaccesories();
                         <td><?php echo $msg['nrtelefonit'];?></td>
                         <td><?php echo $msg['comment'];?></td>
 
+
+                    </tr>
+                <?php }?> 
+            </tbody>
+        </table>
+        <br><br><br>
+        <hr>
+        <h2 style="text-align: center;">NewsLetters</h2>
+        <br> <br> <br>
+        <table>
+            <thead>
+            <tr>
+            <th>Email</th>
+         
+
+            </tr>
+            </thead>
+            <tbody>
+                <?php foreach($newss as $ne) { ?>
+                    <tr>
+                    <td><?php echo $ne['email'];?></td>
+                
 
                     </tr>
                 <?php }?> 

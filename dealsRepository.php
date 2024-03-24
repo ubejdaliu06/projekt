@@ -2,7 +2,7 @@
     include_once('databaseConn.php');
     
 
-    class accesoriesRepository{
+    class dealsRepository{
       private $connection;
 
       public function __construct()
@@ -12,48 +12,48 @@
       }
 
 
-      public function insertaccesories($Emri, $Pershkrim, $Cmimi, $img){
+      public function insertdeals($Emri, $Pershkrim, $cmimi, $img){
         $conn = $this->connection;
-        $sql = "INSERT accesories(Emri, Pershkrim, Cmimi, img) VALUES (?,?,?,?)";
+        $sql = "INSERT deals(Emri, Pershkrim, cmimi, img) VALUES (?,?,?,?)";
         $statement = $conn->prepare($sql);
-        $statement->execute([$Emri, $Pershkrim, $Cmimi, $img]);
+        $statement->execute([$Emri, $Pershkrim, $cmimi, $img]);
         echo "<script>alert('U shtua me sukses!')</script>";
     }
 
-    public function getAllaccesories(){
+    public function getAlldeals(){
       $conn = $this->connection;
-      $sql = "SELECT * FROM accesories";
+      $sql = "SELECT * FROM deals";
       $statement = $conn->query($sql);
-      $accesories = $statement->fetchAll();
-      return $accesories;
+      $deals = $statement->fetchAll();
+      return $deals;
   }
 
 
         //Pjesa tjeter e funksioneve CRUD:
         //dergohet parametri ne baze te cilit e identifikojme paisjen (ne kete rast id, por mund te jete edhe ndonje atribut tjeter) dhe parametrat e tjere qe mund t'i ndryshojme (emri, mbiemri, etj...)
-        public function editaccesories($id, $Emri, $Pershkrim, $Cmimi, $img){
+        public function editdeals($id, $Emri, $Pershkrim, $cmimi, $img){
           $conn = $this->connection;
-          $sql = "UPDATE accesories SET Emri=?, Pershkrim=?, Cmimi=?, img=? WHERE id=?";
+          $sql = "UPDATE deals SET Emri=?, Pershkrim=?, cmimi=?, img=? WHERE id=?";
           $statement = $conn->prepare($sql);
           $statement->execute([$Emri, $Pershkrim, $Cmimi, $img, $id]);
           echo "<script>alert('U ndryshua me sukses!')</script>";
       }
 
-      public function deleteaccesories($id){
+      public function deletedeals($id){
         $conn = $this->connection;
-        $sql = "DELETE FROM accesories WHERE id=?";
+        $sql = "DELETE FROM deals WHERE id=?";
         $statement = $conn->prepare($sql);
         $statement->execute([$id]);
     }
 
         //shtese per update: merr studentin ne baze te Id
-        public function getaccesoriesById($id){
+        public function getdealsById($id){
           $conn = $this->connection; 
-          $sql = "SELECT * FROM accesories WHERE id=?";
+          $sql = "SELECT * FROM deals WHERE id=?";
           $statement = $conn->prepare($sql);
           $statement->execute([$id]);
-          $accesories = $statement->fetch();
-          return $accesories;
+          $deals = $statement->fetch();
+          return $deals;
       }
   }
   ?>

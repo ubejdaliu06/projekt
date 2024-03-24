@@ -4,6 +4,9 @@ session_start();
  include_once 'accesoriesRepository.php'; 
  $p = new accesoriesRepository();
 $accesories = $p->getAllaccesories();
+include_once 'ShishaRepository.php'; 
+ $p = new ShishaRepository();
+$shisha = $p->getAllShisha();
 ?>
 
 
@@ -25,9 +28,10 @@ $accesories = $p->getAllaccesories();
 
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
         }
-
         /* Main container */
         .main1 {
             max-width: 1200px;
@@ -67,6 +71,18 @@ $accesories = $p->getAllaccesories();
       
       
  }
+ .main1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .main1 {
+            background-color: #ffffff;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 .menu1>li>a{
   color: black;
   position: relative;
@@ -108,6 +124,9 @@ $accesories = $p->getAllaccesories();
             background-color: #ff9999;
             text-align: center;
             padding: 10px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .menu {
@@ -115,6 +134,9 @@ $accesories = $p->getAllaccesories();
             justify-content: center;
             align-items: center;
             margin-top: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .headeri img {
@@ -131,6 +153,9 @@ $accesories = $p->getAllaccesories();
             padding: 10px;
             color: #ffffff;
             margin-top: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .menu1 {
@@ -141,6 +166,7 @@ $accesories = $p->getAllaccesories();
             padding: 0;
             margin: 0;
         }
+        
 
         .menu1 li {
             margin-right: 20px;
@@ -157,9 +183,20 @@ $accesories = $p->getAllaccesories();
             justify-content: center;
             gap: 20px;
         }
+        .first{
+            display:flex;
+            gap:80px;
+            justify-content:center;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
 
         .Produkt {
             text-align: center;
+            
         }
 
         .Produkt img {
@@ -193,6 +230,33 @@ $accesories = $p->getAllaccesories();
             border: none;
             border-top: 2px solid #ddd;
         }
+        .f {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .ff {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .f6 a {
+            margin: 0 10px;
+        }
+
+        .end {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        a{
+            text-decoration:none;
+            color:black;
+        }
     </style>
 </head>
 <body>
@@ -201,12 +265,12 @@ $accesories = $p->getAllaccesories();
         <h3>WARNING: This product contains nicotine. Nicotine is an addictive chemical.</h3>
     </div>
     <div class="menu">
-        <div class="headeri">
+       <a href="projekt.php" style="text-decoration:none; color:black;"> <div class="headeri">
             <img src="Download1-removebg-preview.png" alt="The Goat Vape Logo">
             <div class="catalog"> 
                 <h2>The Goat Vape</h2>
             </div>
-        </div>
+        </div></a> 
     </div>
     <div class="headerii">
         <ul class="menu1">
@@ -214,66 +278,73 @@ $accesories = $p->getAllaccesories();
             <li><a href="contactus.php"><h3>Contact Us</h3></a></li>
             <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
             <li><a href="aboutus.php"><h3>About us</h3></a></li>
-            <li><a href="projekt.php"><h3>Home Page</h3></a></li>
+            <!-- <li><a href="projekt.php"><h3>Home Page</h3></a></li> -->
            
-            </li>  <?php 
-           if(isset($_SESSION['roli'])){
-                if($_SESSION['roli']=="admin"){
-                    echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";
-                    echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
-                }else{
-                    echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
-                   
-                }
-         
-            }
-            
-            ?></li>
-            <li><a href="Log in.php"><h3>Login</h3></a></li>
+            </li>     <?php  if(isset($_SESSION['roli'])){
+    if($_SESSION['roli']=="admin"){
+        echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";
+        echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+    } else {
+        echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+    }
+} else {
+    // User is not logged in, so display the "Log in" link
+    echo "<li><a href='Log in.php'><h3>Log In</h3></a></li>";
+    echo "<li><a href='Register.php'><h3>Sign In</h3></a></li>";
+}
+?></li>
+           
         </ul>
     </div>
-
+    <br><br><br><br><br><br>
     <div class="First-bracket">
         <div class="titell">
             <h2> SHISHA'S</h2>
         </div>
         <div class="first">
-            <div class="Produkt">
-                <img src="shisha 1.png " width="150px" height="150px" alt="shisha1">
-                <p>Standard Shisha 59.99$</p>
-            </div>
-            <div class="Produkt">
-                <img src="shisha 2.png" width="150px" height="150px" alt="shisha2">
-                <p>Black shisha 79.99$</p>
-            </div>
-            <div class="Produkt">
-                <img src="shisha 3.png" width="150px" height="150px" alt="shisha 3">
-                <p> Exclusive Shisha 87.99$</p>
-            </div>
-        </div>
+        <?php foreach ($shisha as $shishat) { ?>
+        
+        <a href=""> <img src="<?php echo $shishat['img']?>" height="200px">
+               <p><?php echo $shishat['Emri']?></p>
+               <p><?php echo $shishat['cmimi']?></p>
+        </a> 
+        
+    
+        <?php } ?>
+            
     </div>
+    <br><br><br><br><br>
     <div class="third">
         <div class="titell">
             <h2>ACCESORIES</h2>
         </div>
+        <br><br>
         <div class="First-row">
-            <div class="Produkt">
-                <img src="pica.jpg-removebg-preview.png" width="250px" height="250px" alt="poker">
-                <p> Shisha Poker    6.99$ </p>
-            </div>
-            <div class="Produkt">
-                <img src="shisha-accesoires-removebg-preview.png" width="250px" height="250px" alt="gaca">
-                <p> Shisha Cole LIMITED EDITION    14.99$ </p>
+           <br><br>
+            <div class="first">
+        <?php foreach ($accesories as $as) { ?>
+            <a href=""> <img src="<?php echo $as['img']?>" height="200px">
+                <p><?php echo $as['Emri']?></p>
+                <p><?php echo $as['Cmimi']?></p>
+            </a> 
+
+        <?php } ?>
+    </div>
+        </div>
+    </div>
+   
+    <hr>
+</div>
+<div class="f">
+        <div class="ff">
+            <h4>Follow us</h4>
+            <div class="f6">
+                <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook" height="40px"></a>
+                <a href="https://twitter.com/i/flow/login"><img src="twitter.png" alt="Twitter" height="40px"></a>
+                <a href="https://www.instagram.com/"><img src="instagram.png" alt="" height="40px"></a>
+                <a href="https://www.pinterest.com/login/"><img src="pinterest.png" alt="" height="40px"></a>
             </div>
         </div>
     </div>
-    <div class="rubrika">
-        <?php foreach ($accesories as $as) { ?>
-            <a href=""> <img src="<?php echo $as['img']?>" height="200px">
-                <p><?php echo $as['Emri']?></p></a> 
-        <?php } ?>
-    </div>
-    <hr>
-</div>
 </body>
 </html>
