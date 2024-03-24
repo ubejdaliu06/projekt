@@ -21,6 +21,76 @@ $shisha = $p->getAllShisha();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Goat Vape - Best Deals</title>
     <style>
+        @media screen and (max-width: 600px) {
+   body{
+      background-color: black;
+   }
+  #footer{
+   color: white;
+  }
+  .Banner{
+   color: white;
+  }
+  .navbar a{
+   color: white;
+  }
+}
+.menu1{
+  height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      color: black;
+      gap: 50px;
+      list-style: none;
+      
+      
+ }
+.menu1>li>a{
+  color: black;
+  position: relative;
+  text-decoration: none;
+ }
+ li>a:after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition:transform 0.3s ease-out;
+
+ }
+ li>a:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+ }
+  
+  .headeri{
+    width: 100%;
+    height: 0%;
+    
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+     
+      margin: 00 0px;
+      padding: 20px 30;
+  }
+  .catalog{
+    justify-content: center;
+   }
+ 
+  .menu{
+     display: flex;
+  }
+
+   
       body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -112,6 +182,20 @@ $shisha = $p->getAllShisha();
             margin: 0 auto;
             padding: 20px;
             flex-wrap: wrap;
+            border-radius: 7px;
+             display: flex;
+             flex-direction: row;
+           flex-wrap: wrap;
+           gap: 5%;
+           margin: 4%;
+           padding: 5%;
+           list-style: none;
+           position: relative;
+           overflow: hidden;
+           background-size:auto;
+           justify-content: center;
+           background-color: rgb(240, 240, 240);
+           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .Produkt {
@@ -195,13 +279,16 @@ $shisha = $p->getAllShisha();
     </div>
     <div class="headerii">
         <ul class="menu1">
-        <li><a href="projekt.php"><h3 style="text-decoration:none; color:black;"><img src="website-home-page-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+       
             
-  
-            <li><a href="deals.php"><h3 ><img src="shopping-hot-blackfriday-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+        <li><a href="projekt.php"><h3><img src="website-home-page-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+            
+        
+            <li><a href="deals.php"><h3><img src="shopping-hot-blackfriday-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <li><a href="aboutus.php"><h3><img src="about-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <li><a href="PajisjetNeShitje1.php"><h3><img src="download-remddddovebg-preview (1).png" alt=""height="35px"></h3></a></li>
-            <li><a href="contactus.php"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px" target="_blank"></h3></a></li>
+            <li><a href="eliquids.php"><h3><img src="liquid-drop-svgrepo-com.svg" alt=""height="35px"></h3></a></li>
+            <li><a href="contactus.php" target="_blank"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
           
            
             </li>     <?php  if(isset($_SESSION['roli'])){

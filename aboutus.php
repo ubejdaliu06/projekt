@@ -9,7 +9,7 @@ include 'databaseConn.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Goat Vape</title>
+    <title>The Goat Vape - About us</title>
     <link rel="stylesheet" href="projeckt.css">
     <style>
         body {
@@ -191,8 +191,9 @@ include 'databaseConn.php';
             <li><a href="deals.php"><h3><img src="shopping-hot-blackfriday-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <li><a href="aboutus.php"><h3><img src="about-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <li><a href="PajisjetNeShitje1.php"><h3><img src="download-remddddovebg-preview (1).png" alt=""height="35px"></h3></a></li>
-            <li><a href="contactus.php"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
-            <!-- <li><a href="projekt.php"><h3>Home Page</h3></a></li> -->
+            <li><a href="eliquids.php"><h3><img src="liquid-drop-svgrepo-com.svg" alt=""height="35px"></h3></a></li>
+            <li><a href="contactus.php" target="_blank"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+          
             </li>    <?php  if(isset($_SESSION['roli'])){
     if($_SESSION['roli']=="admin"){
         echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";

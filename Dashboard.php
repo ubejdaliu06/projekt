@@ -13,6 +13,7 @@ include_once "VapeRepository.php";
 include_once "ShishaRepository.php";
 include_once "accesoriesRepository.php";
 include_once "dealsRepository.php";
+include_once "elRepository.php";
 include "Contact.php";
 include "news.php";
 
@@ -28,6 +29,8 @@ $news = new News();
 $newss = $news->getAllNews();
 $strepdeals = new dealsRepository();
 $deals = $strepdeals->getAlldeals();
+$strepel = new elRepository();
+$el = $strepel->getAllel();
 
 ?>
 
@@ -219,7 +222,7 @@ $deals = $strepdeals->getAlldeals();
 
 
 <br><br><br> <br>
-<hr>
+
 
 <br> <br> <br> <br>
 
@@ -253,6 +256,35 @@ $deals = $strepdeals->getAlldeals();
 
 
 <br><br><br> <br>
+<br> <br> <br> <br>
+
+<hr>
+<h2 style="text-align: center;">Regjistri i E-Liquid</h2><br><br>
+<table>
+    <thead>
+    <tr>
+        <th>Emri</th>
+        <th>Pershkrimi</th>
+        <th>Cmimi</th>
+        <th>Foto</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach($el as $al) { ?>
+        <tr>
+            <td><?php echo $al['Emri'];?></td>
+            <td><?php echo $al['Pershkrim'];?></td>
+            <td><?php echo $al['cmimi'];?></td>
+            <td><?php echo $al['img'];?></td>
+            <td><a href='edit5.php?id=<?php echo $al['id']?>'>Edit</a></td>
+            <td><a href='delete4.php?id=<?php echo $al['id']?>'>Delete</a></td>
+        </tr>
+    <?php } ?>
+    </tbody>
+</table>
+<a href="register6.php">Register E-Liquid</a>
 <hr>
 <h2 style="text-align: center;">Regjistri i Paqartesive</h2>
 <br><br>

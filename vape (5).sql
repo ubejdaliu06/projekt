@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2024 at 05:15 AM
+-- Generation Time: Mar 24, 2024 at 04:13 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -44,7 +44,7 @@ INSERT INTO `accesories` (`id`, `Emri`, `Pershkrim`, `Cmimi`, `img`) VALUES
 (5, 'Shisha Cole LIMITED EDITION', '', ' 14.99$', 0x7368697368612d61636365736f697265732d72656d6f766562672d707265766965772e706e67),
 (6, 'Hookah Bowl Phunnel Shisha Head', 'aliua', '20.00$', 0x3431442b59476b4d47484c2d72656d6f766562672d707265766965772e706e67),
 (7, 'Hookah shisha', 'aliua', '50.00$', 0x696d616765732d72656d6f766562672d707265766965772e706e67),
-(8, '1 Silicone Funnel Hookah Head Bowl', '', '15.00$', 0x732d6c3430302d72656d6f766562672d707265766965772e706e67);
+(8, '1 Silicone Funnel Hookah Head Bowl', 'cccc', '', '');
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,9 @@ INSERT INTO `contact_us` (`emri`, `mbiemri`, `email`, `nrtelefonit`, `comment`) 
 ('asdsada', 'asdasdasd', 'ubejdaliu5@gmail.com', 0, 'fgddfgfg'),
 ('asdsada', 'asdasdas', 'ubejdaliu5@gmail.com', 0, 'asdasdas'),
 ('asdsada', 'asdasdas', 'ubejdaliu5@gmail.com', 0, 'asdasdas'),
-('', '', '', 0, '');
+('', '', '', 0, ''),
+('', '', '', 0, ''),
+('', '', '', 2147483647, '');
 
 -- --------------------------------------------------------
 
@@ -80,6 +82,27 @@ INSERT INTO `contact_us` (`emri`, `mbiemri`, `email`, `nrtelefonit`, `comment`) 
 
 CREATE TABLE `deals` (
   `id` int(11) NOT NULL,
+  `Emri` varchar(255) NOT NULL,
+  `Pershkrim` varchar(255) NOT NULL,
+  `img` blob NOT NULL,
+  `cmimi` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `deals`
+--
+
+INSERT INTO `deals` (`id`, `Emri`, `Pershkrim`, `img`, `cmimi`) VALUES
+(1, 'vape', '223', 0x75362d72656d6f766562672d707265766965772e706e67, '10.00$');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `e-l`
+--
+
+CREATE TABLE `el` (
+  `id` int(11) DEFAULT NULL,
   `Emri` varchar(255) NOT NULL,
   `Pershkrim` varchar(255) NOT NULL,
   `img` blob NOT NULL,
@@ -107,13 +130,10 @@ CREATE TABLE `form` (
 INSERT INTO `form` (`name`, `email`, `pass`, `confirmpassword`, `roli`) VALUES
 ('ubejd', 'ubejdaliu@gmail.com', '12345678', '12345678', 'admin'),
 ('ilmi', 'ilmialiu@gmail.com', '12345678', '12345678', 'admin'),
-('ubejd', 'ubejdaliu55@gmail.com', 'omeraliu12.', 'omeraliu12.', ''),
 ('ubejd', 'ubejdaliu123@gmail.com', '12345678', '12345678', ''),
 ('ubejd11', 'ilmialiu1389@gmail.com', '12345678', '12345678', ''),
 ('ubejdaa', 'ilmialiu1389@gmail.com', '12345678', '12345678', ''),
-('ubejdaa', 'ubejdaliu555@gmail.com', '12345678', '12345678', ''),
-('ubejdaa', 'ubejdaliu555@gmail.com', '12345678', '12345678', ''),
-('ubejdaa', 'ubejdaliu555@gmail.com', '12345678', '12345678', '');
+('ilmi', 'ilmialiu22@gmail.com', '12345678', '12345678', '');
 
 -- --------------------------------------------------------
 
@@ -131,7 +151,8 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `email`) VALUES
-(1, 'ubejdaliu@gmail.com');
+(1, 'ubejdaliu@gmail.com'),
+(2, 'ubejdaliu@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -158,7 +179,7 @@ INSERT INTO `shisha` (`shisha_ID`, `Emri`, `Pershkrim`, `img`, `cmimi`) VALUES
 (13, 'Exclusive Shisha Max', '97.99$', 'shisha_4-removebg-preview.png', '97.99$'),
 (14, 'ALPHA HOOKAH S', '119.98$', 'alpha-hookahssss-s-removebg-preview.png', '119.98$'),
 (15, 'Cachimba Alpha Model S', '200.00$', 'download__1_ddds-removebg-preview.png', '200.00$'),
-(16, 'Ocean - Kaif ', '2.323.00$', 'downloasdsadad-removebg-preview.png', '2.323.00$');
+(16, 'Ocean - Kaif ', '2.323.00$', 'downloasdsadad-removebg-preview.png', '1.323.00$');
 
 -- --------------------------------------------------------
 
@@ -229,13 +250,13 @@ ALTER TABLE `accesories`
 -- AUTO_INCREMENT for table `deals`
 --
 ALTER TABLE `deals`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `shisha`
