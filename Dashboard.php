@@ -46,6 +46,7 @@ $deals = $strepdeals->getAlldeals();
             margin: 0;
             padding: 20px;
             background-color: #f4f4f4;
+         
         }
 
         h2 {
@@ -73,10 +74,11 @@ $deals = $strepdeals->getAlldeals();
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            border: 1px solid black;
         }
 
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid black;
             padding: 8px;
             text-align: center;
         }
