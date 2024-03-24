@@ -185,10 +185,13 @@ include 'databaseConn.php';
         <div class="headerii">
         <ul class="menu1">
         
-        <li><a href="deals.php"><h3>Best Deals</h3></a></li>
-            <li><a href="contactus.php"><h3>Contact Us</h3></a></li>
-            <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
-            <li><a href="aboutus.php"><h3>About us</h3></a></li>
+        <li><a href="projekt.php"><h3><img src="website-home-page-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+            
+      
+            <li><a href="deals.php"><h3><img src="shopping-hot-blackfriday-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+            <li><a href="aboutus.php"><h3><img src="about-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+            <li><a href="PajisjetNeShitje1.php"><h3><img src="download-remddddovebg-preview (1).png" alt=""height="35px"></h3></a></li>
+            <li><a href="contactus.php"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <!-- <li><a href="projekt.php"><h3>Home Page</h3></a></li> -->
             </li>    <?php  if(isset($_SESSION['roli'])){
     if($_SESSION['roli']=="admin"){
@@ -215,12 +218,12 @@ include 'databaseConn.php';
     <br><br><br><br>
     <div class="u1">
         <div class="about-section">
-            <h4>Established in 2013, Element Vape is a progressive retail establishment in the electronic cigarette industry based out of California. Our personal philosophy is to give consumers more than what they pay for. With an uncompromising drive to exceed expectations, we are committed to help customers experience the best possible shopping experience. Furthermore, we invested in a strict, industry-leading age verification system to verify every single order for youth prevention in accordance with federal law.
+            <h3>Established in 2013, The GoatVape is a progressive retail establishment in the electronic cigarette industry based out of California. Our personal philosophy is to give consumers more than what they pay for. With an uncompromising drive to exceed expectations, we are committed to help customers experience the best possible shopping experience. Furthermore, we invested in a strict, industry-leading age verification system to verify every single order for youth prevention in accordance with federal law.
 
             Trash The Ash...Get In The Element.
             ElementVape.com offers a wide array of the vape products and accessories, complemented with premium vape juice to satisfy your needs. With the industry growing and becoming more innovative, we have an unerring fascination for the newest technology and the latest products. Through continued partnership with major manufacturers, we are able to receive the best pricing available, creating an outlet of considerable savings for our customers with unbeatable prices and thousands of selection. The Element Vape team aims to push the boundaries of service to deliver customers a completely satisfying experience.
 
-            Element Vape is committed to the vibrant vaping community. We are an active member of Vapor Tech Association (VTA) and donated to vape advocacy groups such as American Vaping Association (AVA).</h4>
+            Element Vape is committed to the vibrant vaping community. We are an active member of Vapor Tech Association (VTA) and donated to vape advocacy groups such as American Vaping Association (AVA).</h3>
         </div>
     </div>
     <br><br><br><br><br>
@@ -249,13 +252,16 @@ include 'databaseConn.php';
     <br><br><br><br>
     <div class="f">
         <div class="ff">
-            <h4 style="font-family: Arial, Helvetica, sans-serif;">Follow us</h4>
+         
+    
+            <h3>Follow us</h3>
             <div class="f6">
-                <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook" height="20px"></a>
-                <a href="https://twitter.com/i/flow/login"><img src="twitter.png" alt="Twitter" height="20"></a>
-                <a href="https://www.pinterest.com/login/"><img src="pinterest.png" alt="" height="20px"></a>
-                </div>
-                </div>
+                <a href="https://www.facebook.com/"><img src="facebook.svg" alt="Facebook" height="50px"></a>
+                <a href="https://twitter.com/i/flow/login"><img src="twitter-6.svg" alt="Twitter" height="50px"></a>
+                <a href="https://www.instagram.com/"><img src="instagram-2016-5.svg" alt="" height="50px"></a>
+                <a href="https://www.pinterest.com/login/"><img src="pinterest-4.svg" alt="" height="50px"></a>
+            </div>
+        </div>
             </div>
                 <div class="fundi">
                     <h3>Copyright 2023 The Goat Vape Company. All rights reserved.  </h3>

@@ -47,7 +47,7 @@ include("db.php");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="title">the GoatVape</title> 
-  <link rel="stylesheet" href="LogIn.css">
+  <link rel="stylesheet" href="LogIN.css">
 
 </head>
 <body> 

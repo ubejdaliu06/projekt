@@ -29,28 +29,19 @@ if(isset($_POST['input'])){
     <link rel="stylesheet" href="projeckt.css">
     <style>
   
-        body, h1, h2, h3, h4, h5, h6, p, ul, li {
-            margin: 0;
-            padding: 0;
-           
-        }
-        body {
+  body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
-
- 
-
-   
-
-        /* Main container */
-        .main1 {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        body, h1, h2, h3, h4, h5, h6, p, ul, li {
+            margin: 0;
+            padding: 0;
+           
         }
+
+
         .main1 {
             background-color: #ffffff;
             padding: 20px;
@@ -59,21 +50,24 @@ if(isset($_POST['input'])){
             padding: 20px;
         }
 
-        /* Header */
+   
+
         .dd {
-            background-color: #ff9999;
             text-align: center;
             padding: 10px 0;
+        
+    
+            font-size: 14px;
             background-image:url(AdobeStock_277931111_Preview.jpeg);
-      color: red;
-
+          color: red;
         }
 
         .menu {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
+            margin-bottom: 20px;
+            
         }
 
         .headeri img {
@@ -81,21 +75,21 @@ if(isset($_POST['input'])){
         }
 
         .catalog h2 {
-            font-size: 24px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
             margin-left: 10px;
         }
 
         .headerii {
-            background-color:#808080;
+            background-color: #808080;
             padding: 10px;
             color: #ffffff;
-            margin-top: 20px;
         }
 
         .menu1 {
             list-style-type: none;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             padding: 0;
             margin: 0;
@@ -105,7 +99,6 @@ if(isset($_POST['input'])){
             margin-right: 20px;
         }
 
-    
      
 
         /* Product container */
@@ -196,12 +189,16 @@ if(isset($_POST['input'])){
     </div>
     <div class="headerii">
         <ul class="menu1">
-            <li><a href="deals.php"><h3>Best Deals</h3></a></li>
-            <li><a href="contactus.php"><h3>Contact Us</h3></a></li>
-            <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
-            <li><a href="aboutus.php"><h3>About us</h3></a></li>
+           <li><a href="projekt.php"><h3><img src="website-home-page-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+            
+        
+            <li><a href="deals.php"><h3><img src="shopping-hot-blackfriday-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+            <li><a href="aboutus.php"><h3><img src="about-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+            <li><a href="PajisjetNeShitje1.php"><h3><img src="download-remddddovebg-preview (1).png" alt=""height="35px"></h3></a></li>
+            <li><a href="contactus.php"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <!-- <li><a href="projekt.php"><h3>Home Page</h3></a></li> -->
            
+      
             </li>
              <?php  if(isset($_SESSION['roli'])){
          if($_SESSION['roli']=="admin"){
@@ -214,11 +211,12 @@ if(isset($_POST['input'])){
       // User is not logged in, so display the "Log in" link
     echo "<li><a href='Log in.php'><h3>Log In</h3></a></li>";
     echo "<li><a href='Register.php'><h3>Sign In</h3></a></li>";
+    
    }
     ?>
             
             </li>
-        
+           
         </ul>
     </div>
 
@@ -339,12 +337,12 @@ if(isset($_POST['input'])){
     <br><br>
     <div class="f">
         <div class="ff">
-            <h4>Follow us</h4>
+            <h3>Follow us</h3>
             <div class="f6">
-                <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook" height="40px"></a>
-                <a href="https://twitter.com/i/flow/login"><img src="twitter.png" alt="Twitter" height="40px"></a>
-                <a href="https://www.instagram.com/"><img src="instagram.png" alt="" height="40px"></a>
-                <a href="https://www.pinterest.com/login/"><img src="pinterest.png" alt="" height="40px"></a>
+                <a href="https://www.facebook.com/"><img src="facebook.svg" alt="Facebook" height="50px"></a>
+                <a href="https://twitter.com/i/flow/login"><img src="twitter-6.svg" alt="Twitter" height="50px"></a>
+                <a href="https://www.instagram.com/"><img src="instagram-2016-5.svg" alt="" height="50px"></a>
+                <a href="https://www.pinterest.com/login/"><img src="pinterest-4.svg" alt="" height="50px"></a>
             </div>
         </div>
     </div>

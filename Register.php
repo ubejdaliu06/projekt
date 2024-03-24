@@ -47,7 +47,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: url(1616588204_35-p-fon-magiya-39.jpg) no-repeat;
+      background: url(pMAiU.jpg) no-repeat;
       background-size: cover;
       background-position: center;
     }
@@ -142,12 +142,23 @@
         <label  style="color:white;"><input type="checkbox">Remember Me</label>
         <a href="#">Forgot Password</a>
       </div>
+      
+      <br> <br>
       <button type="submit" class="btn">Register</button><br>
-      <a href="Log in.php" ><p id="register" style="color:white; text-decoration:none">Back to LOG IN</p></a>
-      <a href="projekt.php" ><p id="register" style="color:white; text-decoration:none" >Back to Home Page</p></a>
-    </form>
-  </div>
+      </form>
+      <a href="Log in.php" ><p id="register" style="color:white; text-decoration:none; 
+      
+      justify-content: center;
+      align-items: center; ">Back to LOG IN</p></a>
+      <br>
+      <a href="projekt.php" ><p id="register" style="color:white; text-decoration:none; 
+      justify-content: center;
+      align-items: center;" >Back to Home Page</p></a>
 
+    
+    
+  </div>
+ 
 
   <script>
       function validimi() {
