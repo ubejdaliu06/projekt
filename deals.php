@@ -174,6 +174,11 @@ $deals = $p->getAlldeals();
             margin-top: 40px;
             text-align: center;
         }
+        h3{
+            text-decoration:none;
+            color:black;
+
+        }
     </style>
 </head>
 <body>
@@ -198,7 +203,7 @@ $deals = $p->getAlldeals();
             <li><a href="deals.php"><h3><img src="shopping-hot-blackfriday-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <li><a href="aboutus.php"><h3><img src="about-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <li><a href="PajisjetNeShitje1.php"><h3><img src="download-remddddovebg-preview (1).png" alt=""height="35px"></h3></a></li>
-            <li><a href="contactus.php"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+            <li><a href="contactus.php"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px" target="_blank"></h3></a></li>
            
             </li>    <?php  if(isset($_SESSION['roli'])){
     if($_SESSION['roli']=="admin"){
@@ -242,8 +247,7 @@ $deals = $p->getAlldeals();
         <h2>Gratis Offer 1+1</h2>
     </div>
 
-    <div class="first"style="text-decoration:none;
-            color:black;">
+    <div class="first" >
             <?php foreach ($deals as $ad) { ?>
         
            <a href=""> <img src="<?php echo $ad['img']?>" height="200px">

@@ -40,6 +40,7 @@ $shisha = $p->getAllShisha();
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            
         }
 
    
@@ -59,6 +60,7 @@ $shisha = $p->getAllShisha();
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
+            
             
         }
 
@@ -88,11 +90,9 @@ $shisha = $p->getAllShisha();
         }
 
         .menu1 li {
-            margin-right: 20px;
+      
         }
 
-
-        /* Product sections */
         .titell {
             text-align: center;
             margin-bottom: 20px;
@@ -130,7 +130,7 @@ $shisha = $p->getAllShisha();
             font-size: 18px;
         }
 
-        /* Accessories section */
+      
         .rubrika {
             display: flex;
             justify-content: center;
@@ -143,7 +143,7 @@ $shisha = $p->getAllShisha();
             border-radius: 10px;
         }
 
-        /* Divider */
+     
         hr {
             width: 80%;
             margin: 20px auto;
@@ -177,6 +177,7 @@ $shisha = $p->getAllShisha();
             text-decoration:none;
             color:black;
         }
+    
     </style>
 </head>
 <body>
@@ -194,13 +195,13 @@ $shisha = $p->getAllShisha();
     </div>
     <div class="headerii">
         <ul class="menu1">
-        <li><a href="projekt.php"><h3><img src="website-home-page-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+        <li><a href="projekt.php"><h3 style="text-decoration:none; color:black;"><img src="website-home-page-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             
   
-            <li><a href="deals.php"><h3><img src="shopping-hot-blackfriday-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+            <li><a href="deals.php"><h3 ><img src="shopping-hot-blackfriday-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <li><a href="aboutus.php"><h3><img src="about-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <li><a href="PajisjetNeShitje1.php"><h3><img src="download-remddddovebg-preview (1).png" alt=""height="35px"></h3></a></li>
-            <li><a href="contactus.php"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
+            <li><a href="contactus.php"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px" target="_blank"></h3></a></li>
           
            
             </li>     <?php  if(isset($_SESSION['roli'])){
@@ -211,7 +212,7 @@ $shisha = $p->getAllShisha();
         echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
     }
 } else {
-    // User is not logged in, so display the "Log in" link
+ 
     echo "<li><a href='Log in.php'><h3>Log In</h3></a></li>";
     echo "<li><a href='Register.php'><h3>Sign In</h3></a></li>";
 }
