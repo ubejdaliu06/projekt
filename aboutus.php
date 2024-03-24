@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Goat Vape</title>
-    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="projeckt.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,7 +50,7 @@
         }
 
         .headerii {
-            background-color: #333;
+            background-color: #808080;
             padding: 10px;
             color: #ffffff;
         }

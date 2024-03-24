@@ -11,6 +11,7 @@ if ( $_SESSION['roli'] !== 'admin') {
 include "databaseConn.php";
 include_once "VapeRepository.php";
 include_once "ShishaRepository.php";
+include_once "accesoriesRepository.php";
 include "Contact.php";
 
 $strep = new VapeRepository();
@@ -19,6 +20,8 @@ $strepShisha = new ShishaRepository();
 $shisha = $strepShisha->getAllShisha();
 $contact = new Contact();
 $data = $contact->getAllComments();
+$strepaccesories = new accesoriesRepository();
+$accesories = $strepaccesories->getAllaccesories();
 
 ?>
 
@@ -176,6 +179,33 @@ $data = $contact->getAllComments();
 </table>
 
 <a href="Register12.php">Register Shisha</a>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>Emri</th>
+        <th>Pershkrimi</th>
+        <th>Cmimi</th>
+        <th>Foto</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach($accesories as $ac) { ?>
+        <tr>
+            <td><?php echo $ac['Emri'];?></td>
+            <td><?php echo $ac['Pershkrim'];?></td>
+            <td><?php echo $ac['Cmimi'];?></td>
+            <td><?php echo $ac['img'];?></td>
+            <td><a href='edit33.php?id=<?php echo $ac['id']?>'>Edit</a></td>
+            <td><a href='.php?id=<?php echo $ac['id']?>'>Delete</a></td>
+        </tr>
+    <?php } ?>
+    </tbody>
+</table>
+<a href="Register123.php">Register Accesories</a>
 
 
 

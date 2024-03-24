@@ -62,7 +62,7 @@ $vape = $p->getAllVape();
         }
 
         .headerii {
-            background-color: #333;
+            background-color:#808080;
             padding: 10px;
             color: #ffffff;
             margin-top: 20px;
@@ -174,8 +174,13 @@ $vape = $p->getAllVape();
                 if($_SESSION['roli']=="admin"){
                     echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";
                     echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+                }else{
+                    echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+                   
                 }
+         
             }
+            
             ?></li>
             <li><a href="Log in.php"><h3>Login</h3></a></li>
         </ul>

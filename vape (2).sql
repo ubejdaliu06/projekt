@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2024 at 04:15 PM
+-- Generation Time: Mar 24, 2024 at 12:30 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -24,7 +24,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `countact_us`
+-- Table structure for table `accesories`
+--
+
+CREATE TABLE `accesories` (
+  `id` int(11) NOT NULL,
+  `Emri` varchar(255) NOT NULL,
+  `Pershkrim` varchar(255) NOT NULL,
+  `Cmimi` varchar(255) NOT NULL,
+  `img` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_us`
 --
 
 CREATE TABLE `contact_us` (
@@ -34,6 +48,17 @@ CREATE TABLE `contact_us` (
   `nrtelefonit` int(11) NOT NULL,
   `comment` varchar(5000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`emri`, `mbiemri`, `email`, `nrtelefonit`, `comment`) VALUES
+('asdsada', 'asdasdasd', 'ubejdaliu@gmail.com', 0, 'asdasdasda'),
+('dasdasasdasda', 'asdasdad', 'sadasd', 0, 'asdadas'),
+('asdsada', 'asdasdasd', 'ubejdaliu5@gmail.com', 0, 'fgddfgfg'),
+('asdsada', 'asdasdas', 'ubejdaliu5@gmail.com', 0, 'asdasdas'),
+('asdsada', 'asdasdas', 'ubejdaliu5@gmail.com', 0, 'asdasdas');
 
 -- --------------------------------------------------------
 
@@ -108,6 +133,12 @@ INSERT INTO `vape` (`Id`, `Emri`, `Pershkrim`, `Cmimi`, `img`) VALUES
 --
 
 --
+-- Indexes for table `accesories`
+--
+ALTER TABLE `accesories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `shisha`
 --
 ALTER TABLE `shisha`
@@ -124,16 +155,22 @@ ALTER TABLE `vape`
 --
 
 --
+-- AUTO_INCREMENT for table `accesories`
+--
+ALTER TABLE `accesories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `shisha`
 --
 ALTER TABLE `shisha`
-  MODIFY `shisha_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `shisha_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `vape`
 --
 ALTER TABLE `vape`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

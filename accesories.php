@@ -1,5 +1,5 @@
 <?php
-class vape{
+class accesories{
     private $Id; //e kemi shtu Id direkt ne db me AutoIncrement
     private $Emri;
     private $Pershkrim;

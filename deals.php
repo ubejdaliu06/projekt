@@ -127,7 +127,7 @@ $shisha = $p->getAllShisha();
         }
 
         .headerii {
-            background-color: #333;
+            background-color: #808080;
             padding: 10px;
             color: #ffffff;
             margin-top: 20px;
@@ -208,23 +208,27 @@ $shisha = $p->getAllShisha();
     </div>
     <div class="headerii">
         <ul class="menu1">
-        
-        <li><a href="deals.php"><h3>Best Deals</h3></a></li>
+            <li><a href="deals.php"><h3>Best Deals</h3></a></li>
             <li><a href="contactus.php"><h3>Contact Us</h3></a></li>
             <li><a href="PajisjetNeShitje1.php"><h3>Shop</h3></a></li>
             <li><a href="aboutus.php"><h3>About us</h3></a></li>
             <li><a href="projekt.php"><h3>Home Page</h3></a></li>
+           
             </li>  <?php 
-            if(isset($_SESSION['roli'])){
-             
+           if(isset($_SESSION['roli'])){
+                if($_SESSION['roli']=="admin"){
+                    echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";
                     echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+                }else{
+                    echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
+                   
                 }
-            
          
+            }
+            
             ?></li>
             <li><a href="Log in.php"><h3>Login</h3></a></li>
         </ul>
-       
     </div>
 
     <div class="new">
