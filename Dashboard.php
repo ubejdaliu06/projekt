@@ -4,9 +4,9 @@ if (!isset($_SESSION['email'])) {
     header("Location: Log in.php");
     exit;
 }
-if ( $_SESSION['roli'] !== 'admin') {
+if ($_SESSION['roli'] !== 'admin') {
     header("Location: Log in.php");
-  exit;
+    exit;
 }
 include "databaseConn.php";
 include_once "VapeRepository.php";
@@ -34,10 +34,7 @@ $el = $strepel->getAllel();
 
 ?>
 
-  
-  
-  
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,7 +46,6 @@ $el = $strepel->getAllel();
             margin: 0;
             padding: 20px;
             background-color: #f4f4f4;
-         
         }
 
         h2 {

@@ -296,14 +296,16 @@
         
             <li><a href="deals.php"><h3><img src="shopping-hot-blackfriday-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <li><a href="aboutus.php"><h3><img src="about-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
-            <li><a href="PajisjetNeShitje1.php"><h3><img src="download-remddddovebg-preview (1).png" alt=""height="35px"></h3></a></li>
+          
+            <li><a href="PajisjetNeShitje1.php"><h3><img src="cart-shopping-svgrepo-com.svg" alt=""height="35px"></h3></a></li>
             <li><a href="eliquids.php"><h3><img src="liquid-drop-svgrepo-com.svg" alt=""height="35px"></h3></a></li>
             <li><a href="contactus.php" target="_blank"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
           
            
             </li>     <?php  if(isset($_SESSION['roli'])){
     if($_SESSION['roli']=="admin"){
-        echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";
+        echo "<li><a href='Dashboard.php'><h3><img src='dashboard-svgrepo-com.svg'height='30px'></h3></a></li>";
+        
         echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
     } else {
         echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";

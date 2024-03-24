@@ -8,7 +8,7 @@ $vape = $p->getAllVape();
 if(isset($_POST['input'])){
     include_once 'News.php';
     $obj= new News();
-    $res = $obj->news($_POST); // Corrected method name here
+    $res = $obj->news($_POST); 
 
     if($res == true){
         echo "<script>alert('Query successfully Submitted .Thank You')</script>";
@@ -131,8 +131,29 @@ if(isset($_POST['input'])){
         }
 
         .rubrika {
+            display:flex;
+            gap:80px;
+            justify-content:center;
             text-align: center;
-            margin: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-wrap: wrap;
+            border-radius: 7px;
+       
+             flex-direction: row;
+           flex-wrap: wrap;
+         
+           margin: 4%;
+           padding: 5%;
+           list-style: none;
+           position: relative;
+           overflow: hidden;
+           background-size:auto;
+           
+          
+           background-color: rgb(240, 240, 240);
+           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .rubrika img {
@@ -173,6 +194,11 @@ if(isset($_POST['input'])){
             margin: 0 auto;
             padding: 20px;
         }
+        a{
+    color: black;
+    position: relative;
+    text-decoration: none;
+   }
     </style>
 </head>
 <body>
@@ -195,16 +221,18 @@ if(isset($_POST['input'])){
         
             <li><a href="deals.php"><h3><img src="shopping-hot-blackfriday-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
             <li><a href="aboutus.php"><h3><img src="about-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
-            <li><a href="PajisjetNeShitje1.php"><h3><img src="download-remddddovebg-preview (1).png" alt=""height="35px"></h3></a></li>
+           
+            <li><a href="PajisjetNeShitje1.php"><h3><img src="cart-shopping-svgrepo-com.svg" alt=""height="35px"></h3></a></li>
             <li><a href="eliquids.php"><h3><img src="liquid-drop-svgrepo-com.svg" alt=""height="35px"></h3></a></li>
             <li><a href="contactus.php" target="_blank"><h3><img src="contact-us-filled-svgrepo-com.svg" alt=""height="30px"></h3></a></li>
 
            
-      
+
             </li>
              <?php  if(isset($_SESSION['roli'])){
          if($_SESSION['roli']=="admin"){
-        echo "<li><a href='Dashboard.php'><h3>Dashboard</h3></a></li>";
+            echo "<li><a href='Dashboard.php'><h3><img src='dashboard-svgrepo-com.svg'height='30px'></h3></a></li>";
+            
         echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
       } else {
         echo "<li><a href='LogOut.php'><h3>Log out</h3></a></li>";
@@ -238,53 +266,7 @@ if(isset($_POST['input'])){
         <div class="t1">
             <h2>TRENDING</h2>
         </div>
-        <div class="fotografit">
-        <div class="rubrika"> 
-                <a href="">  
-                <img src="u1-removebg-preview.png" alt="" class="img" height="200px" id="fotografit">
-                 <h6>VIHO TURBO VAPES DISPOSABLE</h6>
-            </a>
-        </div>
-     
-          <div class="rubrika">
-                <a href="" >
-                <img src="u2-removebg-preview.png" alt="" class="img" height="200px">
-               
-                    <h6>DUMMY VAPES XFINITY 6900 DISPOSABLE</h6>
-                </a> 
-    
-            </div>
-            <div class="rubrika">
-            <a href="">
-                <img src="u3-removebg-preview.png" alt="" class="img" height="200px">
-                <h6>SIGELEI SMART AC10000 DISPOSABLE</h6>
-            </a> 
-            </div>
-            
-            <div class="rubrika">
-                <a href="">
-                <img src="u4-removebg-preview.png" alt="" class="img" height="200px">
-                <h6> GEEK BAR PULSE – DISPOSABLE VAPE</h6>
-            </a> 
-        </div>
-                  
-          
-                <div class="rubrika">
-                    <a href=""> 
-                   
-                    <img src="u5-removebg-preview.png" alt="" class="img" height="200px">
-                    <h6>LOST VAPE ORION BAR 7500 DISPOSABLE</h6>
-                </a> 
-                </div>
-            </a> 
-            
-                <div class="rubrika">
-                    <a href=""> 
-                   
-                        <img src="u6-removebg-preview.png" alt="" class="img" height="200px">
-                    <h6>POD POCKET 7500 DISPOSABLE</h6>
-                </a>
-                </div> 
+      
               
                 <div class="rubrika">
             <?php foreach ($vape as $vapet) { ?>
