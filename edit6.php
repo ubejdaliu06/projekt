@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'dealsRepository.php'; 
+include 'elRepository.php'; 
 
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
@@ -12,26 +12,26 @@ if ($id === null) {
 }
 
 $editedBy = isset($_SESSION['email']) ? "Edited By: " . $_SESSION['email'] : "Edited By: Unknown";
-$strep = new dealsRepository();
-$deals = $strep->getdealsById($id);
+$strep = new elRepository();
+$el = $strep->getelById($id);
 ?>
 
 <!DOCTYPE html>
 <html>
 <body>
-    <h3>Edit deals</h3>
+    <h3>Edit E-Liquid</h3>
     <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="POST">
      
      <label>Emri:</label>    
-     <input type="text" name="Emri" value="<?php echo $deals['Emri']?>"> <br> <br> 
+     <input type="text" name="Emri" value="<?php echo $el['Emri']?>"> <br> <br> 
     
      <label>Cmimi:</label> 
-     <input type="text" name="cmimi" value="<?php echo $deals['cmimi']?>"> <br> <br>
+     <input type="text" name="cmimi" value="<?php echo $el['cmimi']?>"> <br> <br>
   
      <label>Foto e produktit:</label>
-     <input type="file" name="img" value="<?php echo $deals['img']?>"> <br> <br>
+     <input type="file" name="img" value="<?php echo $el['img']?>"> <br> <br>
      <label>Pershkrimi:</label>
-     <input type="text" name="Pershkrim" value="<?php echo $deals['Pershkrim']?>"> <br> <br>
+     <input type="text" name="Pershkrim" value="<?php echo $el['Pershkrim']?>"> <br> <br>
      <input type="hidden" name="edit" value="<?php echo htmlspecialchars($editedBy); ?>"> <br> <br>
      <input type="submit" name="editBtn" value="save"> <br> <br>
     </form>
@@ -87,7 +87,7 @@ if(isset($_POST['editBtn'])){
     $img = $_POST['img'];
     $Pershkrim = $_POST['Pershkrim'];
 
-    $strep->editdeals($id, $Emri, $Pershkrim, $cmimi, $img);
+    $strep->editel($id, $Emri, $Pershkrim, $cmimi, $img);
     header("location: Dashboard.php");
     exit();
 }

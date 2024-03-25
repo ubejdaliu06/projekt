@@ -102,7 +102,7 @@ if(isset($_POST['input'])){
 
      
 
-        /* Product container */
+       
         .new {
             margin-top: 40px;
         }
@@ -113,7 +113,7 @@ if(isset($_POST['input'])){
             margin-bottom: 20px;
         }
 
-        /* Trending section */
+        
         .f1 {
             margin-top: 40px;
         }
@@ -123,13 +123,36 @@ if(isset($_POST['input'])){
             font-size: 36px;
             margin-bottom: 20px;
         }
+        .title{
+   
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
 
-        .fotografit {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+ } 
+ .f3{
+   
+    display: flex;
+   padding: 1%;
+    
+    /* border: 1px  solid#333; */
+     height: 40px;
+     align-items: center;
+   border-radius: 5px;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+   
+    
+    background-color: rgb(240, 240, 240);
+     justify-content: space-evenly;
+     margin-bottom: 20px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+ }
 
+
+
+       
         .rubrika {
             display:flex;
             gap:80px;
@@ -159,6 +182,10 @@ if(isset($_POST['input'])){
         .rubrika img {
             height: 200px;
             margin-bottom: 10px;
+        }
+        .rubrika a {
+
+            
         }
 
         /* Footer */
@@ -272,7 +299,9 @@ if(isset($_POST['input'])){
             <?php foreach ($vape as $vapet) { ?>
         
            <a href=""> <img src="<?php echo $vapet['img']?>" height="200px">
-               <p><?php echo $vapet['Emri']?></p></a> 
+               <p><?php echo $vapet['Emri']?></p>
+               <br><br>
+               <p><?php echo $vapet['Cmimi']?></p></a> 
            
        
            <?php } ?>

@@ -274,8 +274,8 @@ $el = $strepel->getAllel();
             <td><?php echo $al['Pershkrim'];?></td>
             <td><?php echo $al['cmimi'];?></td>
             <td><?php echo $al['img'];?></td>
-            <td><a href='edit5.php?id=<?php echo $al['id']?>'>Edit</a></td>
-            <td><a href='delete4.php?id=<?php echo $al['id']?>'>Delete</a></td>
+            <td><a href='edit6.php?id=<?php echo $al['id']?>'>Edit</a></td>
+            <td><a href='delete12.php?id=<?php echo $al['id']?>'>Delete</a></td>
         </tr>
     <?php } ?>
     </tbody>

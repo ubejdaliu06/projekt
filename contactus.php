@@ -14,19 +14,24 @@
 <div class="forma">
         <form onsubmit="return validateform()" method="POST">
             <div class="contact">
-                <h1>Contact Us
-                </h1>
+                <h4>Contact Us
+                </h4>
                 </div>
             <p>Emri:<br>
+            <br>
             <input type="text" id="emri" name="emri"></p>
-            <p>Mbiemri:<br>
+          
+            <p>Mbiemri:<br><br>
             <input type="text" id="mbiemri" name="mbiemri"></p>
-            <p>E-mail:<br>
+            
+            <p>E-mail:<br><br>
             <input type="text" id="email" name="email"></p>
-            <p>Numri Telefonit::<br>
+            
+            <p>Numri Telefonit::<br><br>
             <input type="text" id="nrtelefonit" name="nrtelefonit"></p>
-            <p>A keni ndonje pyetje?<br>
-            <textarea id="comment" cols="40" rows="10" name="comment" style="border-color: #eeeeee; border:2px solid #eeeeee"></textarea></p>
+            
+            <p>A keni ndonje pyetje?<br><br>
+            <textarea id="comment" cols="30" rows="8" name="comment" style="border-color: #eeeeee; border:2px solid #eeeeee"></textarea></p>
             <p><input type="submit" id="submit-btn" value="Send" name='input'></p>
         </form>
     </div>
@@ -43,7 +48,7 @@
 p{
     color:white;
 }
-h1{
+h4{
     color:white;
 }
 input{
@@ -58,7 +63,7 @@ input{
     backdrop-filter: blur(50px);
     color:black;
     border-radius: 12px;
-    padding: 30px 40px;
+    padding: 25px 30px;
 
 }
 
@@ -73,7 +78,7 @@ input{
 
 
 textarea {
-    width: calc(100% - 22px); 
+    width: calc(95% - 22px); 
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;

@@ -73,6 +73,7 @@ include("db.php");
         <a href="#" style="color:white;">Forgot Password</a>
       </div>
       <button type="submit" class="btn">LogIn</button>
+      <br><br>
       <a href="Register.php" target="_blank"><p id="register"style="display:flex; margin-left:120px; text-align:center; justify=content:center; align-items:center; color:white;">Create Account</p></a>
     </form>
   </div>

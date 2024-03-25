@@ -3,9 +3,9 @@ session_start();
 include 'accesoriesRepository.php'; 
 
 
-$id = isset($_GET['id']) ? $_GET['id'] : null;
+$Id = isset($_GET['id']) ? $_GET['id'] : null;
 
-if ($id === null) {
+if ($Id === null) {
   
     header("Location: some_error_page.php");
    
@@ -13,14 +13,14 @@ if ($id === null) {
 
 $editedBy = isset($_SESSION['email']) ? "Edited By: " . $_SESSION['email'] : "Edited By: Unknown";
 $strep = new accesoriesRepository();
-$accesories = $strep->getaccesoriesById($id);
+$accesories = $strep->getaccesoriesById($Id);
 ?>
 
 <!DOCTYPE html>
 <html>
 <body>
     <h3>Edit Accesories</h3>
-    <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="POST">
+    <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $Id; ?>" method="POST">
      
      <label>Emri:</label>    
      <input type="text" name="Emri" value="<?php echo $accesories['Emri']?>"> <br> <br> 
@@ -81,7 +81,7 @@ input[type="submit"]:hover {
 <?php 
 
 if(isset($_POST['editBtn'])){
-    $id = $id; 
+    $Id = $Id; 
     $Emri = $_POST['Emri']; 
     $cmimi = $_POST['Cmimi'];
     $img = $_POST['img'];

@@ -14,7 +14,7 @@ p>.header{
    border-bottom: 2px solid black;font-weight: older;}
 
 .fotografit{
-  /* border: 2px outset black; */
+  
   border-radius: 7px;
     display: flex;
     flex-direction: row;
@@ -131,13 +131,6 @@ p>.header{
 
  
 
- /* .footerright{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
- } */
 
 
 .fundi{
@@ -157,6 +150,9 @@ width: 100%;
   
     border-radius: 7px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     
 
 }
@@ -165,6 +161,9 @@ width: 100%;
     display: flex;
     flex-direction:column;
      gap: 30%;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 20px;
     
    
 }
@@ -172,6 +171,9 @@ h4>.f>.ff{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 .f6{
   flex-direction: row;
@@ -273,7 +275,9 @@ button{
   
   .title{
    
-    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 
   } 
   .f3{
@@ -285,6 +289,9 @@ button{
       height: 40px;
       align-items: center;
     border-radius: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     
      
      background-color: rgb(240, 240, 240);

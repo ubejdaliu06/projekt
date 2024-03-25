@@ -53,6 +53,7 @@
     }
     .formular {
       width: 420px;
+     
       background: transparent;
       border: 2px solid rgba(255, 255, 255, .2);
       backdrop-filter: blur(50px);
@@ -71,6 +72,21 @@
       width: 100%;
       height: 50px;
       margin: 20px 0;
+    }
+    .remember-forgo{
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:50px;
+      margin: 5%;
+      padding: 5%;
+      color:white;
+     
+    }
+    .remember-forgo a{
+      color:white;
+      text-decoration:none;
     }
     .input-box input {
       width: 100%;
@@ -132,7 +148,7 @@
 <body>
   <div class="formular">
     <form onsubmit="return validimi()" method="POST">
-      <h3>Welcome to The GoatVape</h3>
+      <h4>Welcome to The GoatVape</h4>
       <input type="text" placeholder="Username" id="emri" name="name" class="input-box" required>
       <input type="text" placeholder="E-mail" id="email" name="email" class="input-box" required>
       <input type="password" placeholder="Password" id="fjalekalimi" name="pass" class="input-box" required>
@@ -142,20 +158,20 @@
         <label  style="color:white;"><input type="checkbox">Remember Me</label>
         <a href="#">Forgot Password</a>
       </div>
-      
+     
+
       <br> <br>
       <button type="submit" class="btn">Register</button><br>
-      </form>
-      <a href="Log in.php" ><p id="register" style="color:white; text-decoration:none; 
-      
-      justify-content: center;
-      align-items: center; ">Back to LOG IN</p></a>
-      <br>
-      <a href="projekt.php" ><p id="register" style="color:white; text-decoration:none; 
-      justify-content: center;
-      align-items: center;" >Back to Home Page</p></a>
+     
+      <div class="remember-forgo">
 
-    
+     
+      <a href="Log in.php" ><h4>LOG IN</h4></a>
+      
+      
+      <a href="projekt.php" ><h4>Home Page</h4></p></a>
+   </div>
+
     
   </div>
  
