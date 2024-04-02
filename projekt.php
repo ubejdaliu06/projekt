@@ -28,7 +28,7 @@ if(isset($_POST['input'])){
     <title>The Goat Vape</title>
     <link rel="stylesheet" href="projeckt.css">
     <style>
-  
+ 
   body {
             font-family: Arial, sans-serif;
             margin: 0;

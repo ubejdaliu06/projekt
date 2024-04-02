@@ -12,6 +12,11 @@ include 'databaseConn.php';
     <title>The Goat Vape - About us</title>
     <link rel="stylesheet" href="projeckt.css">
     <style>
+        @media (max-width: 800px)  {
+                .catalog,.about-section{
+                    background : #87CEEB;
+                }
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;

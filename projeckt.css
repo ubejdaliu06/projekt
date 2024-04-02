@@ -1,14 +1,9 @@
-
 @media  (max-width: 800px) {
-  body{
-     background-color: yellow;
-     
-     flex-wrap:wrap;
-  }
- 
-  
- }
 
+  .f1,.new,.new1,.menu1,.menu{
+    background-color: red;
+  }
+}
 p>.header{
     color: brown;
    border-bottom: 2px solid black;font-weight: older;}

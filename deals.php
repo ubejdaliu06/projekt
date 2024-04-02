@@ -18,11 +18,11 @@ $deals = $p->getAlldeals();
   
     
     <style>
-        /* For screens between 600px and 900px */
-        @media screen and (min-width: 600px) and (max-width: 900px) {
-            body{
+        /* For screens that reach the 800px */
+        @media screen and (max-width: 800px) {
+            .menu,.menu1{
                 
-                background-color: #333;
+                background-color: #FFFF00;
                         }
         }
         body {

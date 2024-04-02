@@ -21,10 +21,11 @@ $shisha = $p->getAllShisha();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Goat Vape - Best Deals</title>
     <style>
-        @media screen and (max-width: 600px) {
-   body{
-      background-color: black;
-   }
+        @media only screen and (max-width: 600px) {
+            .end{
+        background-color: green; /* Change background color to green for screens with width less than or equal to 800px */
+    }
+}
   #footer{
    color: white;
   }
@@ -34,7 +35,7 @@ $shisha = $p->getAllShisha();
   .navbar a{
    color: white;
   }
-}
+
 .menu1{
   height: 100%;
       display: flex;
